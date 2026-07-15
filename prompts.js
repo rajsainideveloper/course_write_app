@@ -404,56 +404,50 @@ export function getPromptForChunk(chunk, config, questionsPerChunk) {
 4. **Reveal the Traps**: Discuss common student misconceptions, exam traps, and cognitive biases that lead to wrong answers, explaining exactly how to identify and avoid them.
 
 # SPECIFIC DIALECT FORMATTING RULES
-You must output ONLY valid text in our custom Markdown dialect. Follow these rules exactly:
+You must output ONLY valid text in our custom Markdown dialect. Follow these strict formatting rules exactly:
 
-1. **Page Title**: Start the document with exactly one \`# [Title]\` (use the chapter name: "${currentChunk.title}").
-2. **Subtitle**: Immediately follow with \`> [Subtitle]\` (an intellectually rich, engaging, human-sounding subtitle summarizing the chapter).
-3. **Chapters**: Group main topics using \`## Chapter [X]: [Name]\` (use chapter number ${chunk} and partition the topics below logically).
-4. **Sections**: Break chapters into sections using \`### Section [X] | [Section Name]\`.
+1. **Page Title**: Start the document with exactly one `# [Title]` (use the chapter name: "${currentChunk.title}").
+2. **Subtitle**: Immediately follow with `> [Subtitle]` (an intellectually rich, engaging, human-sounding subtitle summarizing the chapter).
+3. **Chapters**: Group main topics using `## Chapter ${chunk}: [Chapter Name]`.
+4. **Sections**: Break chapters into sections using `### Section [X] | [Section Name]`.
 5. **Text Formatting**:
-   - Use \`**bold**\` for emphasis.
-   - Use \`*italic*\` for specific technical terms or rules.
-   - Use \`=highlight=\` for key formulas, critical definitions, rules, shortcuts, or crucial words (e.g. \`=Total = (Left + Right) - 1=\` or \`=A is opposite to B if Sum = 27=\`).
-6. **Lists**: Use \`- \` for bullet points.
-7. **Tables**: Use standard markdown tables (e.g., \`| Col1 | Col2 |\`) to present clear comparison data, formulas, or character/symbol mappings.
-8. **Important Alerts**: For crucial tips, formulas, shortcuts, or warning traps, wrap them in:
+   - Use `**bold**` for emphasis.
+   - Use `*italic*` for terms.
+   - Use `=highlight=` for key formulas, shortcuts, or crucial words (e.g. `=n(n+1)/2=`).
+6. **Lists**: Use `- ` for bullet points.
+7. **Tables**: Use standard markdown tables (e.g., `| Col1 | Col2 |`).
+8. **Important Alerts**: For crucial tips, formulas, or warning traps, wrap them in:
    [alert type="success"]
    **Important Note:** ...
    [/alert]
    *(Valid types: success, warning, info, danger)*
-9. **Premium Solved Examples**: Always include realistic, challenging, step-by-step solved reasoning problems formatted as:
+9. **Solved Examples**: When you see a solved math or logic problem, format it exactly as:
    [example]
-   **Question:** [Insert a high-quality, realistic exam-style question]
-   **Solution:** [Insert a deep, detailed, step-by-step cognitive breakdown explaining:
-   1. The logic/pattern discovery.
-   2. How to set up the visualization (family tree, grid, sequence).
-   3. The exact logical derivation leading to the final correct answer.]
+   **Question:** ...
+   **Solution:** ...
    [/example]
-10. **Flashcards (Multiple per block)**: Group key terms, patterns, symbol meanings, or conceptual formulas into flashcard blocks:
-    [flashcards title="[Topic/Concept]"]
+10. **Flashcards (Multiple per block)**: If there are terms, shortcuts, pattern rules, or definitions to memorize, group them into a single flashcard block:
+    [flashcards title="[Topic]"]
     | [Front Term 1] | [Back Definition 1] |
     | [Front Term 2] | [Back Definition 2] |
     [/flashcards]
-11. **High-Yield Quizzes (Multiple questions per block)**: At the end of each section, group 2-5 challenging practice questions together using the \`[quiz]\` shortcode. 
-    - Provide 4 distinct options (A, B, C, D).
-    - Avoid trivial options; use realistic distractors representing common logical mistakes.
-    - Each option MUST include clear, detailed conceptual feedback in parentheses explaining why it is correct, or detailing the exact trap or logical slip that makes it incorrect:
+11. **Quizzes (Multiple questions per block)**: For quizzes, group 2-5 questions together using the `[quiz]` shortcode and `Q:` for each question exactly like this:
     [quiz title="[Quiz Title]"]
     Q: [Question 1 text]
-    - A) [Option A] (Correct: [Detailed explanation of why this is correct])
-    - B) [Option B] (Incorrect: [Explain the specific logical slip or trap that leads to this wrong answer])
-    - C) [Option C] (Incorrect: [Explain the specific logical slip or trap that leads to this wrong answer])
-    - D) [Option D] (Incorrect: [Explain the specific logical slip or trap that leads to this wrong answer])
+    - A) [Option 1]
+    - B) [Option 2] (Correct: [Optional feedback])
+    - C) [Option 3]
+    - D) [Option 4]
     
     Q: [Question 2 text]
-    - A) [Option A] (Incorrect: [Explain logical slip])
-    - B) [Option B] (Correct: [Detailed explanation of why this is correct])
-    - C) [Option C] (Incorrect: [Explain logical slip])
-    - D) [Option D] (Incorrect: [Explain logical slip])
+    - A) [Option 1] (Correct)
+    - B) [Option 2]
+    - C) [Option 3]
+    - D) [Option 4]
     [/quiz]
 
-Do not use any standard HTML tags like \`<div>\` or \`<span>\`. Only output this custom Markdown format.
-Write a highly comprehensive, educational, and engaging chapter covering these topics in detail. Do not include any conversational text or explanations before or after the Markdown document.
+Do not use any standard HTML tags like `<div>` or `<span>`. Only output this custom Markdown format.
+Do not write any conversational text or preamble/postscript before or after the Markdown document. Start directly with the `# [Title]` line and end with the last `[/quiz]` or content block.
 
 **Here are the raw topics to convert and cover in this chapter:**
 ${topicListString}`;
