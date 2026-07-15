@@ -27,6 +27,27 @@ function markdownToHtmlParagraphs(markdown) {
   });
   return htmlLines.join('');
 }
+import { execSync } from 'child_process';
+
+function readSystemClipboard() {
+  try {
+    if (process.platform === 'darwin') {
+      return execSync('pbpaste', { encoding: 'utf-8' });
+    } else if (process.platform === 'win32') {
+      return execSync('powershell -NoProfile -Command "Get-Clipboard"', { encoding: 'utf-8' });
+    } else {
+      try {
+        return execSync('xclip -selection clipboard -o', { encoding: 'utf-8' });
+      } catch (e) {
+        return execSync('xsel --clipboard --output', { encoding: 'utf-8' });
+      }
+    }
+  } catch (error) {
+    console.warn('⚠️ System clipboard read failed:', error.message);
+    return null;
+  }
+}
+
 // Enable stealth to minimize automated browser signals
 puppeteer.use(StealthPlugin());
 
@@ -64,6 +85,15 @@ async function generateMCQs() {
       '--disable-blink-features=AutomationControlled',
     ],
   });
+
+  // Grant clipboard permissions so we can read copied raw markdown
+  try {
+    const context = browser.defaultBrowserContext();
+    await context.overridePermissions('https://chat.deepseek.com', ['clipboard-read', 'clipboard-write']);
+    console.log('✅ Clipboard permissions granted for raw Markdown extraction.');
+  } catch (permError) {
+    console.warn('⚠️ Warning: Failed to set clipboard permissions:', permError.message);
+  }
 
   try {
     const page = await browser.newPage();
@@ -206,19 +236,174 @@ async function generateMCQs() {
       console.log('➡️ Sending message...');
       await page.keyboard.press('Enter');
 
-      // 10 questions takes slightly longer to generate. Let's wait 45 seconds per chunk.
-      const generationDelay = 180000;
+      // 10 questions takes slightly longer to generate. Let's wait 130 seconds per chunk.
+      const generationDelay = 130000; // Full production delay (130s)
       console.log(`⏳ Waiting ${generationDelay / 1000} seconds for response...`);
       await new Promise(resolve => setTimeout(resolve, generationDelay));
 
-      console.log('🔍 Extracting content...');
-      const extractedText = await page.evaluate(() => {
-        const codeBlocks = Array.from(document.querySelectorAll('pre code, .markdown-body, [class*="message"]'));
-        if (codeBlocks.length > 0) {
-          return codeBlocks[codeBlocks.length - 1].textContent || '';
+      console.log('🔍 Extracting raw Markdown content...');
+      let extractedText = '';
+      
+      // 1. Attempt to extract via Copy Button to preserve all original Markdown tags (#, ##, **, -, etc.)
+      const copySuccess = await page.evaluate(() => {
+        // Find the last message's container
+        const messageContainers = Array.from(document.querySelectorAll('.ds-markdown, .markdown-body, [class*="message-content"]'));
+        if (messageContainers.length === 0) return false;
+        
+        const lastMessage = messageContainers[messageContainers.length - 1];
+        
+        // Find the closest parent container of the last message that holds controls
+        let parent = lastMessage;
+        while (parent && !parent.querySelector('[role="button"], button')) {
+          parent = parent.parentElement;
         }
-        return '';
+        
+        if (!parent) parent = document.body; // Fallback to global scanning if parent traversal is limited
+        
+        // Find all interactive elements (buttons, divs with role="button") inside this message block
+        const buttons = Array.from(parent.querySelectorAll('div[role="button"], button, [role="button"], a, .ds-icon-button'));
+        for (const btn of buttons) {
+          const svgPath = btn.querySelector('svg path');
+          if (svgPath) {
+            const d = svgPath.getAttribute('d') || '';
+            // Match the unique path start for the copy icon provided by the user
+            if (d.startsWith('M6.14929 4.02032')) {
+              btn.click();
+              return true;
+            }
+          }
+        }
+        
+        // Global fallback search for the latest visible copy button matching this exact path
+        const allButtons = Array.from(document.querySelectorAll('div[role="button"], button, [role="button"]'));
+        for (const btn of allButtons.reverse()) {
+          const svgPath = btn.querySelector('svg path');
+          if (svgPath) {
+            const d = svgPath.getAttribute('d') || '';
+            if (d.startsWith('M6.14929 4.02032')) {
+              if (btn.offsetWidth > 0 && btn.offsetHeight > 0) {
+                btn.click();
+                return true;
+              }
+            }
+          }
+        }
+        
+        // Absolute fallback search by title, aria, or HTML content if path matching failed
+        for (const btn of allButtons.reverse()) {
+          const html = btn.innerHTML.toLowerCase();
+          const title = (btn.getAttribute('title') || '').toLowerCase();
+          const aria = (btn.getAttribute('aria-label') || '').toLowerCase();
+          if (title.includes('copy') || aria.includes('copy') || html.includes('copy') || html.includes('ds-icon-copy')) {
+            if (btn.offsetWidth > 0 && btn.offsetHeight > 0) {
+              btn.click();
+              return true;
+            }
+          }
+        }
+        
+        return false;
       });
+
+      if (copySuccess) {
+        console.log('📋 Copy button triggered! Reading copied content from clipboard...');
+        await new Promise(resolve => setTimeout(resolve, 1200)); // wait for clipboard write
+        
+        // 1. Try reading from the system clipboard first (reliable, focus-independent)
+        try {
+          const sysText = readSystemClipboard();
+          if (sysText && sysText.trim().length > 0) {
+            extractedText = sysText;
+            console.log(`✅ Retrieved ${extractedText.length} characters of raw Markdown from system clipboard.`);
+          }
+        } catch (sysError) {
+          console.warn('⚠️ System clipboard read failed:', sysError.message);
+        }
+
+        // 2. Try browser context clipboard read as fallback
+        if (!extractedText) {
+          try {
+            extractedText = await page.evaluate(async () => {
+              return await navigator.clipboard.readText();
+            });
+          } catch (clipError) {
+            console.warn('⚠️ Browser clipboard read failed. Falling back to recursive direct scraping...', clipError.message);
+          }
+        }
+      }
+
+      // 2. Direct DOM Text Scrape Fallback (if clipboard is empty/fails)
+      if (!extractedText) {
+        console.log('⚠️ Direct DOM scraping fallback active (converting HTML back to raw Markdown)...');
+        extractedText = await page.evaluate(() => {
+          const body = document.querySelector('.ds-markdown, .markdown-body, [class*="message-content"]');
+          if (!body) {
+            const blocks = Array.from(document.querySelectorAll('pre code, [class*="message"]'));
+            return blocks.length > 0 ? (blocks[blocks.length - 1].textContent || '') : '';
+          }
+          
+          function convertNodeToMarkdown(node) {
+            if (node.nodeType === Node.TEXT_NODE) {
+              return node.nodeValue || '';
+            }
+            if (node.nodeType !== Node.ELEMENT_NODE) {
+              return '';
+            }
+            
+            const tagName = node.tagName.toLowerCase();
+            let childrenMarkdown = '';
+            for (const child of node.childNodes) {
+              childrenMarkdown += convertNodeToMarkdown(child);
+            }
+            
+            switch (tagName) {
+              case 'h1':
+                return `\n\n# ${childrenMarkdown.trim()}\n\n`;
+              case 'h2':
+                return `\n\n## ${childrenMarkdown.trim()}\n\n`;
+              case 'h3':
+                return `\n\n### ${childrenMarkdown.trim()}\n\n`;
+              case 'h4':
+                return `\n\n#### ${childrenMarkdown.trim()}\n\n`;
+              case 'p':
+                return `\n\n${childrenMarkdown.trim()}\n\n`;
+              case 'strong':
+              case 'b':
+                return `**${childrenMarkdown.trim()}**`;
+              case 'em':
+              case 'i':
+                return `*${childrenMarkdown.trim()}*`;
+              case 'li':
+                return `\n- ${childrenMarkdown.trim()}`;
+              case 'ul':
+              case 'ol':
+                return `\n${childrenMarkdown}\n`;
+              case 'blockquote':
+                return `\n\n> ${childrenMarkdown.trim().split('\n').join('\n> ')}\n\n`;
+              case 'pre':
+                return `\n\n\`\`\`\n${node.textContent.trim()}\n\`\`\`\n\n`;
+              case 'code':
+                if (node.parentElement && node.parentElement.tagName.toLowerCase() !== 'pre') {
+                  return `\`${childrenMarkdown.trim()}\``;
+                }
+                return childrenMarkdown;
+              case 'br':
+                return '\n';
+              case 'tr':
+                return `\n| ${childrenMarkdown}`;
+              case 'td':
+              case 'th':
+                return `${childrenMarkdown.trim()} |`;
+              default:
+                return childrenMarkdown;
+            }
+          }
+          
+          return convertNodeToMarkdown(body)
+            .replace(/\n{3,}/g, '\n\n')
+            .trim();
+        });
+      }
 
       if (!extractedText) {
         throw new Error(`Failed to extract text content for chunk ${chunk}.`);
@@ -242,14 +427,12 @@ async function generateMCQs() {
           topics: ["General Aptitude and Logic Reasoning Applications"]
         };
 
-        // Convert the clean markdown into HTML-wrapped paragraphs
-        const htmlContent = markdownToHtmlParagraphs(markdownContent);
         const created_at = getFormattedTimestamp();
 
-        // Build the inner nested question_json object
+        // Build the inner nested question_json object with raw Markdown format
         const question_json = {
           material_title: currentChunk.title,
-          content: htmlContent,
+          content: markdownContent,
           description: "",
           metadata: {
             created_at: created_at,

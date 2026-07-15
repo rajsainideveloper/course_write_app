@@ -391,6 +391,8 @@ export function getPromptForChunk(chunk, config, questionsPerChunk) {
     topics: ["General Aptitude and Logic Reasoning Applications"]
   };
 
+
+
   const topicListString = currentChunk.topics.join('\n');
 
   return `You are a world-class Reasoning and Aptitude professor writing a comprehensive, premium textbook for elite students preparing for highly competitive exams (such as CAT, GMAT, CSAT, and Bank PO). Your goal is to write a deeply educational, realistic, and highly authoritative chapter that feels entirely human-written, avoiding all standard AI clichés and generic summaries.

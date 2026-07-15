@@ -1,18 +1,3 @@
-2026/07/15-22:40:07.972 2907 Reusing MANIFEST /Applications/XAMPP/xamppfiles/htdocs/course_write_app/user_data/Default/Local Storage/leveldb/MANIFEST-000001
-2026/07/15-22:40:07.975 2907 Recovering log #30
-2026/07/15-22:40:07.976 2907 Reusing old log /Applications/XAMPP/xamppfiles/htdocs/course_write_app/user_data/Default/Local Storage/leveldb/000030.log 
-2026/07/15-22:55:23.629 2907 Level-0 table #33: started
-2026/07/15-22:55:23.647 2907 Level-0 table #33: 29694 bytes OK
-2026/07/15-22:55:23.651 2907 Delete type=0 #30
-2026/07/15-23:15:24.673 2907 Level-0 table #35: started
-2026/07/15-23:15:24.718 2907 Level-0 table #35: 27786 bytes OK
-2026/07/15-23:15:24.732 2907 Delete type=0 #32
-2026/07/15-23:15:24.768 3303 Compacting 4@0 + 1@1 files
-2026/07/15-23:15:24.789 3303 Generated table #36@0: 41 keys, 10736 bytes
-2026/07/15-23:15:24.789 3303 Compacted 4@0 + 1@1 files => 10736 bytes
-2026/07/15-23:15:24.789 3303 compacted to: files[ 0 1 0 0 0 0 0 ]
-2026/07/15-23:15:24.789 3303 Delete type=2 #29
-2026/07/15-23:15:24.789 3303 Delete type=2 #35
-2026/07/15-23:15:24.789 3303 Delete type=2 #33
-2026/07/15-23:15:24.790 3303 Delete type=2 #27
-2026/07/15-23:15:24.790 3303 Delete type=2 #25
+2026/07/16-01:44:48.773 2f0b Reusing MANIFEST /Applications/XAMPP/xamppfiles/htdocs/course_write_app/user_data/Default/Local Storage/leveldb/MANIFEST-000001
+2026/07/16-01:44:48.777 2f0b Recovering log #53
+2026/07/16-01:44:48.778 2f0b Reusing old log /Applications/XAMPP/xamppfiles/htdocs/course_write_app/user_data/Default/Local Storage/leveldb/000053.log 
