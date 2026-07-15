@@ -1,14 +1,14 @@
-2026/07/15-22:40:17.779 f403 Reusing MANIFEST /Applications/XAMPP/xamppfiles/htdocs/course_write_app/user_data/Default/IndexedDB/https_chat.deepseek.com_0.indexeddb.leveldb/MANIFEST-000001
-2026/07/15-22:40:17.779 f403 Recovering log #85
-2026/07/15-22:40:17.780 f403 Reusing old log /Applications/XAMPP/xamppfiles/htdocs/course_write_app/user_data/Default/IndexedDB/https_chat.deepseek.com_0.indexeddb.leveldb/000085.log 
-2026/07/15-22:40:17.780 f403 Delete type=2 #83
-2026/07/15-22:40:17.782 8a03 Level-0 table #90: started
-2026/07/15-22:40:17.782 8a03 Level-0 table #90: 1590 bytes OK
-2026/07/15-22:40:17.782 8a03 Delete type=0 #85
-2026/07/15-22:40:17.783 10f07 Manual compaction at level-0 from '\x00\x1a\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x1b\x00\x00\x00' @ 0 : 0; will stop at '\x00\x1a\x00\x00\xc8 \x00l\x00o\x00c\x00a\x00l\x00-\x00f\x00o\x00r\x00a\x00g\x00e\x00-\x00d\x00e\x00t\x00e\x00c\x00t\x00-\x00b\x00l\x00o\x00b\x00-\x00s\x00u\x00p\x00p\x00o\x00r\x00t' @ 2571 : 1
-2026/07/15-22:40:17.783 10f07 Compacting 1@0 + 1@1 files
-2026/07/15-22:40:17.783 10f07 Generated table #91@0: 27 keys, 607 bytes
-2026/07/15-22:40:17.783 10f07 Compacted 1@0 + 1@1 files => 607 bytes
-2026/07/15-22:40:17.783 10f07 compacted to: files[ 0 1 1 0 0 0 0 ]
-2026/07/15-22:40:17.783 10f07 Delete type=2 #90
-2026/07/15-22:40:17.783 b403 Manual compaction at level-0 from '\x00\x1a\x00\x00\xc8 \x00l\x00o\x00c\x00a\x00l\x00-\x00f\x00o\x00r\x00a\x00g\x00e\x00-\x00d\x00e\x00t\x00e\x00c\x00t\x00-\x00b\x00l\x00o\x00b\x00-\x00s\x00u\x00p\x00p\x00o\x00r\x00t' @ 2571 : 1 .. '\x00\x1b\x00\x00\x00' @ 0 : 0; will stop at (end)
+2026/07/15-23:32:36.564 810b Reusing MANIFEST /Applications/XAMPP/xamppfiles/htdocs/course_write_app/user_data/Default/IndexedDB/https_chat.deepseek.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/07/15-23:32:36.564 810b Recovering log #89
+2026/07/15-23:32:36.565 810b Reusing old log /Applications/XAMPP/xamppfiles/htdocs/course_write_app/user_data/Default/IndexedDB/https_chat.deepseek.com_0.indexeddb.leveldb/000089.log 
+2026/07/15-23:32:36.565 810b Delete type=2 #87
+2026/07/15-23:32:36.568 b203 Level-0 table #94: started
+2026/07/15-23:32:36.569 b203 Level-0 table #94: 15343 bytes OK
+2026/07/15-23:32:36.569 b203 Delete type=0 #89
+2026/07/15-23:32:36.570 f303 Manual compaction at level-0 from '\x00\x1b\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x1c\x00\x00\x00' @ 0 : 0; will stop at '\x00\x1c\x00\x00\x05' @ 2756 : 1
+2026/07/15-23:32:36.570 f303 Compacting 1@0 + 1@1 files
+2026/07/15-23:32:36.570 f303 Generated table #95@0: 33 keys, 701 bytes
+2026/07/15-23:32:36.570 f303 Compacted 1@0 + 1@1 files => 701 bytes
+2026/07/15-23:32:36.570 f303 compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/07/15-23:32:36.570 f303 Delete type=2 #94
+2026/07/15-23:32:36.570 9e03 Manual compaction at level-0 from '\x00\x1c\x00\x00\x05' @ 2756 : 1 .. '\x00\x1c\x00\x00\x00' @ 0 : 0; will stop at (end)

@@ -167,6 +167,18 @@ async function generateMCQs() {
     let allQuestions = [];
 
     for (let chunk = 1; chunk <= totalChunks; chunk++) {
+      const outputFileName = getFilenameForChunk(chunk);
+      const outputPath = path.resolve(outputFileName);
+
+      // Check if this chunk has already been successfully generated and saved
+      try {
+        await fs.access(outputPath);
+        console.log(`\n⏭️ Chunk ${chunk}/${totalChunks} already completed (${outputFileName}). Skipping to next...`);
+        continue;
+      } catch (accessError) {
+        // File does not exist, proceed with generation
+      }
+
       console.log(`\n============================================================`);
       console.log(`🌀 Processing Chunk ${chunk}/${totalChunks}...`);
       console.log(`============================================================`);
