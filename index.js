@@ -167,7 +167,7 @@ async function generateMCQs() {
       await page.keyboard.press('Enter');
 
       // 10 questions takes slightly longer to generate. Let's wait 45 seconds per chunk.
-      const generationDelay = 25000;
+      const generationDelay = 60000;
       console.log(`⏳ Waiting ${generationDelay / 1000} seconds for response...`);
       await new Promise(resolve => setTimeout(resolve, generationDelay));
 

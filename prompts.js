@@ -393,48 +393,61 @@ export function getPromptForChunk(chunk, config, questionsPerChunk) {
 
   const topicListString = currentChunk.topics.join('\n');
 
-  return `You are an expert curriculum developer. Your task is to convert raw study materials and curriculum topics into a specific custom Markdown dialect designed for an interactive learning platform.
+  return `You are a world-class Reasoning and Aptitude professor writing a comprehensive, premium textbook for elite students preparing for highly competitive exams (such as CAT, GMAT, CSAT, and Bank PO). Your goal is to write a deeply educational, realistic, and highly authoritative chapter that feels entirely human-written, avoiding all standard AI clichés and generic summaries.
 
-Follow these strict formatting rules exactly:
+# WRITING STYLE & HUMAN VOICE GUIDELINES
+1. **Write like a Veteran Human Educator**: Use a tone that is authoritative, engaging, direct, and intellectually stimulating. Be passionate about the logic, and teach the underlying cognitive structures, shortcuts, and mental models.
+2. **Avoid AI Clichés & Buzzwords**: Do NOT use phrases like "Let's dive in," "In conclusion," "It is crucial to remember," "Essentially," "Moreover," "Furthermore," "Let's look at an example," or robotic transitions. Start directly with the content. Do not write any conversational preamble or postscript (e.g. "Sure, here is your chapter").
+3. **Provide Immense Depth**: Avoid shallow definitions. For every sub-topic listed, explain the logical mechanics in full, the standard formulas (such as the letter-index grid, EJOTY rules, or circular seating direction formulas), and the exact step-by-step cognitive steps required to solve them.
+4. **Reveal the Traps**: Discuss common student misconceptions, exam traps, and cognitive biases that lead to wrong answers, explaining exactly how to identify and avoid them.
+
+# SPECIFIC DIALECT FORMATTING RULES
+You must output ONLY valid text in our custom Markdown dialect. Follow these rules exactly:
 
 1. **Page Title**: Start the document with exactly one \`# [Title]\` (use the chapter name: "${currentChunk.title}").
-2. **Subtitle**: Immediately follow with \`> [Subtitle]\` (a catchy subtitle summarizing this chapter).
+2. **Subtitle**: Immediately follow with \`> [Subtitle]\` (an intellectually rich, engaging, human-sounding subtitle summarizing the chapter).
 3. **Chapters**: Group main topics using \`## Chapter [X]: [Name]\` (use chapter number ${chunk} and partition the topics below logically).
 4. **Sections**: Break chapters into sections using \`### Section [X] | [Section Name]\`.
 5. **Text Formatting**:
    - Use \`**bold**\` for emphasis.
-   - Use \`*italic*\` for terms.
-   - Use \`=highlight=\` for key formulas, critical definitions, rules, or crucial words (e.g. \`=Distance = Speed × Time=\`).
+   - Use \`*italic*\` for specific technical terms or rules.
+   - Use \`=highlight=\` for key formulas, critical definitions, rules, shortcuts, or crucial words (e.g. \`=Total = (Left + Right) - 1=\` or \`=A is opposite to B if Sum = 27=\`).
 6. **Lists**: Use \`- \` for bullet points.
-7. **Tables**: Use standard markdown tables (e.g., \`| Col1 | Col2 |\`).
-8. **Important Alerts**: For crucial tips, formulas, shortcuts, or rules, wrap them in:
+7. **Tables**: Use standard markdown tables (e.g., \`| Col1 | Col2 |\`) to present clear comparison data, formulas, or character/symbol mappings.
+8. **Important Alerts**: For crucial tips, formulas, shortcuts, or warning traps, wrap them in:
    [alert type="success"]
    **Important Note:** ...
    [/alert]
    *(Valid types: success, warning, info, danger)*
-9. **Solved Examples**: Always include realistic, step-by-step solved reasoning problems formatted as:
+9. **Premium Solved Examples**: Always include realistic, challenging, step-by-step solved reasoning problems formatted as:
    [example]
-   **Question:** ...
-   **Solution:** ...
+   **Question:** [Insert a high-quality, realistic exam-style question]
+   **Solution:** [Insert a deep, detailed, step-by-step cognitive breakdown explaining:
+   1. The logic/pattern discovery.
+   2. How to set up the visualization (family tree, grid, sequence).
+   3. The exact logical derivation leading to the final correct answer.]
    [/example]
-10. **Flashcards (Multiple per block)**: Group key terms, patterns, symbols, or definitions into flashcard blocks:
+10. **Flashcards (Multiple per block)**: Group key terms, patterns, symbol meanings, or conceptual formulas into flashcard blocks:
     [flashcards title="[Topic/Concept]"]
     | [Front Term 1] | [Back Definition 1] |
     | [Front Term 2] | [Back Definition 2] |
     [/flashcards]
-11. **Quizzes (Multiple questions per block)**: At the end of each section, group 2-5 practice questions together using the \`[quiz]\` shortcode and \`Q:\` for each question exactly like this:
+11. **High-Yield Quizzes (Multiple questions per block)**: At the end of each section, group 2-5 challenging practice questions together using the \`[quiz]\` shortcode. 
+    - Provide 4 distinct options (A, B, C, D).
+    - Avoid trivial options; use realistic distractors representing common logical mistakes.
+    - Each option MUST include clear, detailed conceptual feedback in parentheses explaining why it is correct, or detailing the exact trap or logical slip that makes it incorrect:
     [quiz title="[Quiz Title]"]
     Q: [Question 1 text]
-    - A) [Option 1]
-    - B) [Option 2] (Correct: [Optional feedback])
-    - C) [Option 3]
-    - D) [Option D]
+    - A) [Option A] (Correct: [Detailed explanation of why this is correct])
+    - B) [Option B] (Incorrect: [Explain the specific logical slip or trap that leads to this wrong answer])
+    - C) [Option C] (Incorrect: [Explain the specific logical slip or trap that leads to this wrong answer])
+    - D) [Option D] (Incorrect: [Explain the specific logical slip or trap that leads to this wrong answer])
     
     Q: [Question 2 text]
-    - A) [Option A] (Correct)
-    - B) [Option B]
-    - C) [Option C]
-    - D) [Option D]
+    - A) [Option A] (Incorrect: [Explain logical slip])
+    - B) [Option B] (Correct: [Detailed explanation of why this is correct])
+    - C) [Option C] (Incorrect: [Explain logical slip])
+    - D) [Option D] (Incorrect: [Explain logical slip])
     [/quiz]
 
 Do not use any standard HTML tags like \`<div>\` or \`<span>\`. Only output this custom Markdown format.
