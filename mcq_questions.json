@@ -1,202 +1,202 @@
 [
   {
-    "question": "What is the primary difference between a JavaScript Promise and a callback function for handling asynchronous operations?",
+    "question": "What is the primary purpose of a JavaScript Promise?",
     "options": [
-      "Promises are always faster than callbacks",
-      "Promises provide built-in error handling via .catch() and allow chaining, whereas callbacks can lead to nested 'pyramid of doom'",
-      "Callbacks can only be used with setTimeout, while Promises work with any async operation",
-      "Promises block the main thread until resolved, while callbacks do not"
+      "To execute synchronous code in parallel",
+      "To represent the eventual completion or failure of an asynchronous operation",
+      "To replace all callback functions permanently",
+      "To block the event loop until a task finishes"
     ],
-    "correct_answer": "Promises provide built-in error handling via .catch() and allow chaining, whereas callbacks can lead to nested 'pyramid of doom'"
+    "correct_answer": "To represent the eventual completion or failure of an asynchronous operation"
   },
   {
-    "question": "Which of the following correctly describes the state transition of a Promise?",
+    "question": "Which of the following is a valid state of a native JavaScript Promise?",
     "options": [
-      "Pending → Fulfilled → Settled",
-      "Pending → Rejected → Fulfilled",
-      "Fulfilled → Pending → Rejected",
-      "Pending → Fulfilled or Rejected → Settled"
+      "Pending, Resolved, Rejected",
+      "Pending, Fulfilled, Rejected",
+      "Waiting, Done, Failed",
+      "Started, Finished, Errored"
     ],
-    "correct_answer": "Pending → Fulfilled or Rejected → Settled"
+    "correct_answer": "Pending, Fulfilled, Rejected"
   },
   {
-    "question": "What value does an async function always return, regardless of what is explicitly returned inside it?",
+    "question": "What does the async keyword do when placed before a function declaration?",
     "options": [
-      "A Promise",
-      "The exact value returned",
-      "Undefined",
-      "A Thenable object"
+      "It makes the function return a Promise implicitly",
+      "It forces the function to run synchronously",
+      "It automatically wraps the return value in a resolved Promise only",
+      "It converts all parameters to Promises"
     ],
-    "correct_answer": "A Promise"
+    "correct_answer": "It makes the function return a Promise implicitly"
   },
   {
-    "question": "In the context of await, what happens if the expression following await is not a Promise?",
+    "question": "Inside an async function, what happens if you await a non-Promise value (e.g., a number or string)?",
     "options": [
-      "It throws a TypeError immediately",
-      "It is wrapped in a resolved Promise automatically",
-      "It is ignored and execution continues",
-      "It converts to a rejected Promise"
+      "It throws a TypeError",
+      "It wraps the value in a resolved Promise and pauses execution",
+      "It converts the value to a rejected Promise",
+      "It ignores the await and continues synchronously"
     ],
-    "correct_answer": "It is wrapped in a resolved Promise automatically"
+    "correct_answer": "It wraps the value in a resolved Promise and pauses execution"
   },
   {
-    "question": "Which method of a Promise is used to schedule a function to be called regardless of whether the Promise resolves or rejects?",
+    "question": "Which method of a Promise is used to handle both fulfillment and rejection in a single callback?",
     "options": [
+      ".then()",
+      ".catch()",
       ".finally()",
-      ".always()",
-      ".either()",
-      ".lastly()"
+      ".all()"
     ],
     "correct_answer": ".finally()"
   },
   {
-    "question": "What is the output of the following code snippet?\nlet p = new Promise((resolve, reject) => { reject('Error'); });\np.then(() => console.log('A')).catch(() => console.log('B')).then(() => console.log('C'));",
+    "question": "What will Promise.all([]) (an empty iterable) return?",
     "options": [
-      "A C",
-      "B C",
-      "B",
-      "A B C"
+      "A rejected Promise with an empty array error",
+      "A pending Promise indefinitely",
+      "A resolved Promise with an empty array",
+      "A resolved Promise with undefined"
     ],
-    "correct_answer": "B C"
+    "correct_answer": "A resolved Promise with an empty array"
   },
   {
-    "question": "Which of the following statements about error handling with async/await is true?",
+    "question": "In an async function, how can you handle an error from an await expression without using try/catch?",
     "options": [
-      "Errors must be handled using .catch() attached to the async function call",
-      "try/catch blocks cannot be used inside async functions",
-      "Using try/catch around await handles both synchronous and asynchronous errors from that expression",
-      "Unhandled rejections inside async functions are silently ignored"
+      "By attaching a .catch() to the awaited Promise directly",
+      "By using a finally block after the await",
+      "By checking the Promise state manually",
+      "It is not possible; try/catch is mandatory"
     ],
-    "correct_answer": "Using try/catch around await handles both synchronous and asynchronous errors from that expression"
+    "correct_answer": "By attaching a .catch() to the awaited Promise directly"
   },
   {
-    "question": "What does Promise.all() do when one of the input Promises rejects?",
+    "question": "What is the effect of calling console.log immediately after a Promise.resolve(1).then(v => v + 1) without awaiting it?",
     "options": [
-      "It waits for all Promises to settle and then returns an array of all results and errors",
-      "It immediately rejects with the reason of the first rejected Promise, ignoring others",
-      "It returns a resolved Promise with the results of only the fulfilled ones",
-      "It retries the rejected Promise automatically"
+      "It prints 2 immediately",
+      "It prints a Promise object",
+      "It prints 1 because the then runs synchronously",
+      "It prints undefined"
     ],
-    "correct_answer": "It immediately rejects with the reason of the first rejected Promise, ignoring others"
+    "correct_answer": "It prints a Promise object"
   },
   {
-    "question": "Which of the following is a correct way to pause execution in an async function until multiple Promises are resolved without short-circuiting on rejection?",
+    "question": "Which statement correctly describes the microtask queue in relation to Promises?",
     "options": [
-      "await Promise.all([p1, p2])",
-      "await Promise.race([p1, p2])",
-      "await Promise.allSettled([p1, p2])",
-      "await Promise.any([p1, p2])"
+      "Promise callbacks are executed in the next macro-task cycle",
+      "Promise callbacks are executed after all setTimeout callbacks",
+      "Promise callbacks are executed before the current event loop tick ends",
+      "Promise callbacks are executed in a separate thread"
     ],
-    "correct_answer": "await Promise.allSettled([p1, p2])"
+    "correct_answer": "Promise callbacks are executed before the current event loop tick ends"
   },
   {
-    "question": "If a Promise is already fulfilled and you call .then() on it, when is the callback executed?",
+    "question": "What happens if you await a Promise that never resolves or rejects inside an async function?",
     "options": [
-      "Immediately, synchronously",
-      "On the next microtask tick",
-      "On the next macrotask tick",
-      "It never executes because the Promise is already settled"
+      "The function returns undefined immediately",
+      "The function throws a timeout error",
+      "The function remains suspended indefinitely",
+      "The function continues execution with a null value"
     ],
-    "correct_answer": "On the next microtask tick"
+    "correct_answer": "The function remains suspended indefinitely"
   },
   {
-    "question": "What is the output of the following code?\n(async () => {\n  const a = await Promise.resolve(1);\n  const b = await Promise.resolve(2);\n  console.log(a + b);\n})();",
+    "question": "What is the output of the following code?\nlet p = new Promise((resolve) => { resolve(1); });\np.then(val => val + 2).then(val => { throw val; }).catch(err => err * 2).then(console.log);",
     "options": [
       "3",
-      "Promise { 3 }",
-      "undefined",
-      "NaN"
+      "6",
+      "A rejected promise",
+      "2"
     ],
-    "correct_answer": "3"
+    "correct_answer": "6"
   },
   {
-    "question": "Which of the following correctly implements a retry logic for a failed Promise-based API call using async/await?",
+    "question": "Which of the following will cause an unhandled rejection error if no catch is attached?",
     "options": [
-      "Using a for loop with try/catch inside and a break on success",
-      "Using Promise.retry() method",
-      "Using .catch() recursively without a loop",
-      "Using setTimeout inside a .then() chain"
+      "A promise that resolves after a timeout",
+      "A promise that rejects inside a .then() that already has a .catch() later",
+      "A promise that rejects and has a .finally() but no .catch() or second .then()",
+      "A promise that is awaited inside a try block"
     ],
-    "correct_answer": "Using a for loop with try/catch inside and a break on success"
+    "correct_answer": "A promise that rejects and has a .finally() but no .catch() or second .then()"
   },
   {
-    "question": "What will be logged in the console?\nconst p = new Promise((resolve) => {\n  resolve(10);\n  console.log(20);\n});\np.then(console.log);",
+    "question": "What value does Promise.race([Promise.resolve(10), Promise.reject('error')]) return if the resolve wins?",
     "options": [
-      "20 then 10",
-      "10 then 20",
-      "10 only",
-      "20 only"
+      "10",
+      "'error'",
+      "A resolved promise with 10",
+      "A rejected promise with 'error'"
     ],
-    "correct_answer": "20 then 10"
+    "correct_answer": "A resolved promise with 10"
   },
   {
-    "question": "In an async function, what is the effect of using return await somePromise versus return somePromise?",
+    "question": "In the following code, which message logs first?\nsetTimeout(() => console.log('A'), 0);\nPromise.resolve().then(() => console.log('B'));\nconsole.log('C');",
     "options": [
-      "They are functionally identical in all cases",
-      "return await ensures the rejection is caught by the surrounding try/catch, while return may lead to unhandled rejection if not awaited",
-      "return await is slower and should be avoided always",
-      "return somePromise converts the value to a non-Promise"
+      "A",
+      "B",
+      "C",
+      "A and B simultaneously"
     ],
-    "correct_answer": "return await ensures the rejection is caught by the surrounding try/catch, while return may lead to unhandled rejection if not awaited"
+    "correct_answer": "C"
   },
   {
-    "question": "Which Promise static method is best suited for a scenario where you need the fastest response from a set of async operations and you don't care if others fail, as long as at least one succeeds?",
+    "question": "What does the await keyword do when used inside a for loop with an array of Promises?",
     "options": [
-      "Promise.race()",
-      "Promise.any()",
-      "Promise.all()",
-      "Promise.allSettled()"
+      "It runs all Promises in parallel and waits for all",
+      "It pauses the loop for each Promise sequentially",
+      "It throws an error because await cannot be used in loops",
+      "It skips the Promise and continues the loop"
     ],
-    "correct_answer": "Promise.any()"
+    "correct_answer": "It pauses the loop for each Promise sequentially"
   },
   {
-    "question": "What is the output of the following code?\nlet resolveFn;\nconst p = new Promise(resolve => { resolveFn = resolve; });\nsetTimeout(() => resolveFn('Done'), 0);\np.then(console.log);\nconsole.log('Start');",
+    "question": "Which method is best for executing multiple independent async tasks and continuing as soon as any one of them settles (fulfills or rejects)?",
     "options": [
-      "Start Done",
-      "Done Start",
-      "Start",
-      "Done"
+      "Promise.all",
+      "Promise.any",
+      "Promise.race",
+      "Promise.allSettled"
     ],
-    "correct_answer": "Start Done"
+    "correct_answer": "Promise.race"
   },
   {
-    "question": "Which of the following is a valid way to cancel an ongoing fetch request that returns a Promise, using modern JavaScript?",
+    "question": "What is the value of x after this code runs?\nlet x = 0;\nasync function test() {\n  x = await Promise.resolve(5);\n  x += 1;\n}\ntest();\nx += 2;",
     "options": [
-      "Using Promise.cancel() method",
-      "Using an AbortController and its signal passed to fetch, then calling abort()",
-      "Using clearTimeout() on the Promise itself",
-      "Promises cannot be cancelled at all"
+      "8",
+      "3",
+      "6",
+      "2"
     ],
-    "correct_answer": "Using an AbortController and its signal passed to fetch, then calling abort()"
+    "correct_answer": "2"
   },
   {
-    "question": "What will be the result of the following?\nconst p1 = Promise.resolve('A');\nconst p2 = Promise.reject('B');\nconst p3 = Promise.resolve('C');\nPromise.allSettled([p1, p2, p3]).then(results => results.map(r => r.status));",
+    "question": "Which of the following correctly describes the behavior of Promise.allSettled()?",
     "options": [
-      "['fulfilled', 'rejected', 'fulfilled']",
-      "['fulfilled', 'fulfilled', 'fulfilled']",
-      "['A', 'B', 'C']",
-      "['rejected', 'rejected', 'rejected']"
+      "It rejects immediately if any Promise rejects",
+      "It returns an array of results only for fulfilled promises",
+      "It returns a single object with the first settled value",
+      "It always resolves with an array of objects each having status and value or reason"
     ],
-    "correct_answer": "['fulfilled', 'rejected', 'fulfilled']"
+    "correct_answer": "It always resolves with an array of objects each having status and value or reason"
   },
   {
-    "question": "Inside an async function, which of the following is the correct way to execute multiple independent async tasks in parallel, not sequentially?",
+    "question": "What is the effect of returning a non-Promise value inside a .then() callback that is attached to a resolved Promise?",
     "options": [
-      "await task1(); await task2();",
-      "const [r1, r2] = await Promise.all([task1(), task2()]);",
-      "task1(); task2(); await;",
-      "await (task1(), task2());"
+      "It causes the next .then() to receive that value in a new resolved Promise",
+      "It throws an error because the return must be a Promise",
+      "It returns a pending Promise that never settles",
+      "It replaces the original Promise result globally"
     ],
-    "correct_answer": "const [r1, r2] = await Promise.all([task1(), task2()]);"
+    "correct_answer": "It causes the next .then() to receive that value in a new resolved Promise"
   },
   {
-    "question": "What is the primary advantage of using Promise.race() over manually setting a timeout with setTimeout for an async operation?",
+    "question": "Which statement is true about error propagation in async/await?",
     "options": [
-      "Promise.race() is always faster",
-      "Promise.race() integrates natively with the Promise's rejection handling and can clean up resources more cleanly when combined with AbortController",
-      "Promise.race() does not require a callback",
-      "Promise.race() automatically retries the operation"
+      "An uncaught error inside an async function will reject the returned Promise automatically",
+      "All errors inside async functions are automatically caught and logged",
+      "Errors can only be handled with .catch() not try/catch",
+      "Returning a rejected Promise from an async function does not propagate the error"
     ],
-    "correct_answer": "Promise.race() integrates natively with the Promise's rejection handling and can clean up resources more cleanly when combined with AbortController"
+    "correct_answer": "An uncaught error inside an async function will reject the returned Promise automatically"
   }
 ]
