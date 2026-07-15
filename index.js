@@ -2,6 +2,8 @@ import puppeteer from 'puppeteer-extra';
 import StealthPlugin from 'puppeteer-extra-plugin-stealth';
 import fs from 'fs/promises';
 import path from 'path';
+import { getPromptForChunk } from './prompts.js';
+
 
 // Enable stealth to minimize automated browser signals
 puppeteer.use(StealthPlugin());
@@ -139,15 +141,8 @@ async function generateMCQs() {
       console.log(`🌀 Processing Chunk ${chunk}/${totalChunks} (${questionsPerChunk} MCQs)...`);
       console.log(`============================================================`);
 
-      const promptText = `Generate ${questionsPerChunk} unique multiple-choice questions (MCQs) about ${CONFIG.topic}. 
-Ensure these questions are completely new and different from any questions already generated in this conversation.
-The response must be strictly formatted as a valid JSON array of objects. Do not include any conversational text or explanations before or after the JSON.
-Each object in the array must have exactly this structure:
-{
-  "question": "The text of the question?",
-  "options": ["Option A", "Option B", "Option C", "Option D"],
-  "correct_answer": "Option A"
-}`;
+      const promptText = getPromptForChunk(chunk, CONFIG, questionsPerChunk);
+
 
       await page.focus(textareaSelector);
       
@@ -169,7 +164,7 @@ Each object in the array must have exactly this structure:
       await page.keyboard.press('Enter');
 
       // 10 questions takes slightly longer to generate. Let's wait 45 seconds per chunk.
-      const generationDelay = 45000;
+      const generationDelay = 25000;
       console.log(`⏳ Waiting ${generationDelay / 1000} seconds for response...`);
       await new Promise(resolve => setTimeout(resolve, generationDelay));
 

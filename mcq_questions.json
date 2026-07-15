@@ -1,1002 +1,202 @@
 [
   {
-    "question": "In which phase of the Node.js event loop are resolved Promise callbacks executed, relative to microtasks from process.nextTick?",
+    "question": "What is the primary difference between a JavaScript Promise and a callback function for handling asynchronous operations?",
     "options": [
-      "Immediately after process.nextTick microtasks, before any other phases",
-      "In the same microtask queue as process.nextTick, but with lower priority",
-      "In the poll phase, after I/O events are processed",
-      "During the check phase, alongside setImmediate callbacks"
+      "Promises are always faster than callbacks",
+      "Promises provide built-in error handling via .catch() and allow chaining, whereas callbacks can lead to nested 'pyramid of doom'",
+      "Callbacks can only be used with setTimeout, while Promises work with any async operation",
+      "Promises block the main thread until resolved, while callbacks do not"
     ],
-    "correct_answer": "Immediately after process.nextTick microtasks, before any other phases"
+    "correct_answer": "Promises provide built-in error handling via .catch() and allow chaining, whereas callbacks can lead to nested 'pyramid of doom'"
   },
   {
-    "question": "What value does the await expression return when applied to a function that returns a non-Promise value, such as await 42?",
+    "question": "Which of the following correctly describes the state transition of a Promise?",
     "options": [
-      "A resolved Promise with the value 42",
-      "The number 42 directly",
-      "undefined, because you must await a Promise",
-      "A TypeError is thrown"
+      "Pending → Fulfilled → Settled",
+      "Pending → Rejected → Fulfilled",
+      "Fulfilled → Pending → Rejected",
+      "Pending → Fulfilled or Rejected → Settled"
     ],
-    "correct_answer": "The number 42 directly"
+    "correct_answer": "Pending → Fulfilled or Rejected → Settled"
   },
   {
-    "question": "Given const p = Promise.reject('error'); and const q = p.catch(() => 'recovered');, what is the state and value of q after the microtask queue drains?",
+    "question": "What value does an async function always return, regardless of what is explicitly returned inside it?",
     "options": [
-      "Fulfilled with 'recovered'",
-      "Rejected with 'error'",
-      "Fulfilled with undefined",
-      "Rejected with 'recovered'"
+      "A Promise",
+      "The exact value returned",
+      "Undefined",
+      "A Thenable object"
     ],
-    "correct_answer": "Fulfilled with 'recovered'"
+    "correct_answer": "A Promise"
   },
   {
-    "question": "Inside an async function, if you place return await somePromise; instead of just return somePromise;, what is the primary practical difference in behavior?",
-    "options": [
-      "The return value is wrapped in an extra Promise layer",
-      "The rejection will be caught by the async function's internal try/catch if present, but otherwise no difference in timing",
-      "It forces the function to return a pending Promise instead of a settled one",
-      "There is no difference at all in any scenario"
-    ],
-    "correct_answer": "The rejection will be caught by the async function's internal try/catch if present, but otherwise no difference in timing"
-  },
-  {
-    "question": "Which of the following correctly describes the execution order when a setTimeout callback, a resolved Promise microtask, and a setImmediate callback are all scheduled in the same tick in Node.js?",
-    "options": [
-      "setImmediate, setTimeout, Promise microtask",
-      "Promise microtask, setTimeout, setImmediate",
-      "Promise microtask, setImmediate, setTimeout",
-      "setTimeout, setImmediate, Promise microtask"
-    ],
-    "correct_answer": "Promise microtask, setImmediate, setTimeout"
-  },
-  {
-    "question": "What is the result of Promise.race([Promise.resolve(1), Promise.reject(2), Promise.resolve(3)])?",
-    "options": [
-      "A fulfilled Promise with value 1",
-      "A rejected Promise with reason 2",
-      "A fulfilled Promise with value 3",
-      "A pending Promise because of the rejection"
-    ],
-    "correct_answer": "A fulfilled Promise with value 1"
-  },
-  {
-    "question": "If an async function throws a synchronous error before the first await, how is that error propagated?",
-    "options": [
-      "It is automatically caught and returned as a rejected Promise",
-      "It throws immediately, crashing the program unless caught synchronously",
-      "It is converted to a Promise rejection and can be caught with .catch()",
-      "It is ignored and the function returns undefined"
-    ],
-    "correct_answer": "It is converted to a Promise rejection and can be caught with .catch()"
-  },
-  {
-    "question": "What does Promise.allSettled() return when passed an array containing Promise.reject('fail') and Promise.resolve('ok')?",
-    "options": [
-      "A single rejected Promise with reason 'fail'",
-      "An array of status objects, one for each input Promise, all fulfilled",
-      "An array with one rejected and one fulfilled status object",
-      "A pending Promise that never settles"
-    ],
-    "correct_answer": "An array with one rejected and one fulfilled status object"
-  },
-  {
-    "question": "In the following code, what is logged? let x = 0; async function test() { x += await 1; x += await 2; } test(); console.log(x);",
-    "options": [
-      "0",
-      "1",
-      "3",
-      "undefined"
-    ],
-    "correct_answer": "0"
-  },
-  {
-    "question": "Which static method of Promise creates a new Promise that resolves with the same value as the given promise, but if the given value is not a Thenable, it is treated as a resolved Promise directly, and it also ensures that the returned value is always a native Promise?",
-    "options": [
-      "Promise.resolve",
-      "Promise.from",
-      "Promise.coerce",
-      "Promise.wrap"
-    ],
-    "correct_answer": "Promise.resolve"
-  },
-  {
-    "question": "What happens when you call await on a value that is a thenable object (i.e., an object with a .then method) but not a native Promise?",
-    "options": [
-      "It throws a TypeError because only native Promises are allowed",
-      "It treats it as a native Promise and resolves it using the thenable's .then method",
-      "It ignores the .then method and returns the object directly",
-      "It wraps the thenable in a native Promise first, then awaits it"
-    ],
-    "correct_answer": "It treats it as a native Promise and resolves it using the thenable's .then method"
-  },
-  {
-    "question": "In an async function, if you have multiple await statements in sequence, how does the JavaScript engine handle them in terms of microtask queuing?",
-    "options": [
-      "Each await schedules a separate microtask, and they execute in order with other microtasks interleaved",
-      "All await expressions are batched into a single microtask",
-      "Each await forces a full event loop turn, including macro tasks",
-      "They execute synchronously without creating microtasks"
-    ],
-    "correct_answer": "Each await schedules a separate microtask, and they execute in order with other microtasks interleaved"
-  },
-  {
-    "question": "What is the output of the following code? Promise.reject('a').catch(v => v + 'b').catch(v => v + 'c').then(v => console.log(v));",
-    "options": [
-      "'abc'",
-      "'ab'",
-      "undefined",
-      "'ac'"
-    ],
-    "correct_answer": "'ab'"
-  },
-  {
-    "question": "Which of the following is true about the finally() method on a Promise?",
-    "options": [
-      "It always returns a new Promise that resolves to the same value as the original Promise, even if the original rejected",
-      "It can change the resolved value by returning a new value from the callback",
-      "It is executed only if the Promise is fulfilled, not if rejected",
-      "It schedules the callback as a microtask regardless of the Promise's state"
-    ],
-    "correct_answer": "It always returns a new Promise that resolves to the same value as the original Promise, even if the original rejected"
-  },
-  {
-    "question": "Given const p = new Promise((res, rej) => { res(1); throw new Error('x'); });, what is the final state and value of p?",
-    "options": [
-      "Fulfilled with 1",
-      "Rejected with Error('x')",
-      "Pending forever",
-      "Fulfilled with undefined"
-    ],
-    "correct_answer": "Fulfilled with 1"
-  },
-  {
-    "question": "What does the await keyword do when used inside a top-level module in a modern JavaScript environment that supports top-level await?",
-    "options": [
-      "It throws a syntax error because await is only allowed inside async functions",
-      "It pauses the entire module execution until the awaited Promise settles",
-      "It returns a Promise that resolves with the module's exports",
-      "It wraps the module in an implicit async function and continues execution after the awaited operation"
-    ],
-    "correct_answer": "It pauses the entire module execution until the awaited Promise settles"
-  },
-  {
-    "question": "If you have an array of Promises and use Promise.any(), what is the outcome when one Promise fulfills with value 5 and another rejects early?",
-    "options": [
-      "It rejects immediately with the first rejection",
-      "It fulfills with the value 5 after waiting for all others to settle",
-      "It fulfills with the value 5 as soon as that Promise fulfills, ignoring others",
-      "It returns an AggregateError with all rejection reasons"
-    ],
-    "correct_answer": "It fulfills with the value 5 as soon as that Promise fulfills, ignoring others"
-  },
-  {
-    "question": "What is the effect of passing undefined to Promise.resolve()?",
-    "options": [
-      "It returns a rejected Promise with a TypeError",
-      "It returns a fulfilled Promise with value undefined",
-      "It returns a pending Promise that never settles",
-      "It returns the global object"
-    ],
-    "correct_answer": "It returns a fulfilled Promise with value undefined"
-  },
-  {
-    "question": "Inside an async function, if you place try { await promiseThatRejects(); } catch (e) { return 'fallback'; } and the promise rejects, what is the return value of the async function?",
-    "options": [
-      "A rejected Promise with the error e",
-      "A fulfilled Promise with 'fallback'",
-      "undefined",
-      "A pending Promise"
-    ],
-    "correct_answer": "A fulfilled Promise with 'fallback'"
-  },
-  {
-    "question": "In the Promise constructor, if the executor function calls resolve() after the promise has already been resolved, what happens?",
-    "options": [
-      "The second resolve overwrites the first, changing the value",
-      "The second resolve is ignored silently",
-      "It throws an error because a promise cannot be resolved twice",
-      "It queues the second resolve as a microtask, but the value remains the first"
-    ],
-    "correct_answer": "The second resolve is ignored silently"
-  },
-  {
-    "question": "What is the behavior of Promise.all() when the iterable passed to it contains a non-Promise value (e.g., 42) alongside actual Promises?",
-    "options": [
-      "It throws an error because all values must be Promises",
-      "It treats the non-Promise value as a resolved Promise and includes it in the result array",
-      "It ignores the non-Promise value and only waits for the Promises",
-      "It converts the non-Promise to a rejected Promise"
-    ],
-    "correct_answer": "It treats the non-Promise value as a resolved Promise and includes it in the result array"
-  },
-  {
-    "question": "In the following code, what is logged to the console? async function foo() { console.log(1); await null; console.log(2); } foo(); console.log(3);",
-    "options": [
-      "1, 3, 2",
-      "1, 2, 3",
-      "3, 1, 2",
-      "1, 3, 2 (but with a microtask delay before logging 2)"
-    ],
-    "correct_answer": "1, 3, 2"
-  },
-  {
-    "question": "If a Promise is created with new Promise((resolve) => { resolve(Promise.reject('nested')); }), what is the final state of the outer Promise?",
-    "options": [
-      "Fulfilled with a rejected Promise as its value",
-      "Rejected with 'nested'",
-      "Fulfilled with 'nested'",
-      "Pending indefinitely because of the nested Promise"
-    ],
-    "correct_answer": "Rejected with 'nested'"
-  },
-  {
-    "question": "Which of the following statements about Promise.withResolvers() (a modern addition) is correct?",
-    "options": [
-      "It returns a single Promise that resolves with an object containing resolve and reject functions",
-      "It returns an object containing a Promise, and separate resolve and reject functions bound to that Promise",
-      "It creates a Promise that automatically resolves with the first resolved value from any other Promise",
-      "It is used to attach resolve and reject handlers to an existing Promise"
-    ],
-    "correct_answer": "It returns an object containing a Promise, and separate resolve and reject functions bound to that Promise"
-  },
-  {
-    "question": "What is the value of result after executing const result = await Promise.resolve(5).then(v => v * 2).finally(() => 100); inside an async function?",
-    "options": [
-      "10",
-      "100",
-      "5",
-      "undefined"
-    ],
-    "correct_answer": "10"
-  },
-  {
-    "question": "When using async/await, what is the difference between await promise; and promise.then(...) in terms of error propagation inside a synchronous try/catch block?",
-    "options": [
-      "Both catch errors equally using the same try/catch syntax",
-      "Only await can be caught with try/catch; .then() errors must be caught with .catch()",
-      "Neither can be caught with try/catch because Promises are asynchronous",
-      ".then() can be caught with try/catch, but await cannot"
-    ],
-    "correct_answer": "Only await can be caught with try/catch; .then() errors must be caught with .catch()"
-  },
-  {
-    "question": "What does Promise.race() do when passed an empty iterable (e.g., [])?",
-    "options": [
-      "Returns a rejected Promise with a TypeError",
-      "Returns a pending Promise that never settles",
-      "Returns a fulfilled Promise with undefined",
-      "Throws a synchronous error"
-    ],
-    "correct_answer": "Returns a pending Promise that never settles"
-  },
-  {
-    "question": "In an async function, if you write return; without a value, what is the resolved value of the returned Promise?",
-    "options": [
-      "undefined",
-      "null",
-      "0",
-      "An empty Promise"
-    ],
-    "correct_answer": "undefined"
-  },
-  {
-    "question": "Consider the following: const p = Promise.resolve('a'); p.then(() => { throw 'b'; }).catch(() => 'c').then(v => console.log(v)); What is logged?",
-    "options": [
-      "'b'",
-      "'c'",
-      "'a'",
-      "undefined"
-    ],
-    "correct_answer": "'c'"
-  },
-  {
-    "question": "What is the effect of calling await on a Promise that is already fulfilled in terms of the microtask queue?",
-    "options": [
-      "It schedules a new microtask to retrieve the value, even though the Promise is settled",
-      "It returns the value synchronously without creating a microtask",
-      "It creates a macro task instead of a microtask",
-      "It throws an error because you cannot await a settled Promise"
-    ],
-    "correct_answer": "It schedules a new microtask to retrieve the value, even though the Promise is settled"
-  },
-  {
-    "question": "What happens if you attach a .catch() handler to a Promise that has already resolved successfully?",
-    "options": [
-      "The .catch() handler is executed immediately with a null error",
-      "The .catch() handler is ignored and never executed",
-      "The .catch() handler throws a TypeError",
-      "The .catch() handler schedules a microtask but does nothing"
-    ],
-    "correct_answer": "The .catch() handler is ignored and never executed"
-  },
-  {
-    "question": "In an async function, how does the JavaScript engine handle a throw statement that is placed before any await expression?",
-    "options": [
-      "It throws synchronously and the function returns a rejected Promise",
-      "It throws synchronously and crashes the program unless caught",
-      "It converts the thrown value to a rejected Promise and returns it",
-      "It ignores the throw and continues execution"
-    ],
-    "correct_answer": "It converts the thrown value to a rejected Promise and returns it"
-  },
-  {
-    "question": "What is the output of console.log(Promise.resolve() === Promise.resolve())?",
-    "options": [
-      "true",
-      "false",
-      "undefined",
-      "TypeError"
-    ],
-    "correct_answer": "false"
-  },
-  {
-    "question": "If you have a chain of .then() callbacks and one of them returns a plain value (not a Promise), what happens to the chain?",
-    "options": [
-      "The chain stops and the value is discarded",
-      "The value is wrapped in a resolved Promise and passed to the next .then()",
-      "The value is ignored and the next .then() receives undefined",
-      "The chain throws an error because plain values are not allowed"
-    ],
-    "correct_answer": "The value is wrapped in a resolved Promise and passed to the next .then()"
-  },
-  {
-    "question": "What is the purpose of the async keyword when used to define a function?",
-    "options": [
-      "It makes the function return a Promise implicitly, and allows await inside",
-      "It forces the function to run synchronously",
-      "It prevents the function from throwing errors",
-      "It makes the function execute in a separate thread"
-    ],
-    "correct_answer": "It makes the function return a Promise implicitly, and allows await inside"
-  },
-  {
-    "question": "In a Promise.allSettled() result array, what are the possible shapes of each status object?",
-    "options": [
-      "{ status: 'fulfilled', value: any } or { status: 'rejected', reason: any }",
-      "{ status: 'resolved', result: any } or { status: 'failed', error: any }",
-      "{ status: 'done', value: any } or { status: 'error', reason: any }",
-      "{ status: 'success', data: any } or { status: 'failure', message: any }"
-    ],
-    "correct_answer": "{ status: 'fulfilled', value: any } or { status: 'rejected', reason: any }"
-  },
-  {
-    "question": "What is the behavior when an async function is invoked without an await and it contains an await expression?",
-    "options": [
-      "It blocks the main thread until the awaited promise settles",
-      "It immediately returns a pending Promise and continues execution outside the function",
-      "It throws a syntax error because await must be used with await in the caller",
-      "It executes all synchronous code first, then returns a resolved Promise"
-    ],
-    "correct_answer": "It immediately returns a pending Promise and continues execution outside the function"
-  },
-  {
-    "question": "Consider the following: Promise.reject('err').finally(() => { console.log('finally'); }).catch(e => console.log(e)); What is the output order?",
-    "options": [
-      "'finally' then 'err'",
-      "'err' then 'finally'",
-      "Only 'finally' (error is swallowed)",
-      "Only 'err' (finally is ignored on rejection)"
-    ],
-    "correct_answer": "'finally' then 'err'"
-  },
-  {
-    "question": "What happens if you call resolve() multiple times inside a Promise executor with different values?",
-    "options": [
-      "The Promise resolves with the first value, and subsequent calls are ignored",
-      "The Promise resolves with the last value called",
-      "It throws an error after the second call",
-      "The Promise becomes pending and never settles"
-    ],
-    "correct_answer": "The Promise resolves with the first value, and subsequent calls are ignored"
-  },
-  {
-    "question": "In Node.js, what is the difference between process.nextTick() and a Promise microtask in terms of execution order when both are scheduled in the same tick?",
-    "options": [
-      "Promise microtasks run before process.nextTick()",
-      "process.nextTick() runs before Promise microtasks",
-      "They run in the same queue in FIFO order",
-      "They run in separate phases with process.nextTick() in the poll phase"
-    ],
-    "correct_answer": "process.nextTick() runs before Promise microtasks"
-  },
-  {
-    "question": "What is the result of await Promise.resolve(10) + await Promise.resolve(20) inside an async function?",
-    "options": [
-      "30",
-      "1020",
-      "undefined",
-      "A Promise that resolves to 30"
-    ],
-    "correct_answer": "30"
-  },
-  {
-    "question": "When a Promise chain uses multiple .then() callbacks, and one of them returns a rejected Promise, how does the chain propagate?",
-    "options": [
-      "All subsequent .then() callbacks are skipped until a .catch() is encountered",
-      "The chain continues to the next .then() with the rejection reason",
-      "The rejection is silently ignored and the chain resolves with undefined",
-      "The entire chain stops and the rejection is thrown as an unhandled error"
-    ],
-    "correct_answer": "All subsequent .then() callbacks are skipped until a .catch() is encountered"
-  },
-  {
-    "question": "What does Promise.resolve().then(() => { throw new Error(); }).catch(() => 5).then(v => v * 2) resolve to?",
-    "options": [
-      "10",
-      "5",
-      "Error",
-      "undefined"
-    ],
-    "correct_answer": "10"
-  },
-  {
-    "question": "In an async function, if you use await on a value that is not a Thenable, how many microtasks are scheduled?",
-    "options": [
-      "Zero microtasks are scheduled; the value is returned synchronously",
-      "One microtask is scheduled to wrap the value in a resolved Promise",
-      "Two microtasks are scheduled: one for wrapping and one for unwrapping",
-      "A macro task is scheduled instead of a microtask"
-    ],
-    "correct_answer": "One microtask is scheduled to wrap the value in a resolved Promise"
-  },
-  {
-    "question": "What is the behavior of Promise.any() when all input Promises reject?",
-    "options": [
-      "It returns a Promise that rejects with an AggregateError containing all rejection reasons",
-      "It returns a Promise that fulfills with undefined",
-      "It returns a pending Promise forever",
-      "It throws a synchronous TypeError"
-    ],
-    "correct_answer": "It returns a Promise that rejects with an AggregateError containing all rejection reasons"
-  },
-  {
-    "question": "If you attach both .then() and .catch() to a Promise that rejects, and the .catch() callback itself throws an error, what happens to the chain?",
-    "options": [
-      "The chain resolves with the error thrown from .catch()",
-      "The chain rejects with the error thrown from .catch()",
-      "The original rejection is preserved and the new error is ignored",
-      "The chain becomes pending indefinitely"
-    ],
-    "correct_answer": "The chain rejects with the error thrown from .catch()"
-  },
-  {
-    "question": "What is the output of the following code? async function test() { return await Promise.resolve(5); } console.log(test() instanceof Promise);",
-    "options": [
-      "true",
-      "false",
-      "undefined",
-      "TypeError"
-    ],
-    "correct_answer": "true"
-  },
-  {
-    "question": "In the Promise executor function, what happens if you call reject() after the Promise has already been resolved?",
-    "options": [
-      "The rejection is ignored",
-      "The Promise transitions from resolved to rejected",
-      "It throws an unhandled error",
-      "Both resolve and reject values are stored"
-    ],
-    "correct_answer": "The rejection is ignored"
-  },
-  {
-    "question": "What is the difference between Promise.then() and Promise.prototype.then()?",
-    "options": [
-      "There is no difference; they refer to the same method",
-      "Promise.then() is static and cannot be called on instances",
-      "Promise.prototype.then() is deprecated",
-      "Promise.then() returns a new Promise, while prototype.then mutates the original"
-    ],
-    "correct_answer": "There is no difference; they refer to the same method"
-  },
-  {
-    "question": "If an async function returns Promise.reject('fail') explicitly, what is the state of the Promise returned by the async function itself?",
-    "options": [
-      "Fulfilled with a rejected Promise as its value",
-      "Rejected with 'fail'",
-      "Fulfilled with undefined",
-      "Pending until the returned Promise settles"
-    ],
-    "correct_answer": "Rejected with 'fail'"
-  },
-  {
-    "question": "What is the value of result after const result = await Promise.resolve(3).finally(() => { throw 'cleanup'; }).catch(e => e); inside an async function?",
-    "options": [
-      "'cleanup'",
-      "3",
-      "undefined",
-      "A rejected Promise with 'cleanup'"
-    ],
-    "correct_answer": "'cleanup'"
-  },
-  {
-    "question": "In the following code, which microtask runs first? Promise.resolve().then(() => console.log('A')); process.nextTick(() => console.log('B')); (Node.js environment)",
-    "options": [
-      "'B' then 'A'",
-      "'A' then 'B'",
-      "Both run in the same microtask but in order of registration",
-      "'A' and 'B' are interleaved"
-    ],
-    "correct_answer": "'B' then 'A'"
-  },
-  {
-    "question": "What happens when you pass a non-function value (e.g., null) to .then()?",
+    "question": "In the context of await, what happens if the expression following await is not a Promise?",
     "options": [
       "It throws a TypeError immediately",
-      "It is treated as null and the previous result is passed through",
-      "It behaves like .then(() => {}), ignoring the value",
-      "It stops the Promise chain entirely"
+      "It is wrapped in a resolved Promise automatically",
+      "It is ignored and execution continues",
+      "It converts to a rejected Promise"
     ],
-    "correct_answer": "It behaves like .then(() => {}), ignoring the value"
+    "correct_answer": "It is wrapped in a resolved Promise automatically"
   },
   {
-    "question": "What is the output of Promise.resolve('x').then(() => Promise.resolve('y')).then(v => console.log(v));?",
+    "question": "Which method of a Promise is used to schedule a function to be called regardless of whether the Promise resolves or rejects?",
     "options": [
-      "'x'",
-      "'y'",
+      ".finally()",
+      ".always()",
+      ".either()",
+      ".lastly()"
+    ],
+    "correct_answer": ".finally()"
+  },
+  {
+    "question": "What is the output of the following code snippet?\nlet p = new Promise((resolve, reject) => { reject('Error'); });\np.then(() => console.log('A')).catch(() => console.log('B')).then(() => console.log('C'));",
+    "options": [
+      "A C",
+      "B C",
+      "B",
+      "A B C"
+    ],
+    "correct_answer": "B C"
+  },
+  {
+    "question": "Which of the following statements about error handling with async/await is true?",
+    "options": [
+      "Errors must be handled using .catch() attached to the async function call",
+      "try/catch blocks cannot be used inside async functions",
+      "Using try/catch around await handles both synchronous and asynchronous errors from that expression",
+      "Unhandled rejections inside async functions are silently ignored"
+    ],
+    "correct_answer": "Using try/catch around await handles both synchronous and asynchronous errors from that expression"
+  },
+  {
+    "question": "What does Promise.all() do when one of the input Promises rejects?",
+    "options": [
+      "It waits for all Promises to settle and then returns an array of all results and errors",
+      "It immediately rejects with the reason of the first rejected Promise, ignoring others",
+      "It returns a resolved Promise with the results of only the fulfilled ones",
+      "It retries the rejected Promise automatically"
+    ],
+    "correct_answer": "It immediately rejects with the reason of the first rejected Promise, ignoring others"
+  },
+  {
+    "question": "Which of the following is a correct way to pause execution in an async function until multiple Promises are resolved without short-circuiting on rejection?",
+    "options": [
+      "await Promise.all([p1, p2])",
+      "await Promise.race([p1, p2])",
+      "await Promise.allSettled([p1, p2])",
+      "await Promise.any([p1, p2])"
+    ],
+    "correct_answer": "await Promise.allSettled([p1, p2])"
+  },
+  {
+    "question": "If a Promise is already fulfilled and you call .then() on it, when is the callback executed?",
+    "options": [
+      "Immediately, synchronously",
+      "On the next microtask tick",
+      "On the next macrotask tick",
+      "It never executes because the Promise is already settled"
+    ],
+    "correct_answer": "On the next microtask tick"
+  },
+  {
+    "question": "What is the output of the following code?\n(async () => {\n  const a = await Promise.resolve(1);\n  const b = await Promise.resolve(2);\n  console.log(a + b);\n})();",
+    "options": [
+      "3",
+      "Promise { 3 }",
       "undefined",
-      "'xy'"
+      "NaN"
     ],
-    "correct_answer": "'y'"
+    "correct_answer": "3"
   },
   {
-    "question": "If an async function contains await Promise.reject('err') without a try/catch, what is the state of the returned Promise?",
+    "question": "Which of the following correctly implements a retry logic for a failed Promise-based API call using async/await?",
     "options": [
-      "Fulfilled with undefined",
-      "Rejected with 'err'",
-      "Pending forever",
-      "Fulfilled with a rejected Promise"
+      "Using a for loop with try/catch inside and a break on success",
+      "Using Promise.retry() method",
+      "Using .catch() recursively without a loop",
+      "Using setTimeout inside a .then() chain"
     ],
-    "correct_answer": "Rejected with 'err'"
+    "correct_answer": "Using a for loop with try/catch inside and a break on success"
   },
   {
-    "question": "What is the difference between Promise.resolve() and new Promise(resolve => resolve()) in terms of microtask scheduling?",
+    "question": "What will be logged in the console?\nconst p = new Promise((resolve) => {\n  resolve(10);\n  console.log(20);\n});\np.then(console.log);",
     "options": [
-      "Both schedule exactly one microtask",
-      "Promise.resolve() schedules no microtask, while the constructor schedules one",
-      "The constructor schedules two microtasks, while resolve() schedules one",
-      "There is no difference in microtask scheduling"
+      "20 then 10",
+      "10 then 20",
+      "10 only",
+      "20 only"
     ],
-    "correct_answer": "Both schedule exactly one microtask"
+    "correct_answer": "20 then 10"
   },
   {
-    "question": "What is the result of Object.prototype.toString.call(Promise.resolve())?",
+    "question": "In an async function, what is the effect of using return await somePromise versus return somePromise?",
     "options": [
-      "'[object Promise]'",
-      "'[object Object]'",
-      "'[object Thenable]'",
-      "'[object ResolvedPromise]'"
+      "They are functionally identical in all cases",
+      "return await ensures the rejection is caught by the surrounding try/catch, while return may lead to unhandled rejection if not awaited",
+      "return await is slower and should be avoided always",
+      "return somePromise converts the value to a non-Promise"
     ],
-    "correct_answer": "'[object Promise]'"
+    "correct_answer": "return await ensures the rejection is caught by the surrounding try/catch, while return may lead to unhandled rejection if not awaited"
   },
   {
-    "question": "In a Promise.all() call, if one Promise rejects, what happens to the other Promises in the iterable?",
+    "question": "Which Promise static method is best suited for a scenario where you need the fastest response from a set of async operations and you don't care if others fail, as long as at least one succeeds?",
     "options": [
-      "They continue to execute but their results are ignored",
-      "They are cancelled immediately",
-      "They are paused until the rejection is handled",
-      "They are automatically resolved with undefined"
+      "Promise.race()",
+      "Promise.any()",
+      "Promise.all()",
+      "Promise.allSettled()"
     ],
-    "correct_answer": "They continue to execute but their results are ignored"
+    "correct_answer": "Promise.any()"
   },
   {
-    "question": "What is the value of x after let x; try { x = await Promise.reject('err'); } catch { x = 'fallback'; }?",
+    "question": "What is the output of the following code?\nlet resolveFn;\nconst p = new Promise(resolve => { resolveFn = resolve; });\nsetTimeout(() => resolveFn('Done'), 0);\np.then(console.log);\nconsole.log('Start');",
     "options": [
-      "'fallback'",
-      "'err'",
-      "undefined",
-      "A Promise that resolves to 'fallback'"
+      "Start Done",
+      "Done Start",
+      "Start",
+      "Done"
     ],
-    "correct_answer": "'fallback'"
+    "correct_answer": "Start Done"
   },
   {
-    "question": "Which of the following is true about the relationship between async/await and the event loop?",
+    "question": "Which of the following is a valid way to cancel an ongoing fetch request that returns a Promise, using modern JavaScript?",
     "options": [
-      "Each await forces a macro task to be scheduled",
-      "await always yields control to the event loop, even if the awaited value is already resolved",
-      "await blocks the event loop until the Promise settles",
-      "await never yields control; it runs synchronously"
+      "Using Promise.cancel() method",
+      "Using an AbortController and its signal passed to fetch, then calling abort()",
+      "Using clearTimeout() on the Promise itself",
+      "Promises cannot be cancelled at all"
     ],
-    "correct_answer": "await always yields control to the event loop, even if the awaited value is already resolved"
+    "correct_answer": "Using an AbortController and its signal passed to fetch, then calling abort()"
   },
   {
-    "question": "What happens when await is used on a value that is a native Promise but that Promise is already settled with a value, regarding the execution context?",
+    "question": "What will be the result of the following?\nconst p1 = Promise.resolve('A');\nconst p2 = Promise.reject('B');\nconst p3 = Promise.resolve('C');\nPromise.allSettled([p1, p2, p3]).then(results => results.map(r => r.status));",
     "options": [
-      "The async function pauses and resumes in the same microtask, but the current synchronous code continues first",
-      "The async function returns the value synchronously without any pause",
-      "The async function schedules a macro task to retrieve the value",
-      "The async function throws an error because it cannot await an already settled Promise"
+      "['fulfilled', 'rejected', 'fulfilled']",
+      "['fulfilled', 'fulfilled', 'fulfilled']",
+      "['A', 'B', 'C']",
+      "['rejected', 'rejected', 'rejected']"
     ],
-    "correct_answer": "The async function pauses and resumes in the same microtask, but the current synchronous code continues first"
+    "correct_answer": "['fulfilled', 'rejected', 'fulfilled']"
   },
   {
-    "question": "What is the result of calling Promise.race([Promise.reject('a'), Promise.reject('b')])?",
+    "question": "Inside an async function, which of the following is the correct way to execute multiple independent async tasks in parallel, not sequentially?",
     "options": [
-      "A rejected Promise with reason 'a'",
-      "A rejected Promise with reason 'b'",
-      "An AggregateError containing both 'a' and 'b'",
-      "A pending Promise because all inputs reject"
+      "await task1(); await task2();",
+      "const [r1, r2] = await Promise.all([task1(), task2()]);",
+      "task1(); task2(); await;",
+      "await (task1(), task2());"
     ],
-    "correct_answer": "A rejected Promise with reason 'a'"
+    "correct_answer": "const [r1, r2] = await Promise.all([task1(), task2()]);"
   },
   {
-    "question": "In a browser environment, if you use await inside a click event listener, what is the effect on the event propagation?",
+    "question": "What is the primary advantage of using Promise.race() over manually setting a timeout with setTimeout for an async operation?",
     "options": [
-      "The event propagation is paused until the awaited Promise settles",
-      "The event propagation completes synchronously before the await resumes",
-      "The event is cancelled automatically",
-      "The await causes the event to be retriggered"
+      "Promise.race() is always faster",
+      "Promise.race() integrates natively with the Promise's rejection handling and can clean up resources more cleanly when combined with AbortController",
+      "Promise.race() does not require a callback",
+      "Promise.race() automatically retries the operation"
     ],
-    "correct_answer": "The event propagation completes synchronously before the await resumes"
-  },
-  {
-    "question": "What is the value of p after const p = new Promise((resolve, reject) => { resolve(1); reject(2); });?",
-    "options": [
-      "Fulfilled with 1",
-      "Rejected with 2",
-      "Fulfilled with 2",
-      "Rejected with 1"
-    ],
-    "correct_answer": "Fulfilled with 1"
-  },
-  {
-    "question": "If you call .catch() on a Promise that is already rejected, and the .catch() callback returns a Promise that eventually rejects, what is the state of the returned Promise from .catch()?",
-    "options": [
-      "Rejected with the new rejection reason",
-      "Fulfilled with the original rejection reason",
-      "Fulfilled with undefined",
-      "Pending until the new Promise resolves"
-    ],
-    "correct_answer": "Rejected with the new rejection reason"
-  },
-  {
-    "question": "What does the await keyword do when used with Promise.resolve() inside a for loop in terms of microtask queuing?",
-    "options": [
-      "Each iteration schedules a new microtask, so iterations may be interleaved with other microtasks",
-      "All iterations are batched into a single microtask",
-      "The loop runs synchronously without scheduling microtasks because the Promise is already resolved",
-      "It schedules a macro task for each iteration"
-    ],
-    "correct_answer": "Each iteration schedules a new microtask, so iterations may be interleaved with other microtasks"
-  },
-  {
-    "question": "What is the output of Promise.resolve().then(() => console.log(1)).then(() => console.log(2)); Promise.resolve().then(() => console.log(3));?",
-    "options": [
-      "1, 2, 3",
-      "1, 3, 2",
-      "3, 1, 2",
-      "2, 1, 3"
-    ],
-    "correct_answer": "1, 2, 3"
-  },
-  {
-    "question": "In an async function, if you have const data = await fetch(url).catch(err => null);, and fetch rejects, what is the value of data?",
-    "options": [
-      "null",
-      "undefined",
-      "The rejected error object",
-      "A pending Promise"
-    ],
-    "correct_answer": "null"
-  },
-  {
-    "question": "What is the difference between Promise.then(onFulfilled, onRejected) and Promise.then(onFulfilled).catch(onRejected)?",
-    "options": [
-      "The first form catches errors from onFulfilled, while the second does not",
-      "The second form catches errors from onFulfilled, while the first does not",
-      "Both forms are identical in error handling",
-      "The first form cannot handle rejections at all"
-    ],
-    "correct_answer": "The second form catches errors from onFulfilled, while the first does not"
-  },
-  {
-    "question": "What happens when you await a Promise that is created with Promise.reject() but the rejection is handled by a .catch() attached directly to the Promise before the await?",
-    "options": [
-      "The await expression resolves to the value returned by .catch()",
-      "The await expression throws the original rejection reason",
-      "The await expression returns undefined",
-      "The await expression causes the async function to reject with the original error"
-    ],
-    "correct_answer": "The await expression resolves to the value returned by .catch()"
-  },
-  {
-    "question": "What is the output of the following code? let resolveFn; const p = new Promise(r => { resolveFn = r; }); setTimeout(() => resolveFn(1), 0); await p; console.log('done'); (inside an async function, assuming no other microtasks)",
-    "options": [
-      "'done' is logged immediately after the setTimeout callback runs",
-      "'done' is logged before the setTimeout callback runs",
-      "'done' is never logged because the Promise never resolves",
-      "'done' is logged synchronously before the setTimeout is scheduled"
-    ],
-    "correct_answer": "'done' is logged immediately after the setTimeout callback runs"
-  },
-  {
-    "question": "If a Promise chain has .then(() => { throw 'x'; }).then(() => 'y').catch(() => 'z'), what is the final resolved value?",
-    "options": [
-      "'z'",
-      "'x'",
-      "'y'",
-      "undefined"
-    ],
-    "correct_answer": "'z'"
-  },
-  {
-    "question": "What is the behavior of Promise.all() when the iterable contains a thenable that is not a Promise, but defines both then and catch methods?",
-    "options": [
-      "It treats the thenable as a Promise and uses its then method to resolve",
-      "It ignores the thenable and uses its catch method instead",
-      "It throws a TypeError because only native Promises are allowed",
-      "It converts the thenable to a native Promise using Promise.resolve() first"
-    ],
-    "correct_answer": "It treats the thenable as a Promise and uses its then method to resolve"
-  },
-  {
-    "question": "In an async function, what is the effect of using return await on a value that is not a Promise (e.g., return await 42)?",
-    "options": [
-      "It returns a Promise that resolves to 42, scheduling a microtask",
-      "It returns 42 synchronously without scheduling a microtask",
-      "It returns a rejected Promise with a TypeError",
-      "It returns undefined"
-    ],
-    "correct_answer": "It returns a Promise that resolves to 42, scheduling a microtask"
-  },
-  {
-    "question": "What is the value of result after const result = Promise.reject('fail').finally(() => { return 'clean'; }).catch(e => e + ' handled');?",
-    "options": [
-      "'fail handled'",
-      "'clean'",
-      "'fail'",
-      "undefined"
-    ],
-    "correct_answer": "'fail handled'"
-  },
-  {
-    "question": "When using await in a try block, if the awaited Promise rejects, does the finally block execute before or after the catch block?",
-    "options": [
-      "The catch block executes, then the finally block",
-      "The finally block executes, then the catch block",
-      "Only the catch block executes; finally is skipped on rejection",
-      "Only the finally block executes; catch is skipped"
-    ],
-    "correct_answer": "The catch block executes, then the finally block"
-  },
-  {
-    "question": "What is the output of console.log(await Promise.resolve(1) || await Promise.resolve(2)); inside an async function?",
-    "options": [
-      "1",
-      "2",
-      "true",
-      "undefined"
-    ],
-    "correct_answer": "1"
-  },
-  {
-    "question": "If you create a Promise with new Promise(() => {}) and never call resolve or reject, what is the state of the Promise and what happens to the microtask queue?",
-    "options": [
-      "It remains pending forever and no microtasks are scheduled",
-      "It becomes fulfilled with undefined after a timeout",
-      "It becomes rejected with a timeout error",
-      "It schedules a microtask to check for resolution"
-    ],
-    "correct_answer": "It remains pending forever and no microtasks are scheduled"
-  },
-  {
-    "question": "What happens when .then() is called on a Promise that is pending, and the Promise later resolves with a value?",
-    "options": [
-      "The .then() callback is scheduled as a microtask and executes when the Promise settles",
-      "The .then() callback executes synchronously immediately",
-      "The .then() callback is ignored because the Promise was pending",
-      "The .then() callback is scheduled as a macro task"
-    ],
-    "correct_answer": "The .then() callback is scheduled as a microtask and executes when the Promise settles"
-  },
-  {
-    "question": "What is the result of await Promise.resolve().then(() => {})?",
-    "options": [
-      "undefined",
-      "A Promise that resolves to undefined",
-      "null",
-      "0"
-    ],
-    "correct_answer": "undefined"
-  },
-  {
-    "question": "What is the behavior of await when used with a value that has a then method that throws an error synchronously?",
-    "options": [
-      "The async function rejects with that error",
-      "The async function ignores the error and continues",
-      "The await expression returns the thrown error as a value",
-      "The await expression schedules a microtask that throws the error"
-    ],
-    "correct_answer": "The async function rejects with that error"
-  },
-  {
-    "question": "What is the output of Promise.resolve().then(() => { throw new Error('a'); }).then(() => console.log('b')).catch(() => console.log('c'));?",
-    "options": [
-      "'c' is logged, 'b' is not logged",
-      "'b' is logged, 'c' is not logged",
-      "Both 'b' and 'c' are logged",
-      "Neither 'b' nor 'c' are logged"
-    ],
-    "correct_answer": "'c' is logged, 'b' is not logged"
-  },
-  {
-    "question": "In an async function, if you have const p = Promise.reject('x'); p.catch(() => {}); await p; what happens?",
-    "options": [
-      "The await throws 'x' because the rejection was already handled",
-      "The await resolves with undefined because the rejection was caught",
-      "The await ignores the rejection and continues",
-      "The await causes a UnhandledPromiseRejection warning"
-    ],
-    "correct_answer": "The await throws 'x' because the rejection was already handled"
-  },
-  {
-    "question": "What is the difference between Promise.resolve(1).finally(() => 2) and Promise.resolve(1).then(() => 2)?",
-    "options": [
-      "finally ignores the return value, while then uses it to resolve the chain",
-      "finally executes before then, while then executes after",
-      "Both produce the same result",
-      "finally cannot be chained after then"
-    ],
-    "correct_answer": "finally ignores the return value, while then uses it to resolve the chain"
-  },
-  {
-    "question": "What happens when you await a value that is a Promise that resolves to another Promise?",
-    "options": [
-      "The await resolves only after both Promises settle, returning the inner Promise's value",
-      "The await returns the inner Promise itself without unwrapping",
-      "The await throws a TypeError",
-      "The await resolves immediately with the outer Promise"
-    ],
-    "correct_answer": "The await resolves only after both Promises settle, returning the inner Promise's value"
-  },
-  {
-    "question": "What is the result of new Promise((resolve) => { resolve(1); }).then((v) => v + 1).then((v) => v * 2)?",
-    "options": [
-      "A Promise that resolves to 4",
-      "A Promise that resolves to 3",
-      "A Promise that resolves to 2",
-      "A Promise that resolves to undefined"
-    ],
-    "correct_answer": "A Promise that resolves to 4"
-  },
-  {
-    "question": "In the Node.js event loop, if both a resolved Promise microtask and a setImmediate callback are scheduled, which executes first?",
-    "options": [
-      "The Promise microtask executes before setImmediate",
-      "setImmediate executes before the Promise microtask",
-      "They execute in the same phase, in order of registration",
-      "Their order is non-deterministic"
-    ],
-    "correct_answer": "The Promise microtask executes before setImmediate"
-  },
-  {
-    "question": "What is the output of const p = Promise.reject('err'); p.catch(() => 'caught'); p.then(v => console.log(v));?",
-    "options": [
-      "Nothing is logged because the rejection is unhandled",
-      "'caught' is logged",
-      "'err' is logged",
-      "undefined is logged"
-    ],
-    "correct_answer": "Nothing is logged because the rejection is unhandled"
-  },
-  {
-    "question": "If an async function returns await on a Promise that rejects, and the rejection is caught by a catch block inside the function, what does the async function return?",
-    "options": [
-      "It returns a resolved Promise with the value from the catch block",
-      "It returns a rejected Promise with the error",
-      "It returns undefined",
-      "It returns a pending Promise"
-    ],
-    "correct_answer": "It returns a resolved Promise with the value from the catch block"
-  },
-  {
-    "question": "What is the value of result after const result = await Promise.race([Promise.resolve('a'), Promise.resolve('b')]);?",
-    "options": [
-      "'a'",
-      "'b'",
-      "'a' or 'b' depending on race condition",
-      "An array ['a', 'b']"
-    ],
-    "correct_answer": "'a'"
-  },
-  {
-    "question": "What is the output of the following code? async function test() { console.log(1); await Promise.resolve(); console.log(2); } test(); console.log(3);",
-    "options": [
-      "1, 3, 2",
-      "1, 2, 3",
-      "3, 1, 2",
-      "1, 3, 2 (with 2 logged in a microtask)"
-    ],
-    "correct_answer": "1, 3, 2"
-  },
-  {
-    "question": "If a Promise is rejected and has multiple .catch() handlers attached, which handlers execute?",
-    "options": [
-      "Only the first .catch() in the chain executes",
-      "All attached .catch() handlers execute",
-      "None execute if one already handled the rejection",
-      "Only the last .catch() executes"
-    ],
-    "correct_answer": "Only the first .catch() in the chain executes"
-  },
-  {
-    "question": "What happens when await is used in a for...of loop with an array of Promises?",
-    "options": [
-      "Each Promise is awaited sequentially, one after another",
-      "All Promises are awaited in parallel, and the loop continues when all settle",
-      "The loop throws an error because await cannot be used in loops",
-      "The loop runs synchronously and ignores the await"
-    ],
-    "correct_answer": "Each Promise is awaited sequentially, one after another"
-  },
-  {
-    "question": "What is the result of Promise.resolve(5).then(v => v, err => err + 1).then(v => v + 1)?",
-    "options": [
-      "A Promise that resolves to 6",
-      "A Promise that resolves to 7",
-      "A Promise that resolves to 5",
-      "A Promise that rejects"
-    ],
-    "correct_answer": "A Promise that resolves to 6"
-  },
-  {
-    "question": "In an async function, if await is used on a Promise that never settles, what happens to the async function and the event loop?",
-    "options": [
-      "The async function remains pending forever, and the event loop continues with other tasks",
-      "The async function blocks the event loop indefinitely",
-      "The async function eventually times out and rejects",
-      "The async function returns undefined after a default timeout"
-    ],
-    "correct_answer": "The async function remains pending forever, and the event loop continues with other tasks"
-  },
-  {
-    "question": "What does Promise.reject('error').catch(() => { throw 'new error'; }).catch(e => e) resolve to?",
-    "options": [
-      "'new error'",
-      "'error'",
-      "undefined",
-      "A rejected Promise with 'new error'"
-    ],
-    "correct_answer": "'new error'"
-  },
-  {
-    "question": "When a then() callback returns a value that is a Promise that resolves to null, what does the next then() receive?",
-    "options": [
-      "null",
-      "undefined",
-      "The Promise itself",
-      "0"
-    ],
-    "correct_answer": "null"
-  },
-  {
-    "question": "What is the behavior of async functions regarding the arguments object?",
-    "options": [
-      "async functions do not have an arguments object",
-      "async functions have a special AsyncArguments object",
-      "async functions have the same arguments object as regular functions",
-      "async functions only support rest parameters, not arguments"
-    ],
-    "correct_answer": "async functions have the same arguments object as regular functions"
-  },
-  {
-    "question": "What is the output of Promise.resolve(1).then(() => 2).then(() => {}).then(v => console.log(v))?",
-    "options": [
-      "undefined",
-      "1",
-      "2",
-      "null"
-    ],
-    "correct_answer": "undefined"
-  },
-  {
-    "question": "If you have const p = new Promise((resolve) => { setTimeout(resolve, 0, 'done'); }); await p; console.log('after'); inside an async function, in what order do the setTimeout callback, the Promise resolution, and 'after' log?",
-    "options": [
-      "setTimeout callback runs, then Promise resolves, then 'after' is logged",
-      "Promise resolves, setTimeout callback runs, then 'after' is logged",
-      "'after' is logged, then setTimeout callback runs, then Promise resolves",
-      "setTimeout callback runs, 'after' is logged, then Promise resolves"
-    ],
-    "correct_answer": "setTimeout callback runs, then Promise resolves, then 'after' is logged"
+    "correct_answer": "Promise.race() integrates natively with the Promise's rejection handling and can clean up resources more cleanly when combined with AbortController"
   }
 ]
