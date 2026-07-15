@@ -260,6 +260,12 @@ async function generateMCQs() {
         await fs.writeFile(outputPath, JSON.stringify(finalJsonObject, null, 2), 'utf-8');
         console.log(`✅ Chunk ${chunk} processed successfully! Database JSON saved to ${outputFileName}`);
 
+        // Save the raw clean Markdown file side-by-side
+        const mdFileName = outputFileName.replace(/\.json$/, '.md');
+        const mdOutputPath = path.resolve(mdFileName);
+        await fs.writeFile(mdOutputPath, markdownContent, 'utf-8');
+        console.log(`📝 Raw Markdown also saved side-by-side to ${mdFileName}`);
+
       } catch (saveError) {
         console.error(`\n❌ Save Error in Chunk ${chunk}:`, saveError.message);
         throw saveError;
