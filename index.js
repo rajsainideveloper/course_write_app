@@ -2,7 +2,8 @@ import puppeteer from 'puppeteer-extra';
 import StealthPlugin from 'puppeteer-extra-plugin-stealth';
 import fs from 'fs/promises';
 import path from 'path';
-import { getPromptForChunk } from './prompts.js';
+import { getPromptForChunk, TOTAL_CHUNKS } from './prompts.js';
+
 
 
 // Enable stealth to minimize automated browser signals
@@ -11,7 +12,7 @@ puppeteer.use(StealthPlugin());
 // Configuration
 const CONFIG = {
   url: 'https://chat.deepseek.com/',
-  topic: 'JavaScript Promises and Async/Await',
+  topic: 'Reasoning and Aptitude',
   outputFile: 'mcq_questions.json',
   userDataDir: './user_data',
   
@@ -132,14 +133,15 @@ async function generateMCQs() {
     
     console.log('✅ Chat interface ready!');
 
-    const totalChunks = 10;
+    const totalChunks = TOTAL_CHUNKS;
     const questionsPerChunk = 10;
     let allQuestions = [];
 
     for (let chunk = 1; chunk <= totalChunks; chunk++) {
       console.log(`\n============================================================`);
-      console.log(`🌀 Processing Chunk ${chunk}/${totalChunks} (${questionsPerChunk} MCQs)...`);
+      console.log(`🌀 Processing Chunk ${chunk}/${totalChunks}...`);
       console.log(`============================================================`);
+
 
       const promptText = getPromptForChunk(chunk, CONFIG, questionsPerChunk);
 
@@ -181,39 +183,23 @@ async function generateMCQs() {
         throw new Error(`Failed to extract text content for chunk ${chunk}.`);
       }
 
-      console.log('🧹 Cleaning and parsing JSON...');
-      let jsonString = extractedText.trim();
-      const jsonMatch = extractedText.match(/```json\s*([\s\S]*?)\s*```/) || extractedText.match(/```\s*([\s\S]*?)\s*```/);
-      if (jsonMatch && jsonMatch[1]) {
-        jsonString = jsonMatch[1].trim();
-      } else {
-        const startIdx = extractedText.indexOf('[');
-        const endIdx = extractedText.lastIndexOf(']');
-        if (startIdx !== -1 && endIdx !== -1) {
-          jsonString = extractedText.substring(startIdx, endIdx + 1);
-        }
+      console.log('🧹 Cleaning and saving Markdown content...');
+      let markdownContent = extractedText.trim();
+      
+      // Remove leading and trailing markdown code block fences if present
+      const markdownMatch = extractedText.match(/```markdown\s*([\s\S]*?)\s*```/) || extractedText.match(/```\s*([\s\S]*?)\s*```/);
+      if (markdownMatch && markdownMatch[1]) {
+        markdownContent = markdownMatch[1].trim();
       }
 
-      jsonString = jsonString.trim();
-
       try {
-        const parsedData = JSON.parse(jsonString);
-        if (Array.isArray(parsedData)) {
-          allQuestions.push(...parsedData);
-          const outputPath = path.resolve(CONFIG.outputFile);
-          await fs.writeFile(outputPath, JSON.stringify(allQuestions, null, 2), 'utf-8');
-          
-          console.log(`✅ Chunk ${chunk} processed successfully! Cumulative questions saved: ${allQuestions.length}`);
-          console.dir(parsedData, { depth: null, colors: true });
-        } else {
-          throw new Error(`Extracted data for chunk ${chunk} is not a valid JSON array.`);
-        }
-      } catch (parseError) {
-        console.error(`\n❌ JSON Parse Error in Chunk ${chunk}.`);
-        const rawFileName = `raw_response_chunk_${chunk}.txt`;
-        console.log(`Saving raw response to ${rawFileName} for manual review.`);
-        await fs.writeFile(rawFileName, extractedText, 'utf-8');
-        throw parseError;
+        const outputFileName = `chapter_${chunk}.md`;
+        const outputPath = path.resolve(outputFileName);
+        await fs.writeFile(outputPath, markdownContent, 'utf-8');
+        console.log(`✅ Chunk ${chunk} processed successfully! Chapter saved to ${outputFileName}`);
+      } catch (saveError) {
+        console.error(`\n❌ Save Error in Chunk ${chunk}:`, saveError.message);
+        throw saveError;
       }
     }
 
