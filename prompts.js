@@ -443,3 +443,27 @@ Write a highly comprehensive, educational, and engaging chapter covering these t
 **Here are the raw topics to convert and cover in this chapter:**
 ${topicListString}`;
 }
+
+/**
+ * Returns a safe, descriptive filename based on the chapter title.
+ * 
+ * @param {number} chunk - The current chunk number
+ * @returns {string} - A clean filename like "01_analogy_verbal.md"
+ */
+export function getFilenameForChunk(chunk) {
+  const currentChunk = chunkTopics[chunk];
+  if (!currentChunk) return `chapter_${chunk}.md`;
+  
+  // Format chunk number with leading zero if needed, e.g., "01"
+  const prefix = chunk.toString().padStart(2, '0');
+  
+  // Clean the title to make it a safe, consistent filename
+  const cleanTitle = currentChunk.title
+    .toLowerCase()
+    .replace(/[&/\\#,+()$~%.'":*?<>{}]/g, '') // remove special characters
+    .trim()
+    .replace(/\s+/g, '_'); // replace spaces with underscores
+    
+  return `${prefix}_${cleanTitle}.md`;
+}
+

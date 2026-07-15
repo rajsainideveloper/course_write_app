@@ -2,7 +2,8 @@ import puppeteer from 'puppeteer-extra';
 import StealthPlugin from 'puppeteer-extra-plugin-stealth';
 import fs from 'fs/promises';
 import path from 'path';
-import { getPromptForChunk, TOTAL_CHUNKS } from './prompts.js';
+import { getPromptForChunk, TOTAL_CHUNKS, getFilenameForChunk } from './prompts.js';
+
 
 
 
@@ -193,10 +194,11 @@ async function generateMCQs() {
       }
 
       try {
-        const outputFileName = `chapter_${chunk}.md`;
+        const outputFileName = getFilenameForChunk(chunk);
         const outputPath = path.resolve(outputFileName);
         await fs.writeFile(outputPath, markdownContent, 'utf-8');
         console.log(`✅ Chunk ${chunk} processed successfully! Chapter saved to ${outputFileName}`);
+
       } catch (saveError) {
         console.error(`\n❌ Save Error in Chunk ${chunk}:`, saveError.message);
         throw saveError;
