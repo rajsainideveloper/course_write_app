@@ -2,11 +2,31 @@ import puppeteer from 'puppeteer-extra';
 import StealthPlugin from 'puppeteer-extra-plugin-stealth';
 import fs from 'fs/promises';
 import path from 'path';
-import { getPromptForChunk, TOTAL_CHUNKS, getFilenameForChunk } from './prompts.js';
+import { getPromptForChunk, TOTAL_CHUNKS, getFilenameForChunk, chunkTopics } from './prompts.js';
 
+function getFormattedTimestamp() {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, '0');
+  const day = String(now.getDate()).padStart(2, '0');
+  const hours = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+  const seconds = String(now.getSeconds()).padStart(2, '0');
+  return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+}
 
-
-
+function markdownToHtmlParagraphs(markdown) {
+  const lines = markdown.split('\n');
+  const htmlLines = lines.map(line => {
+    const trimmed = line.trim();
+    if (trimmed === '') {
+      return '<p><br></p>';
+    }
+    // Return the line wrapped in a paragraph tag.
+    return `<p>${line}</p>`;
+  });
+  return htmlLines.join('');
+}
 // Enable stealth to minimize automated browser signals
 puppeteer.use(StealthPlugin());
 
@@ -16,6 +36,14 @@ const CONFIG = {
   topic: 'Reasoning and Aptitude',
   outputFile: 'mcq_questions.json',
   userDataDir: './user_data',
+  
+  // Dynamic Database Enum configurations
+  user_id: 'IN6Q2',
+  question_type: 'l',         // l = STUDY_MATERIAL
+  question_subtype: 'study_material',
+  exam_type: 'SS',            // SS = Staff Selection Commission
+  subject: 'LR',              // LR = Logical Reasoning
+  tags: 'SSC | Logical Reasoning',
   
   // Login Credentials
   credentials: {
@@ -167,7 +195,7 @@ async function generateMCQs() {
       await page.keyboard.press('Enter');
 
       // 10 questions takes slightly longer to generate. Let's wait 45 seconds per chunk.
-      const generationDelay = 60000;
+      const generationDelay = 180000;
       console.log(`⏳ Waiting ${generationDelay / 1000} seconds for response...`);
       await new Promise(resolve => setTimeout(resolve, generationDelay));
 
@@ -196,8 +224,41 @@ async function generateMCQs() {
       try {
         const outputFileName = getFilenameForChunk(chunk);
         const outputPath = path.resolve(outputFileName);
-        await fs.writeFile(outputPath, markdownContent, 'utf-8');
-        console.log(`✅ Chunk ${chunk} processed successfully! Chapter saved to ${outputFileName}`);
+
+        const currentChunk = chunkTopics[chunk] || {
+          title: `Reasoning Concepts - Part ${chunk}`,
+          topics: ["General Aptitude and Logic Reasoning Applications"]
+        };
+
+        // Convert the clean markdown into HTML-wrapped paragraphs
+        const htmlContent = markdownToHtmlParagraphs(markdownContent);
+        const created_at = getFormattedTimestamp();
+
+        // Build the inner nested question_json object
+        const question_json = {
+          material_title: currentChunk.title,
+          content: htmlContent,
+          description: "",
+          metadata: {
+            created_at: created_at,
+            type: "study_material"
+          }
+        };
+
+        // Build the outer final database JSON object
+        const finalJsonObject = {
+          user_id: CONFIG.user_id,
+          question_type: CONFIG.question_type,
+          question_subtype: CONFIG.question_subtype,
+          exam_type: currentChunk.exam_type || CONFIG.exam_type || "SS",
+          subject: currentChunk.subject || CONFIG.subject || "LR",
+          tags: currentChunk.tags || CONFIG.tags || `SSC | ${currentChunk.title}`,
+          question: currentChunk.title,
+          question_json: JSON.stringify(question_json)
+        };
+
+        await fs.writeFile(outputPath, JSON.stringify(finalJsonObject, null, 2), 'utf-8');
+        console.log(`✅ Chunk ${chunk} processed successfully! Database JSON saved to ${outputFileName}`);
 
       } catch (saveError) {
         console.error(`\n❌ Save Error in Chunk ${chunk}:`, saveError.message);

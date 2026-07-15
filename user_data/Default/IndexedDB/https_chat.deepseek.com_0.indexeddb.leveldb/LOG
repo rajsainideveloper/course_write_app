@@ -1,14 +1,14 @@
-2026/07/15-20:25:45.857 11403 Reusing MANIFEST /Applications/XAMPP/xamppfiles/htdocs/course_write_app/user_data/Default/IndexedDB/https_chat.deepseek.com_0.indexeddb.leveldb/MANIFEST-000001
-2026/07/15-20:25:45.858 11403 Recovering log #65
-2026/07/15-20:25:45.859 11403 Reusing old log /Applications/XAMPP/xamppfiles/htdocs/course_write_app/user_data/Default/IndexedDB/https_chat.deepseek.com_0.indexeddb.leveldb/000065.log 
-2026/07/15-20:25:45.860 11403 Delete type=2 #63
-2026/07/15-20:25:45.864 b803 Level-0 table #70: started
-2026/07/15-20:25:45.864 b803 Level-0 table #70: 26941 bytes OK
-2026/07/15-20:25:45.865 b803 Delete type=0 #65
-2026/07/15-20:25:45.865 b903 Manual compaction at level-0 from '\x00\x15\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x16\x00\x00\x00' @ 0 : 0; will stop at '\x00\x16\x00\x00\x05' @ 2094 : 1
-2026/07/15-20:25:45.865 b903 Compacting 1@0 + 1@1 files
-2026/07/15-20:25:45.866 b903 Generated table #71@0: 30 keys, 657 bytes
-2026/07/15-20:25:45.866 b903 Compacted 1@0 + 1@1 files => 657 bytes
-2026/07/15-20:25:45.866 b903 compacted to: files[ 0 1 1 0 0 0 0 ]
-2026/07/15-20:25:45.866 b903 Delete type=2 #70
-2026/07/15-20:25:45.870 b603 Manual compaction at level-0 from '\x00\x16\x00\x00\x05' @ 2094 : 1 .. '\x00\x16\x00\x00\x00' @ 0 : 0; will stop at (end)
+2026/07/15-21:11:45.576 b003 Reusing MANIFEST /Applications/XAMPP/xamppfiles/htdocs/course_write_app/user_data/Default/IndexedDB/https_chat.deepseek.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/07/15-21:11:45.576 b003 Recovering log #73
+2026/07/15-21:11:45.576 b003 Reusing old log /Applications/XAMPP/xamppfiles/htdocs/course_write_app/user_data/Default/IndexedDB/https_chat.deepseek.com_0.indexeddb.leveldb/000073.log 
+2026/07/15-21:11:45.576 b003 Delete type=2 #71
+2026/07/15-21:11:45.579 f003 Level-0 table #78: started
+2026/07/15-21:11:45.579 f003 Level-0 table #78: 1541 bytes OK
+2026/07/15-21:11:45.580 f003 Delete type=0 #73
+2026/07/15-21:11:45.580 870b Manual compaction at level-0 from '\x00\x17\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x18\x00\x00\x00' @ 0 : 0; will stop at '\x00\x18\x00\x00\x05' @ 2327 : 1
+2026/07/15-21:11:45.580 870b Compacting 1@0 + 1@1 files
+2026/07/15-21:11:45.580 870b Generated table #79@0: 30 keys, 657 bytes
+2026/07/15-21:11:45.580 870b Compacted 1@0 + 1@1 files => 657 bytes
+2026/07/15-21:11:45.580 870b compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/07/15-21:11:45.580 870b Delete type=2 #78
+2026/07/15-21:11:45.580 f103 Manual compaction at level-0 from '\x00\x18\x00\x00\x05' @ 2327 : 1 .. '\x00\x18\x00\x00\x00' @ 0 : 0; will stop at (end)

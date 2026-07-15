@@ -465,7 +465,7 @@ ${topicListString}`;
  */
 export function getFilenameForChunk(chunk) {
   const currentChunk = chunkTopics[chunk];
-  if (!currentChunk) return `chapter_${chunk}.md`;
+  if (!currentChunk) return `chapter_${chunk}.json`;
   
   // Format chunk number with leading zero if needed, e.g., "01"
   const prefix = chunk.toString().padStart(2, '0');
@@ -477,6 +477,6 @@ export function getFilenameForChunk(chunk) {
     .trim()
     .replace(/\s+/g, '_'); // replace spaces with underscores
     
-  return `${prefix}_${cleanTitle}.md`;
+  return `${prefix}_${cleanTitle}.json`;
 }
 
