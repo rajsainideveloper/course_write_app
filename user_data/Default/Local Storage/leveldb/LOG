@@ -1,30 +1,6 @@
-2026/07/16-02:08:44.796 3d03 Reusing MANIFEST /Applications/XAMPP/xamppfiles/htdocs/course_write_app/user_data/Default/Local Storage/leveldb/MANIFEST-000001
-2026/07/16-02:08:44.800 3d03 Recovering log #58
-2026/07/16-02:08:44.802 3d03 Reusing old log /Applications/XAMPP/xamppfiles/htdocs/course_write_app/user_data/Default/Local Storage/leveldb/000058.log 
-2026/07/16-02:23:54.027 3d03 Level-0 table #63: started
-2026/07/16-02:23:54.036 3d03 Level-0 table #63: 28403 bytes OK
-2026/07/16-02:23:54.043 3d03 Delete type=0 #58
-2026/07/16-02:43:55.166 170b Level-0 table #65: started
-2026/07/16-02:43:55.179 170b Level-0 table #65: 27159 bytes OK
-2026/07/16-02:43:55.183 170b Delete type=0 #62
-2026/07/16-03:03:56.361 2c03 Level-0 table #67: started
-2026/07/16-03:03:56.371 2c03 Level-0 table #67: 27159 bytes OK
-2026/07/16-03:03:56.376 2c03 Delete type=0 #64
-2026/07/16-03:23:57.360 170b Level-0 table #69: started
-2026/07/16-03:23:57.372 170b Level-0 table #69: 27159 bytes OK
-2026/07/16-03:23:57.376 170b Delete type=0 #66
-2026/07/16-03:23:57.381 3d03 Compacting 4@0 + 1@1 files
-2026/07/16-03:23:57.385 3d03 Generated table #70@0: 41 keys, 10765 bytes
-2026/07/16-03:23:57.385 3d03 Compacted 4@0 + 1@1 files => 10765 bytes
-2026/07/16-03:23:57.385 3d03 compacted to: files[ 0 1 0 0 0 0 0 ]
-2026/07/16-03:23:57.386 3d03 Delete type=2 #63
-2026/07/16-03:23:57.386 3d03 Delete type=2 #60
-2026/07/16-03:23:57.386 3d03 Delete type=2 #65
-2026/07/16-03:23:57.386 3d03 Delete type=2 #67
-2026/07/16-03:23:57.386 3d03 Delete type=2 #69
-2026/07/16-03:43:58.304 2c03 Level-0 table #72: started
-2026/07/16-03:43:58.316 2c03 Level-0 table #72: 27163 bytes OK
-2026/07/16-03:43:58.320 2c03 Delete type=0 #68
-2026/07/16-04:03:59.254 170b Level-0 table #74: started
-2026/07/16-04:03:59.267 170b Level-0 table #74: 27173 bytes OK
-2026/07/16-04:03:59.273 170b Delete type=0 #71
+2026/07/16-19:44:27.917 2307 Reusing MANIFEST /Applications/XAMPP/xamppfiles/htdocs/course_write_app/user_data/Default/Local Storage/leveldb/MANIFEST-000001
+2026/07/16-19:44:27.922 2307 Recovering log #73
+2026/07/16-19:44:27.924 2307 Reusing old log /Applications/XAMPP/xamppfiles/htdocs/course_write_app/user_data/Default/Local Storage/leveldb/000073.log 
+2026/07/16-19:59:35.821 3b0b Level-0 table #77: started
+2026/07/16-19:59:35.828 3b0b Level-0 table #77: 28316 bytes OK
+2026/07/16-19:59:35.831 3b0b Delete type=0 #73

@@ -1,2 +1,164 @@
-[△] [▽]
-[▽] [?]
+# Analogy of Figures (Matrix based)
+> The Grammar of Visual Logic: From Positional Rules to Transformational Sequences
+
+## Chapter 33: The Architecture of Visual Matrices
+
+Figure matrix problems are the visual counterpart of number series and letter series. The examiner presents a grid of figures, usually 2×2 or 3×3, with one cell missing. Your task is to identify the underlying rule that governs the arrangement and select the figure that completes the pattern.
+
+The cognitive challenge is multi-dimensional. Unlike a simple series, a matrix has *two axes* of variation. The rule can operate row-wise, column-wise, or diagonally. It can involve rotation, reflection, addition, subtraction, or the movement of elements. The elite solver does not look for a single rule; they look for a *rule set* that consistently explains all cells. The key insight is that the relationship between the first two figures in a row determines the transformation that produces the third.
+
+---
+
+### Section 1 | The Matrix Logic: Row-Wise and Column-Wise Rules
+
+The foundational principle of figure matrices is that the third figure in a row (or column) is derived from the first two figures through a consistent operation. The operation can be:
+- **Addition/Union**: The third figure is the combination of the first two.
+- **Subtraction/Overlay**: The third figure is the difference between the first two.
+- **Transformation**: The third figure is the first figure transformed by a rule derived from the second.
+- **Rotation**: The figures rotate by a fixed angle along the row or column.
+
+[alert type="success"]
+**The Dual-Axis Principle**: In a 3×3 matrix, the rule may apply to rows, columns, or both. Always test the rule on the complete rows first. If it fails, test the columns. If both fail, test the diagonals. The most common rule is row-wise operation.
+[/alert]
+
+**Step-by-step protocol for matrix reasoning**:
+1.  **Scan the matrix**: Look for patterns in the complete rows or columns.
+2.  **Identify the transformation**: Compare the first two figures in a row. How does the second figure differ from the first?
+3.  **Apply the transformation**: Use the same transformation to derive the third figure from the first and second.
+4.  **Verify**: Ensure the same rule applies to all complete rows or columns.
+5.  **Select the option**: The figure that satisfies the rule.
+
+[example]
+**Question**: In a 3×3 matrix, the first row has a circle, a square, and a triangle. The second row has a square, a triangle, and a circle. The third row has a triangle, a circle, and a missing figure. What is the missing figure?
+**Solution**:
+1.  **Identify the pattern**: The figures are rotating positions. In the first row: circle, square, triangle. In the second row: square, triangle, circle. This is a left shift of one position.
+2.  **Apply the pattern**: The third row should be: triangle, circle, square.
+3.  **Result**: The missing figure is a square.
+[/example]
+
+---
+
+### Section 2 | 2×2 Matrix Patterns: The Fundamental Unit
+
+The 2×2 matrix is the simplest form. It has only four cells, with one missing. The rule typically applies row-wise or column-wise. Because there is only one complete row or column to infer the rule, the pattern is often more direct.
+
+**The Mechanics**:
+- The first two cells in a row are the inputs.
+- The third cell (in the same row) is the output.
+- The same operation applies to the other row.
+
+[alert type="warning"]
+**The Ambiguity Trap**: With only one complete row, multiple rules can fit the data. The correct rule is the one that also fits the column-wise relationship. Always test both rows and columns to ensure consistency.
+[/alert]
+
+[example]
+**Question**: In a 2×2 matrix, the first row has a figure with 3 lines and a figure with 5 lines. The second row has a figure with 4 lines and a missing figure. The total number of lines in each row is equal. What is the missing figure?
+**Solution**:
+1.  **Row 1**: 3 + 5 = 8 lines.
+2.  **Row 2**: 4 + x = 8 → x = 4.
+3.  **Result**: The missing figure has 4 lines.
+[/example]
+
+---
+
+### Section 3 | 3×3 Matrix Patterns: The Standard Grid
+
+The 3×3 matrix is the most common format. It has three rows and three columns, with the bottom-right cell typically missing. The rule can be applied row-wise, column-wise, or both. The complexity arises from the combination of multiple transformations.
+
+**The Common Rule Types**:
+- **Addition**: The third figure is the union of the first two (overlay without overlap).
+- **Subtraction**: The third figure is the difference between the first two (remove overlapping parts).
+- **Intersection**: The third figure is the overlapping part of the first two.
+- **Rotation**: Each figure rotates by 90° or 180° along the row or column.
+- **Reflection**: Each figure is mirrored along a vertical or horizontal axis.
+- **Shading**: The shading pattern changes systematically.
+
+[alert type="danger"]
+**The Overlapping Trap**: When the rule involves addition or subtraction, the figures may have overlapping elements. You must carefully determine whether the overlapping parts are included or excluded in the output.
+[/alert]
+
+[flashcards title="3×3 Matrix Rule Types"]
+| Rule Type | Description | Example |
+|-----------|-------------|---------|
+| Addition | Third = First + Second | Circle + Square = Circle with Square inside |
+| Subtraction | Third = First - Second | Square - Circle = Square with hole |
+| Intersection | Third = Overlap of First and Second | Only the overlapping lines |
+| Rotation | Figures rotate by fixed angle | 0°, 90°, 180° along rows |
+| Reflection | Figures are mirrored | Vertical or horizontal flip |
+| Shading | Shading patterns change | Light, medium, dark in sequence |
+[/flashcards]
+
+[example]
+**Question**: In a 3×3 matrix, the first row has a triangle, a square, and a pentagon. The second row has a square, a pentagon, and a hexagon. The third row has a pentagon, a hexagon, and a missing figure. What is the missing figure?
+**Solution**:
+1.  **Identify the pattern**: The number of sides increases by 1 along each row and column.
+2.  **First row**: 3, 4, 5. Second row: 4, 5, 6. Third row: 5, 6, 7.
+3.  **Result**: The missing figure is a heptagon (7 sides).
+[/example]
+
+---
+
+### Section 4 | Pattern Completion Based Grids: The Holistic Rule
+
+In this archetype, the matrix is not based on a simple arithmetic or transformational rule. Instead, the entire grid forms a larger pattern (e.g., each row has the same set of elements in different orientations). The challenge is to see the global arrangement.
+
+**The Mechanics**:
+- The grid is divided into regions, each containing a figure.
+- The figures in each row or column share a common property (e.g., all have the same number of elements, all have the same shape, or all have a specific orientation).
+- The missing figure must complete the set.
+
+**The Algorithm**:
+1.  **Identify the properties**: List the properties of the figures (shape, size, shading, orientation, number of elements).
+2.  **Check rows**: See if each row has a consistent set of properties.
+3.  **Check columns**: See if each column has a consistent set of properties.
+4.  **Check diagonals**: Sometimes the rule applies diagonally.
+5.  **Select the figure**: The figure that satisfies all properties.
+
+[alert type="success"]
+**The Property Checklist**: Create a mental checklist of possible properties: shape, size, shading, rotation, reflection, position, and count. The correct rule often involves a combination of two or more properties.
+[/alert]
+
+[example]
+**Question**: In a 3×3 matrix, each row contains one circle, one square, and one triangle. The circles are shaded in different positions (top, middle, bottom). The squares are rotated at different angles. The triangles are of different sizes. What is the missing figure?
+**Solution**:
+1.  **Row 1**: Circle (top), Square (0°), Triangle (large).
+2.  **Row 2**: Square (45°), Triangle (medium), Circle (middle).
+3.  **Row 3**: Triangle (small), Circle (bottom), Square (90°).
+4.  **Pattern**: Each row has exactly one of each shape. The shading/rotation/size follows a pattern.
+5.  **Result**: The missing figure is a square rotated at 90°.
+[/example]
+
+---
+
+## Cognitive Biases in Figure Matrices
+
+1.  **The Single-Rule Fallacy**: Students often stop at the first rule they find. Always test the rule on all complete rows and columns. If it fails, the rule is incorrect.
+2.  **The Over-Simplification Trap**: Sometimes the rule is a combination of transformations (e.g., addition followed by rotation). Look for multi-step rules.
+3.  **The Rotation Confusion**: When figures rotate, the direction (clockwise vs. counterclockwise) matters. Be precise.
+4.  **The Positional Neglect**: In grids with multiple elements, the position of each element within the figure is part of the rule. Do not ignore it.
+
+[quiz title="Chapter 33: Analogy of Figures (Matrix based) Mastery Quiz"]
+Q: In a 3×3 matrix, the first row has a circle, a square, and a circle with a square inside. The second row has a square, a circle, and a square with a circle inside. The third row has a triangle, a circle, and a missing figure. What is the missing figure?
+- A) Triangle with circle inside (Correct: The rule is addition: the third figure is the union of the first two. Circle + Square = Circle with Square inside. Square + Circle = Square with Circle inside. Triangle + Circle = Triangle with Circle inside.)
+- B) Circle with triangle inside
+- C) Square with triangle inside
+- D) Circle inside triangle
+
+Q: In a 2×2 matrix, the first row has a figure with 2 dots and a figure with 4 dots. The second row has a figure with 3 dots and a missing figure. The total number of dots in each row is equal. What is the missing figure?
+- A) 2 dots
+- B) 3 dots (Correct: 2 + 4 = 6. 3 + x = 6 → x = 3.)
+- C) 4 dots
+- D) 5 dots
+
+Q: In a 3×3 matrix, the figures in the first row are all squares. The figures in the second row are all circles. The figures in the third row are all triangles. Each figure has a different shading (light, medium, dark). The shading pattern is repeated in each row. What is the missing figure?
+- A) A medium triangle (Correct: The shading pattern is light, medium, dark in each row. The third row has light and dark triangles, so the missing one is medium.)
+- B) A dark triangle
+- C) A light triangle
+- D) A medium square
+
+Q: In a 3×3 matrix, the first row has a figure with 1 line, 2 lines, and 3 lines. The second row has a figure with 2 lines, 3 lines, and 4 lines. The third row has a figure with 3 lines, 4 lines, and a missing figure. What is the missing figure?
+- A) 5 lines (Correct: The number of lines increases by 1 along each row and column.)
+- B) 6 lines
+- C) 4 lines
+- D) 7 lines
+[/quiz]
