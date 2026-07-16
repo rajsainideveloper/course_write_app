@@ -1,0 +1,10 @@
+{
+  "user_id": "IN6Q2",
+  "question_type": "l",
+  "question_subtype": "study_material",
+  "exam_type": "SS",
+  "subject": "LR",
+  "tags": "SSC | Logical Reasoning",
+  "question": "Direction Sense",
+  "question_json": "{\"material_title\":\"Direction Sense\",\"content\":\"North\\n                  |\\n        Northwest  |  Northeast\\n              \\\\    |    /\\n               \\\\   |   /\\n    West ---------+--------- East\\n               /   |   \\\\\\n              /    |    \\\\\\n        Southwest  |  Southeast\\n                  |\\n                South\",\"description\":\"\",\"metadata\":{\"created_at\":\"2026-07-16 02:22:49\",\"type\":\"study_material\"}}"
+}

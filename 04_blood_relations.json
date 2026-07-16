@@ -1,0 +1,10 @@
+{
+  "user_id": "IN6Q2",
+  "question_type": "l",
+  "question_subtype": "study_material",
+  "exam_type": "SS",
+  "subject": "LR",
+  "tags": "SSC | Logical Reasoning",
+  "question": "Blood Relations",
+  "question_json": "{\"material_title\":\"Blood Relations\",\"content\":\"Grandfather (M) = Grandmother (F)\\n               |\\n          Father (M) = Mother (F)\\n               |\\n     Son (M) = Wife (F)   Daughter (F)\",\"description\":\"\",\"metadata\":{\"created_at\":\"2026-07-16 02:20:02\",\"type\":\"study_material\"}}"
+}

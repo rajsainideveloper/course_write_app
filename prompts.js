@@ -406,16 +406,16 @@ export function getPromptForChunk(chunk, config, questionsPerChunk) {
 # SPECIFIC DIALECT FORMATTING RULES
 You must output ONLY valid text in our custom Markdown dialect. Follow these strict formatting rules exactly:
 
-1. **Page Title**: Start the document with exactly one `# [Title]` (use the chapter name: "${currentChunk.title}").
-2. **Subtitle**: Immediately follow with `> [Subtitle]` (an intellectually rich, engaging, human-sounding subtitle summarizing the chapter).
-3. **Chapters**: Group main topics using `## Chapter ${chunk}: [Chapter Name]`.
-4. **Sections**: Break chapters into sections using `### Section [X] | [Section Name]`.
+1. **Page Title**: Start the document with exactly one \`# [Title]\` (use the chapter name: "${currentChunk.title}").
+2. **Subtitle**: Immediately follow with \`> [Subtitle]\` (an intellectually rich, engaging, human-sounding subtitle summarizing the chapter).
+3. **Chapters**: Group main topics using \`## Chapter ${chunk}: [Chapter Name]\`.
+4. **Sections**: Break chapters into sections using \`### Section [X] | [Section Name]\`.
 5. **Text Formatting**:
-   - Use `**bold**` for emphasis.
-   - Use `*italic*` for terms.
-   - Use `=highlight=` for key formulas, shortcuts, or crucial words (e.g. `=n(n+1)/2=`).
-6. **Lists**: Use `- ` for bullet points.
-7. **Tables**: Use standard markdown tables (e.g., `| Col1 | Col2 |`).
+   - Use \`**bold**\` for emphasis.
+   - Use \`*italic*\` for terms.
+   - Use \`=highlight=\` for key formulas, shortcuts, or crucial words (e.g. \`=n(n+1)/2=\`).
+6. **Lists**: Use \`- \` for bullet points.
+7. **Tables**: Use standard markdown tables (e.g., \`| Col1 | Col2 |\`).
 8. **Important Alerts**: For crucial tips, formulas, or warning traps, wrap them in:
    [alert type="success"]
    **Important Note:** ...
@@ -431,7 +431,7 @@ You must output ONLY valid text in our custom Markdown dialect. Follow these str
     | [Front Term 1] | [Back Definition 1] |
     | [Front Term 2] | [Back Definition 2] |
     [/flashcards]
-11. **Quizzes (Multiple questions per block)**: For quizzes, group 2-5 questions together using the `[quiz]` shortcode and `Q:` for each question exactly like this:
+11. **Quizzes (Multiple questions per block)**: For quizzes, group 2-5 questions together using the \`[quiz]\` shortcode and \`Q:\` for each question exactly like this:
     [quiz title="[Quiz Title]"]
     Q: [Question 1 text]
     - A) [Option 1]
@@ -446,8 +446,8 @@ You must output ONLY valid text in our custom Markdown dialect. Follow these str
     - D) [Option 4]
     [/quiz]
 
-Do not use any standard HTML tags like `<div>` or `<span>`. Only output this custom Markdown format.
-Do not write any conversational text or preamble/postscript before or after the Markdown document. Start directly with the `# [Title]` line and end with the last `[/quiz]` or content block.
+Do not use any standard HTML tags like \`<div>\` or \`<span>\`. Only output this custom Markdown format.
+Do not write any conversational text or preamble/postscript before or after the Markdown document. Start directly with the \`# [Title]\` line and end with the last \`[/quiz]\` or content block.
 
 **Here are the raw topics to convert and cover in this chapter:**
 ${topicListString}`;

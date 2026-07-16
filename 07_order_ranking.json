@@ -1,0 +1,10 @@
+{
+  "user_id": "IN6Q2",
+  "question_type": "l",
+  "question_subtype": "study_material",
+  "exam_type": "SS",
+  "subject": "LR",
+  "tags": "SSC | Logical Reasoning",
+  "question": "Order & Ranking",
+  "question_json": "{\"material_title\":\"Order & Ranking\",\"content\":\"L | 1 | 2 | 3 | 4 | 5 | ... | n | R\\n     A   B   C   D   E\",\"description\":\"\",\"metadata\":{\"created_at\":\"2026-07-16 02:28:30\",\"type\":\"study_material\"}}"
+}
