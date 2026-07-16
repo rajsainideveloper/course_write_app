@@ -2,7 +2,7 @@ import puppeteer from 'puppeteer-extra';
 import StealthPlugin from 'puppeteer-extra-plugin-stealth';
 import fs from 'fs/promises';
 import path from 'path';
-import { getPromptForChunk, TOTAL_CHUNKS, getFilenameForChunk, chunkTopics } from './prompts.js';
+import { getPromptForChunk, TOTAL_CHUNKS, getFilenameForChunk, chunkTopics } from './SSC_Logical_Reasoning/prompts_old.js';
 
 function getFormattedTimestamp() {
   const now = new Date();
