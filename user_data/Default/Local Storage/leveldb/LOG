@@ -1,6 +1,3 @@
-2026/07/16-19:44:27.917 2307 Reusing MANIFEST /Applications/XAMPP/xamppfiles/htdocs/course_write_app/user_data/Default/Local Storage/leveldb/MANIFEST-000001
-2026/07/16-19:44:27.922 2307 Recovering log #73
-2026/07/16-19:44:27.924 2307 Reusing old log /Applications/XAMPP/xamppfiles/htdocs/course_write_app/user_data/Default/Local Storage/leveldb/000073.log 
-2026/07/16-19:59:35.821 3b0b Level-0 table #77: started
-2026/07/16-19:59:35.828 3b0b Level-0 table #77: 28316 bytes OK
-2026/07/16-19:59:35.831 3b0b Delete type=0 #73
+2026/07/17-23:39:35.042 3b03 Reusing MANIFEST /Applications/XAMPP/xamppfiles/htdocs/course_write_app/user_data/Default/Local Storage/leveldb/MANIFEST-000001
+2026/07/17-23:39:35.045 3b03 Recovering log #109
+2026/07/17-23:39:35.046 3b03 Reusing old log /Applications/XAMPP/xamppfiles/htdocs/course_write_app/user_data/Default/Local Storage/leveldb/000109.log 

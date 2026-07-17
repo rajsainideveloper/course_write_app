@@ -2,7 +2,7 @@ import puppeteer from 'puppeteer-extra';
 import StealthPlugin from 'puppeteer-extra-plugin-stealth';
 import fs from 'fs/promises';
 import path from 'path';
-import { getPromptForChunk, TOTAL_CHUNKS, getFilenameForChunk, chunkTopics } from './SSC_Logical_Reasoning/prompts_old.js';
+import { getPromptForChunk, TOTAL_CHUNKS, getFilenameForChunk, chunkTopics } from './prompts.js';
 
 function getFormattedTimestamp() {
   const now = new Date();
@@ -237,7 +237,8 @@ async function generateMCQs() {
       await page.keyboard.press('Enter');
 
       // 10 questions takes slightly longer to generate. Let's wait 130 seconds per chunk.
-      const generationDelay = 130000; // Full production delay (130s)
+      const generationDelay = 190000; // Full production delay (130s)
+      // const generationDelay = 100000; // Full production delay (130s)
       console.log(`⏳ Waiting ${generationDelay / 1000} seconds for response...`);
       await new Promise(resolve => setTimeout(resolve, generationDelay));
 

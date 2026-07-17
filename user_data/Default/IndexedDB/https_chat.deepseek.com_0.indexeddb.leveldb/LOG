@@ -1,14 +1,5 @@
-2026/07/16-19:44:30.031 830b Reusing MANIFEST /Applications/XAMPP/xamppfiles/htdocs/course_write_app/user_data/Default/IndexedDB/https_chat.deepseek.com_0.indexeddb.leveldb/MANIFEST-000001
-2026/07/16-19:44:30.031 830b Recovering log #144
-2026/07/16-19:44:30.032 830b Reusing old log /Applications/XAMPP/xamppfiles/htdocs/course_write_app/user_data/Default/IndexedDB/https_chat.deepseek.com_0.indexeddb.leveldb/000144.log 
-2026/07/16-19:44:30.032 830b Delete type=2 #142
-2026/07/16-19:44:30.034 f803 Level-0 table #149: started
-2026/07/16-19:44:30.034 f803 Level-0 table #149: 1626 bytes OK
-2026/07/16-19:44:30.034 f803 Delete type=0 #144
-2026/07/16-19:44:30.034 b603 Manual compaction at level-0 from '\x00*\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00+\x00\x00\x00' @ 0 : 0; will stop at '\x00*\x00\x00\xc8 \x00l\x00o\x00c\x00a\x00l\x00-\x00f\x00o\x00r\x00a\x00g\x00e\x00-\x00d\x00e\x00t\x00e\x00c\x00t\x00-\x00b\x00l\x00o\x00b\x00-\x00s\x00u\x00p\x00p\x00o\x00r\x00t' @ 4273 : 1
-2026/07/16-19:44:30.034 b603 Compacting 1@0 + 1@1 files
-2026/07/16-19:44:30.034 b603 Generated table #150@0: 31 keys, 645 bytes
-2026/07/16-19:44:30.034 b603 Compacted 1@0 + 1@1 files => 645 bytes
-2026/07/16-19:44:30.034 b603 compacted to: files[ 0 1 1 0 0 0 0 ]
-2026/07/16-19:44:30.035 b603 Delete type=2 #149
-2026/07/16-19:44:30.035 f903 Manual compaction at level-0 from '\x00*\x00\x00\xc8 \x00l\x00o\x00c\x00a\x00l\x00-\x00f\x00o\x00r\x00a\x00g\x00e\x00-\x00d\x00e\x00t\x00e\x00c\x00t\x00-\x00b\x00l\x00o\x00b\x00-\x00s\x00u\x00p\x00p\x00o\x00r\x00t' @ 4273 : 1 .. '\x00+\x00\x00\x00' @ 0 : 0; will stop at (end)
+2026/07/17-23:39:37.520 f303 Reusing MANIFEST /Applications/XAMPP/xamppfiles/htdocs/course_write_app/user_data/Default/IndexedDB/https_chat.deepseek.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/07/17-23:39:37.520 f303 Recovering log #210
+2026/07/17-23:39:37.520 f303 Reusing old log /Applications/XAMPP/xamppfiles/htdocs/course_write_app/user_data/Default/IndexedDB/https_chat.deepseek.com_0.indexeddb.leveldb/000210.log 
+2026/07/17-23:39:37.520 f303 Delete type=2 #208
+2026/07/17-23:39:37.522 f403 Manual compaction at level-0 from '\x00>\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00?\x00\x00\x00' @ 0 : 0; will stop at (end)
