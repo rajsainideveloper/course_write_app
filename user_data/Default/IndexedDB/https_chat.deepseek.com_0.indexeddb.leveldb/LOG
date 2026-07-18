@@ -1,5 +1,14 @@
-2026/07/17-23:39:37.520 f303 Reusing MANIFEST /Applications/XAMPP/xamppfiles/htdocs/course_write_app/user_data/Default/IndexedDB/https_chat.deepseek.com_0.indexeddb.leveldb/MANIFEST-000001
-2026/07/17-23:39:37.520 f303 Recovering log #210
-2026/07/17-23:39:37.520 f303 Reusing old log /Applications/XAMPP/xamppfiles/htdocs/course_write_app/user_data/Default/IndexedDB/https_chat.deepseek.com_0.indexeddb.leveldb/000210.log 
-2026/07/17-23:39:37.520 f303 Delete type=2 #208
-2026/07/17-23:39:37.522 f403 Manual compaction at level-0 from '\x00>\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00?\x00\x00\x00' @ 0 : 0; will stop at (end)
+2026/07/18-00:02:41.736 b303 Reusing MANIFEST /Applications/XAMPP/xamppfiles/htdocs/course_write_app/user_data/Default/IndexedDB/https_chat.deepseek.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/07/18-00:02:41.736 b303 Recovering log #214
+2026/07/18-00:02:41.736 b303 Reusing old log /Applications/XAMPP/xamppfiles/htdocs/course_write_app/user_data/Default/IndexedDB/https_chat.deepseek.com_0.indexeddb.leveldb/000214.log 
+2026/07/18-00:02:41.737 b303 Delete type=2 #212
+2026/07/18-00:02:41.738 f103 Level-0 table #219: started
+2026/07/18-00:02:41.739 f103 Level-0 table #219: 1636 bytes OK
+2026/07/18-00:02:41.739 f103 Delete type=0 #214
+2026/07/18-00:02:41.739 a30b Manual compaction at level-0 from '\x00@\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00A\x00\x00\x00' @ 0 : 0; will stop at '\x00@\x00\x00\xc8 \x00l\x00o\x00c\x00a\x00l\x00-\x00f\x00o\x00r\x00a\x00g\x00e\x00-\x00d\x00e\x00t\x00e\x00c\x00t\x00-\x00b\x00l\x00o\x00b\x00-\x00s\x00u\x00p\x00p\x00o\x00r\x00t' @ 6531 : 1
+2026/07/18-00:02:41.739 a30b Compacting 1@0 + 1@1 files
+2026/07/18-00:02:41.739 a30b Generated table #220@0: 36 keys, 699 bytes
+2026/07/18-00:02:41.739 a30b Compacted 1@0 + 1@1 files => 699 bytes
+2026/07/18-00:02:41.739 a30b compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/07/18-00:02:41.739 a30b Delete type=2 #219
+2026/07/18-00:02:41.740 b403 Manual compaction at level-0 from '\x00@\x00\x00\xc8 \x00l\x00o\x00c\x00a\x00l\x00-\x00f\x00o\x00r\x00a\x00g\x00e\x00-\x00d\x00e\x00t\x00e\x00c\x00t\x00-\x00b\x00l\x00o\x00b\x00-\x00s\x00u\x00p\x00p\x00o\x00r\x00t' @ 6531 : 1 .. '\x00A\x00\x00\x00' @ 0 : 0; will stop at (end)
