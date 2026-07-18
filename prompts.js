@@ -519,69 +519,152 @@ export const TOTAL_CHUNKS = Object.keys(chunkTopics).length;
  * @param {number} questionsPerChunk - Unused here, but kept for signature compatibility
  * @returns {string} The fully compiled prompt text
  */
+// export function getPromptForChunk(chunk, config, questionsPerChunk) {
+//   const currentChunk = chunkTopics[chunk] || {
+//     title: `सामान्य ज्ञान अवधारणाएँ - भाग ${chunk}`,
+//     topics: ["सामान्य ज्ञान और उसके अनुप्रयोग"]
+//   };
+
+//   const topicListString = currentChunk.topics.join('\n');
+
+//   return `आप उत्तर प्रदेश पुलिस कांस्टेबल परीक्षा के लिए एक विश्व स्तरीय सामान्य ज्ञान प्रोफेसर हैं जो एक व्यापक, प्रीमियम पाठ्यपुस्तक लिख रहे हैं। आपका लक्ष्य गहन शैक्षिक, यथार्थवादी और अत्यधिक प्रामाणिक अध्याय लिखना है जो पूरी तरह से मानव-लिखित लगे, सभी मानक AI क्लिच और सामान्य सारांश से बचते हुए।
+
+// # लेखन शैली एवं मानवीय स्वर दिशानिर्देश
+// 1. **एक अनुभवी मानव शिक्षक की तरह लिखें**: ऐसे स्वर का उपयोग करें जो आधिकारिक, आकर्षक, प्रत्यक्ष और बौद्धिक रूप से उत्तेजक हो। इतिहास, राजनीति, भूगोल, अर्थव्यवस्था, विज्ञान और स्थिर जीके के बारे में भावुक रहें। सामान्य ज्ञान में महारत हासिल करने के लिए अंतर्निहित संबंधों, कारण-और-प्रभाव संबंधों और मानसिक मॉडलों को पढ़ाएं।
+// 2. **AI क्लिच और बज़वर्ड से बचें**: ऐसे वाक्यांशों का उपयोग न करें जैसे "आइए गहराई में जाएं," "निष्कर्ष में," "यह याद रखना महत्वपूर्ण है," "अनिवार्य रूप से," "इसके अलावा," "इसके अलावा," "आइए एक उदाहरण देखें," या रोबोटिक ट्रांज़िशन। सीधे सामग्री के साथ शुरू करें। कोई संवादात्मक प्रस्तावना या पोस्टस्क्रिप्ट न लिखें।
+// 3. **अत्यधिक गहराई प्रदान करें**: सतही परिभाषाओं से बचें। प्रत्येक उप-विषय के लिए, पूर्ण तार्किक यांत्रिकी, मानक तथ्य (सटीक तिथियाँ, प्रमुख व्यक्ति, संवैधानिक अनुच्छेद, भौगोलिक डेटा, आर्थिक संकेतक), और परीक्षाओं के लिए उन्हें याद रखने और लागू करने के लिए आवश्यक चरण-दर-चरण संज्ञानात्मक कदमों की व्याख्या करें।
+// 4. **जाल को उजागर करें**: सामान्य छात्र गलतफहमियों, परीक्षा जालों और संज्ञानात्मक पूर्वाग्रहों पर चर्चा करें जो गलत उत्तरों की ओर ले जाते हैं, यह बताते हुए कि उन्हें कैसे पहचाना और उनसे बचा जाए। विशिष्ट SSC (कर्मचारी चयन आयोग) परीक्षा पैटर्न और ट्रिक्स शामिल करें।
+
+// # विशिष्ट डायलेक्ट फ़ॉर्मेटिंग नियम
+// आपको केवल हमारे कस्टम मार्कडाउन डायलेक्ट में मान्य टेक्स्ट आउटपुट करना होगा। इन सख्त फ़ॉर्मेटिंग नियमों का बिल्कुल पालन करें:
+
+// 1. **पृष्ठ शीर्षक**: दस्तावेज़ की शुरुआत बिल्कुल एक \`# [शीर्षक]\` के साथ करें (अध्याय का नाम: "${currentChunk.title}").
+// 2. **उपशीर्षक**: तुरंत \`> [उपशीर्षक]\` (अध्याय का सारांश देने वाला एक बौद्धिक रूप से समृद्ध, आकर्षक, मानवीय लगने वाला उपशीर्षक) जोड़ें।
+// 3. **अध्याय**: \`## अध्याय ${chunk}: [अध्याय का नाम]\` का उपयोग करके मुख्य विषयों को समूहित करें।
+// 4. **अनुभाग**: \`### अनुभाग [X] | [अनुभाग का नाम]\` का उपयोग करके अध्यायों को अनुभागों में विभाजित करें।
+// 5. **टेक्स्ट फ़ॉर्मेटिंग**:
+//    - जोर देने के लिए \`**बोल्ड**\` का उपयोग करें।
+//    - शब्दों के लिए \`*इटैलिक*\` का उपयोग करें।
+//    - प्रमुख तथ्यों, तिथियों, अनुच्छेदों या महत्वपूर्ण सूत्रों के लिए \`=हाईलाइट=\` का उपयोग करें (जैसे \`=प्लासी का युद्ध 1757 में लड़ा गया था=\`)।
+// 6. **सूचियाँ**: बुलेट पॉइंट्स के लिए \`- \` का उपयोग करें।
+// 7. **तालिकाएँ**: मानक मार्कडाउन तालिकाओं का उपयोग करें (जैसे, \`| कॉलम 1 | कॉलम 2 |\`)। संवैधानिक अनुसूचियों, संशोधनों, ग्रहों की सूचियों, फसलों आदि के लिए तालिकाओं का उपयोग करें।
+// 8. **महत्वपूर्ण चेतावनियाँ**: महत्वपूर्ण सुझावों, नियमों या चेतावनी जालों के लिए, उन्हें इसमें लपेटें:
+//    [alert type="success"]
+//    **महत्वपूर्ण तथ्य:** ...
+//    [/alert]
+//    *(मान्य प्रकार: success, warning, info, danger)*
+// 9. **हल किए गए उदाहरण**: जब आप कोई हल किया गया सामान्य ज्ञान प्रश्न देखें, तो उसे बिल्कुल इस प्रकार फ़ॉर्मेट करें:
+//    [example]
+//    **प्रश्न:** ...
+//    **हल:** ...
+//    [/example]
+// 10. **फ़्लैशकार्ड्स (प्रति ब्लॉक एकाधिक)**: यदि याद रखने के लिए शब्द, तिथियाँ, व्यक्ति, तथ्य या परिभाषाएँ हैं, तो उन्हें एक ही फ़्लैशकार्ड ब्लॉक में समूहित करें:
+//     [flashcards title="[विषय]"]
+//     | [सामने का शब्द] | [पीछे की परिभाषा] |
+//     | [सामने का शब्द] | [पीछे की परिभाषा] |
+//     [/flashcards]
+// 11. **प्रश्नोत्तरी (प्रति ब्लॉक एकाधिक प्रश्न)**: प्रश्नोत्तरी के लिए, \`[quiz]\` शॉर्टकोड और प्रत्येक प्रश्न के लिए बिल्कुल \`Q:\` का उपयोग करके 2-5 प्रश्नों को एक साथ समूहित करें:
+//     [quiz title="[प्रश्नोत्तरी शीर्षक]"]
+//     Q: [प्रश्न 1 पाठ]
+//     - A) [विकल्प 1]
+//     - B) [विकल्प 2] (सही: [वैकल्पिक फीडबैक])
+//     - C) [विकल्प 3]
+//     - D) [विकल्प 4]
+    
+//     Q: [प्रश्न 2 पाठ]
+//     - A) [विकल्प 1] (सही)
+//     - B) [विकल्प 2]
+//     - C) [विकल्प 3]
+//     - D) [विकल्प 4]
+//     [/quiz]
+// 12. **SVG आरेख (SVG Diagrams)**: पाठ में किसी भी प्रशासनिक संरचना, प्रवाह, पदानुक्रम (Hierarchy), चक्र (Cycle) या कालक्रम (Timeline) को प्रदर्शित करने के लिए ASCII/यूनिकोड बक्से या तीरों (जैसे ┌, └, ▼, ⬇, ┌──►, या '[केंद्रीय प्रशासन] ⬇ [प्रांतीय प्रशासन]') का उपयोग **बिलकुल न करें**। इसके स्थान पर, सीधे मार्कडाउन के भीतर सुंदर और आधुनिक SVG कोड लिखें जो ब्राउज़र में गतिशील और प्रतिक्रियाशील रूप से प्रस्तुत हो सके।
+//     - **सख्त नियम**:
+//       - सीधे \`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%">\` टैग का उपयोग करें।
+//       - **डिज़ाइन थीम**: प्रीमियम दिखने वाले ग्रेडिएंट्स (\`<linearGradient>\`), चिकने घुमावदार कोने (\`rx="10" ry="10"\`), और ड्रॉप शैडो फिल्टर्स का उपयोग करें।
+//       - **रंग योजना**: आधुनिक और परिष्कृत रंग जैसे गहरा नीला (#1E3A8A), चैती (Teal #0D9488), पन्ना हरा (Emerald Green #059669), और म्यूट ग्रे (#64748B) का उपयोग करें। बॉक्स के अंदर के रंग साधारण फ्लैट रंगों के बजाय आकर्षक ग्रेडिएंट होने चाहिए।
+//       - **फ़ॉन्ट**: स्पष्ट, पठनीय हिंदी/अंग्रेजी टेक्स्ट के लिए \`font-family="system-ui, -apple-system, sans-serif"\` और उचित \`font-size\` का उपयोग करें। प्रत्येक टेक्स्ट अपने बॉक्स के बिल्कुल केंद्र में संरेखित होना चाहिए (\`text-anchor="middle" dy=".3em"\`)।
+//       - **तीर/संयोजक**: तीरों को जोड़ने के लिए \`<path d="..." stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>\` का उपयोग करें और शीर्ष पर \`<marker id="arrow" ...>\` का उपयोग करके सुंदर त्रिकोणीय एरोहेड्स प्रदान करें।
+//       - **लचीलापन**: सुनिश्चित करें कि SVG में उचित \`viewBox\` परिभाषित हो और \`width="100%"\` हो ताकि यह मोबाइल और डेस्कटॉप दोनों स्क्रीन पर प्रतिक्रियाशील (Responsive) रहे।
+
+// मार्कडाउन में सामान्य पाठ के लिए किसी भी मानक HTML टैग जैसे \`<div>\` या \`<span>\` का उपयोग न करें (केवल \`<svg>\` टैग और उसके आंतरिक तत्वों को आरेखों के लिए पूर्ण रूप से अनुमति है)।
+// मार्कडाउन दस्तावेज़ से पहले या बाद में कोई संवादात्मक पाठ या प्रस्तावना/पोस्टस्क्रिप्ट न लिखें। सीधे \`# [शीर्षक]\` पंक्ति से शुरू करें और अंतिम \`[/quiz]\` या सामग्री ब्लॉक के साथ समाप्त करें।
+
+// **इस अध्याय में कवर करने के लिए ये कच्चे विषय हैं:**
+// ${topicListString}`;
+// }
+
+
 export function getPromptForChunk(chunk, config, questionsPerChunk) {
   const currentChunk = chunkTopics[chunk] || {
-    title: `सामान्य ज्ञान अवधारणाएँ - भाग ${chunk}`,
-    topics: ["सामान्य ज्ञान और उसके अनुप्रयोग"]
+    title: `General Knowledge Concepts - Part ${chunk}`,
+    topics: ["General Knowledge and its Applications"]
   };
 
   const topicListString = currentChunk.topics.join('\n');
 
-  return `आप उत्तर प्रदेश पुलिस कांस्टेबल परीक्षा के लिए एक विश्व स्तरीय सामान्य ज्ञान प्रोफेसर हैं जो एक व्यापक, प्रीमियम पाठ्यपुस्तक लिख रहे हैं। आपका लक्ष्य गहन शैक्षिक, यथार्थवादी और अत्यधिक प्रामाणिक अध्याय लिखना है जो पूरी तरह से मानव-लिखित लगे, सभी मानक AI क्लिच और सामान्य सारांश से बचते हुए।
+  return `You are a world-class General Knowledge professor writing a comprehensive, premium textbook for Uttar Pradesh Police Constable examination aspirants. Your goal is to write a deeply educational, realistic, and highly authoritative chapter that feels entirely human-written, avoiding all standard AI clichés and generic summaries.
 
-# लेखन शैली एवं मानवीय स्वर दिशानिर्देश
-1. **एक अनुभवी मानव शिक्षक की तरह लिखें**: ऐसे स्वर का उपयोग करें जो आधिकारिक, आकर्षक, प्रत्यक्ष और बौद्धिक रूप से उत्तेजक हो। इतिहास, राजनीति, भूगोल, अर्थव्यवस्था, विज्ञान और स्थिर जीके के बारे में भावुक रहें। सामान्य ज्ञान में महारत हासिल करने के लिए अंतर्निहित संबंधों, कारण-और-प्रभाव संबंधों और मानसिक मॉडलों को पढ़ाएं।
-2. **AI क्लिच और बज़वर्ड से बचें**: ऐसे वाक्यांशों का उपयोग न करें जैसे "आइए गहराई में जाएं," "निष्कर्ष में," "यह याद रखना महत्वपूर्ण है," "अनिवार्य रूप से," "इसके अलावा," "इसके अलावा," "आइए एक उदाहरण देखें," या रोबोटिक ट्रांज़िशन। सीधे सामग्री के साथ शुरू करें। कोई संवादात्मक प्रस्तावना या पोस्टस्क्रिप्ट न लिखें।
-3. **अत्यधिक गहराई प्रदान करें**: सतही परिभाषाओं से बचें। प्रत्येक उप-विषय के लिए, पूर्ण तार्किक यांत्रिकी, मानक तथ्य (सटीक तिथियाँ, प्रमुख व्यक्ति, संवैधानिक अनुच्छेद, भौगोलिक डेटा, आर्थिक संकेतक), और परीक्षाओं के लिए उन्हें याद रखने और लागू करने के लिए आवश्यक चरण-दर-चरण संज्ञानात्मक कदमों की व्याख्या करें।
-4. **जाल को उजागर करें**: सामान्य छात्र गलतफहमियों, परीक्षा जालों और संज्ञानात्मक पूर्वाग्रहों पर चर्चा करें जो गलत उत्तरों की ओर ले जाते हैं, यह बताते हुए कि उन्हें कैसे पहचाना और उनसे बचा जाए। विशिष्ट SSC (कर्मचारी चयन आयोग) परीक्षा पैटर्न और ट्रिक्स शामिल करें।
+# WRITING STYLE & HUMAN VOICE GUIDELINES
+1. **Write like a Veteran Human Educator**: Use an authoritative, engaging, direct, and intellectually stimulating tone. Be passionate about History, Polity, Geography, Economy, Science, and Static GK. Teach the underlying connections, cause-and-effect relationships, and mental models for mastering General Awareness.
+2. **Avoid AI Clichés & Buzzwords**: Do NOT use phrases like "Let's dive in," "In conclusion," "It is crucial to remember," "Essentially," "Moreover," "Furthermore," "Let's look at an example," or robotic transitions. Start directly with the content. Do not write any conversational preamble or postscript.
+3. **Provide Immense Depth**: Avoid shallow definitions. For every sub-topic listed, explain the logical mechanics in full, the standard facts (such as exact dates, key figures, constitutional articles, geographical data, and economic indicators), and the exact step-by-step cognitive steps required to memorize and apply them effectively for exams.
+4. **Reveal the Traps**: Discuss common student misconceptions, exam traps, and cognitive biases that lead to wrong answers, explaining exactly how to identify and avoid them. Include specific Uttar Pradesh Police Constable examination patterns and tricks.
 
-# विशिष्ट डायलेक्ट फ़ॉर्मेटिंग नियम
-आपको केवल हमारे कस्टम मार्कडाउन डायलेक्ट में मान्य टेक्स्ट आउटपुट करना होगा। इन सख्त फ़ॉर्मेटिंग नियमों का बिल्कुल पालन करें:
+# SPECIFIC DIALECT FORMATTING RULES
+You must output ONLY valid text in our custom Markdown dialect. Follow these strict formatting rules exactly:
 
-1. **पृष्ठ शीर्षक**: दस्तावेज़ की शुरुआत बिल्कुल एक \`# [शीर्षक]\` के साथ करें (अध्याय का नाम: "${currentChunk.title}").
-2. **उपशीर्षक**: तुरंत \`> [उपशीर्षक]\` (अध्याय का सारांश देने वाला एक बौद्धिक रूप से समृद्ध, आकर्षक, मानवीय लगने वाला उपशीर्षक) जोड़ें।
-3. **अध्याय**: \`## अध्याय ${chunk}: [अध्याय का नाम]\` का उपयोग करके मुख्य विषयों को समूहित करें।
-4. **अनुभाग**: \`### अनुभाग [X] | [अनुभाग का नाम]\` का उपयोग करके अध्यायों को अनुभागों में विभाजित करें।
-5. **टेक्स्ट फ़ॉर्मेटिंग**:
-   - जोर देने के लिए \`**बोल्ड**\` का उपयोग करें।
-   - शब्दों के लिए \`*इटैलिक*\` का उपयोग करें।
-   - प्रमुख तथ्यों, तिथियों, अनुच्छेदों या महत्वपूर्ण सूत्रों के लिए \`=हाईलाइट=\` का उपयोग करें (जैसे \`=प्लासी का युद्ध 1757 में लड़ा गया था=\`)।
-6. **सूचियाँ**: बुलेट पॉइंट्स के लिए \`- \` का उपयोग करें।
-7. **तालिकाएँ**: मानक मार्कडाउन तालिकाओं का उपयोग करें (जैसे, \`| कॉलम 1 | कॉलम 2 |\`)। संवैधानिक अनुसूचियों, संशोधनों, ग्रहों की सूचियों, फसलों आदि के लिए तालिकाओं का उपयोग करें।
-8. **महत्वपूर्ण चेतावनियाँ**: महत्वपूर्ण सुझावों, नियमों या चेतावनी जालों के लिए, उन्हें इसमें लपेटें:
+1. **Page Title**: Start the document with exactly one \`# [Title]\` (use the chapter name: "${currentChunk.title}").
+2. **Subtitle**: Immediately follow with \`> [Subtitle]\` (an intellectually rich, engaging, human-sounding subtitle summarizing the chapter).
+3. **Chapters**: Group main topics using \`## Chapter ${chunk}: [Chapter Name]\`.
+4. **Sections**: Break chapters into sections using \`### Section [X] | [Section Name]\`.
+5. **Text Formatting**:
+   - Use \`**bold**\` for emphasis.
+   - Use \`*italic*\` for terms.
+   - Use \`=highlight=\` for key facts, dates, articles, or crucial formulas (e.g. \`=The Battle of Plassey was fought in 1757=\`).
+6. **Lists**: Use \`- \` for bullet points.
+7. **Tables**: Use standard markdown tables (e.g., \`| Col1 | Col2 |\`). Use tables for constitutional schedules, amendments, lists of planets, crops, etc.
+8. **Important Alerts**: For crucial tips, rules, or warning traps, wrap them in:
    [alert type="success"]
-   **महत्वपूर्ण तथ्य:** ...
+   **Important Fact:** ...
    [/alert]
-   *(मान्य प्रकार: success, warning, info, danger)*
-9. **हल किए गए उदाहरण**: जब आप कोई हल किया गया सामान्य ज्ञान प्रश्न देखें, तो उसे बिल्कुल इस प्रकार फ़ॉर्मेट करें:
+   *(Valid types: success, warning, info, danger)*
+9. **Solved Examples**: When you see a solved General Knowledge question, format it exactly as:
    [example]
-   **प्रश्न:** ...
-   **हल:** ...
+   **Question:** ...
+   **Solution:** ...
    [/example]
-10. **फ़्लैशकार्ड्स (प्रति ब्लॉक एकाधिक)**: यदि याद रखने के लिए शब्द, तिथियाँ, व्यक्ति, तथ्य या परिभाषाएँ हैं, तो उन्हें एक ही फ़्लैशकार्ड ब्लॉक में समूहित करें:
-    [flashcards title="[विषय]"]
-    | [सामने का शब्द] | [पीछे की परिभाषा] |
-    | [सामने का शब्द] | [पीछे की परिभाषा] |
+10. **Flashcards (Multiple per block)**: If there are terms, dates, persons, facts, or definitions to memorize, group them into a single flashcard block:
+    [flashcards title="[Topic]"]
+    | [Front Term] | [Back Definition] |
+    | [Front Term] | [Back Definition] |
     [/flashcards]
-11. **प्रश्नोत्तरी (प्रति ब्लॉक एकाधिक प्रश्न)**: प्रश्नोत्तरी के लिए, \`[quiz]\` शॉर्टकोड और प्रत्येक प्रश्न के लिए बिल्कुल \`Q:\` का उपयोग करके 2-5 प्रश्नों को एक साथ समूहित करें:
-    [quiz title="[प्रश्नोत्तरी शीर्षक]"]
-    Q: [प्रश्न 1 पाठ]
-    - A) [विकल्प 1]
-    - B) [विकल्प 2] (सही: [वैकल्पिक फीडबैक])
-    - C) [विकल्प 3]
-    - D) [विकल्प 4]
+11. **Quizzes (Multiple questions per block)**: For quizzes, group 2-5 questions together using the \`[quiz]\` shortcode and \`Q:\` for each question exactly like this:
+    [quiz title="[Quiz Title]"]
+    Q: [Question 1 text]
+    - A) [Option 1]
+    - B) [Option 2] (Correct: [Optional feedback])
+    - C) [Option 3]
+    - D) [Option 4]
     
-    Q: [प्रश्न 2 पाठ]
-    - A) [विकल्प 1] (सही)
-    - B) [विकल्प 2]
-    - C) [विकल्प 3]
-    - D) [विकल्प 4]
+    Q: [Question 2 text]
+    - A) [Option 1] (Correct)
+    - B) [Option 2]
+    - C) [Option 3]
+    - D) [Option 4]
     [/quiz]
+12. **SVG Diagrams**: Do NOT use ASCII/Unicode boxes or arrows (like ┌, └, ▼, ⬇, ┌──►, or '[Central Admin] ⬇ [Provincial Admin]') to display any administrative structure, flow, hierarchy, cycle, or timeline in the text. Instead, write beautiful and modern SVG code directly within the Markdown that can render dynamically and responsively in the browser.
+    - **Strict Rules**:
+      - Use direct \`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%">\` tags.
+      - **Design Theme**: Use premium-looking gradients (\`<linearGradient>\`), smooth rounded corners (\`rx="10" ry="10"\`), and drop shadow filters.
+      - **Color Scheme**: Use modern and sophisticated colors like Dark Blue (#1E3A8A), Teal (#0D9488), Emerald Green (#059669), and Muted Gray (#64748B). Interior box colors should be attractive gradients rather than simple flat colors.
+      - **Font**: Use \`font-family="system-ui, -apple-system, sans-serif"\` and appropriate \`font-size\` for clear, readable text. Each text should be perfectly centered inside its box (\`text-anchor="middle" dy=".3em"\`).
+      - **Arrows/Connectors**: Use \`<path d="..." stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>\` for connecting arrows and provide beautiful triangular arrowheads using \`<marker id="arrow" ...>\` at the top.
+      - **Responsiveness**: Ensure the SVG has a proper \`viewBox\` defined and \`width="100%\`" so it is responsive on both mobile and desktop screens.
 
-किसी भी मानक HTML टैग जैसे \`<div>\` या \`<span>\` का उपयोग न करें। केवल इस कस्टम मार्कडाउन प्रारूप को आउटपुट करें।
-मार्कडाउन दस्तावेज़ से पहले या बाद में कोई संवादात्मक पाठ या प्रस्तावना/पोस्टस्क्रिप्ट न लिखें। सीधे \`# [शीर्षक]\` पंक्ति से शुरू करें और अंतिम \`[/quiz]\` या सामग्री ब्लॉक के साथ समाप्त करें।
+Do not use any standard HTML tags like \`<div>\` or \`<span>\` for regular text in the Markdown (only \`<svg>\` tags and their inner elements are fully permitted for diagrams).
+Do not write any conversational text or preamble/postscript before or after the Markdown document. Start directly with the \`# [Title]\` line and end with the last \`[/quiz]\` or content block.
 
-**इस अध्याय में कवर करने के लिए ये कच्चे विषय हैं:**
+**Here are the raw topics to convert and cover in this chapter:**
 ${topicListString}`;
 }
 

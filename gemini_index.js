@@ -298,17 +298,45 @@ async function generateMCQs() {
 
       console.log('🔍 Extracting response directly from Gemini DOM...');
       let extractedText = await page.evaluate(() => {
-        // 1. Locate all response containers in Gemini's DOM
-        const containers = Array.from(document.querySelectorAll('.model-response-text, .message-content, message-outer'));
+        // 1. Locate all potential content blocks inside Gemini's response area
+        const contentElements = Array.from(document.querySelectorAll('.model-response-text, .message-content, rich-text, [class*="response-content" i]'));
+        if (contentElements.length === 0) {
+          // If no specific content classes, fall back to any message-outer or article
+          const fallbacks = Array.from(document.querySelectorAll('message-outer, g-message-outer, article'));
+          if (fallbacks.length === 0) return '';
+          const lastFallback = fallbacks[fallbacks.length - 1];
+          return convertNodeToMarkdown(lastFallback)
+            .replace(/\n{3,}/g, '\n\n')
+            .trim();
+        }
         
-        let lastResponseDiv = null;
-        if (containers.length === 0) {
-          // Fallback to standard paragraphs if containers are missing
-          const fallbackDivs = Array.from(document.querySelectorAll('rich-text, [class*="response" i]'));
-          if (fallbackDivs.length === 0) return '';
-          lastResponseDiv = fallbackDivs[fallbackDivs.length - 1];
-        } else {
-          lastResponseDiv = containers[containers.length - 1];
+        // Grab the very last content element on the page (which belongs to the active response)
+        const lastContent = contentElements[contentElements.length - 1];
+        
+        // 2. Traverse up the DOM to find the outermost assistant response turn container.
+        // We look for elements with tags/classes containing "message" or "response", or "article".
+        // We stop immediately if we reach the global scroll container (e.g. .conversation-container)
+        let lastResponseDiv = lastContent;
+        let temp = lastContent.parentElement;
+        while (temp && temp !== document.body) {
+          const tagName = temp.tagName.toLowerCase();
+          const className = (temp.className || '').toString().toLowerCase();
+          
+          if (className.includes('chat-history') || className.includes('conversation-container') || className.includes('all-conversations')) {
+            break;
+          }
+          
+          if (
+            tagName.includes('message') || 
+            tagName.includes('response') || 
+            tagName === 'article' ||
+            className.includes('message-outer') ||
+            className.includes('model-response') ||
+            className.includes('response-container')
+          ) {
+            lastResponseDiv = temp;
+          }
+          temp = temp.parentElement;
         }
         
         if (!lastResponseDiv) return '';
@@ -323,10 +351,14 @@ async function generateMCQs() {
           
           const tagName = node.tagName.toLowerCase();
           
-          // Skip UI-only elements, buttons, SVGs, and the response action bar
+          // Match SVG tags and output their outerHTML directly as raw inline vector graphic
+          if (tagName === 'svg') {
+            return `\n\n${node.outerHTML}\n\n`;
+          }
+          
+          // Skip UI-only elements, buttons, and the response action bar
           if (
             tagName === 'button' || 
-            tagName === 'svg' ||
             node.classList.contains('sr-only') || 
             node.getAttribute('aria-hidden') === 'true' ||
             node.classList.contains('model-response-footer') ||
@@ -433,22 +465,44 @@ async function generateMCQs() {
       if (!extractedText) {
         console.log('⚠️ DOM HTML parsing returned empty. Falling back to raw text extraction...');
         extractedText = await page.evaluate(() => {
-          const containers = Array.from(document.querySelectorAll('.model-response-text, .message-content, message-outer'));
-          if (containers.length > 0) {
-            const last = containers[containers.length - 1];
-            // Extract text but remove the footer if present to avoid noise
-            const clone = last.cloneNode(true);
+          const contentElements = Array.from(document.querySelectorAll('.model-response-text, .message-content, rich-text, [class*="response-content" i]'));
+          if (contentElements.length === 0) {
+            const fallbacks = Array.from(document.querySelectorAll('message-outer, g-message-outer, article'));
+            if (fallbacks.length === 0) return '';
+            return fallbacks[fallbacks.length - 1].textContent || '';
+          }
+          
+          const lastContent = contentElements[contentElements.length - 1];
+          let lastResponseDiv = lastContent;
+          let temp = lastContent.parentElement;
+          while (temp && temp !== document.body) {
+            const tagName = temp.tagName.toLowerCase();
+            const className = (temp.className || '').toString().toLowerCase();
+            
+            if (className.includes('chat-history') || className.includes('conversation-container') || className.includes('all-conversations')) {
+              break;
+            }
+            
+            if (
+              tagName.includes('message') || 
+              tagName.includes('response') || 
+              tagName === 'article' ||
+              className.includes('message-outer') ||
+              className.includes('model-response') ||
+              className.includes('response-container')
+            ) {
+              lastResponseDiv = temp;
+            }
+            temp = temp.parentElement;
+          }
+          
+          if (lastResponseDiv) {
+            const clone = lastResponseDiv.cloneNode(true);
             const footer = clone.querySelector('.model-response-footer, .message-actions');
             if (footer) {
               footer.remove();
             }
             return clone.textContent || '';
-          }
-          
-          // Absolute emergency fallback
-          const divs = Array.from(document.querySelectorAll('rich-text, [class*="response" i]'));
-          if (divs.length > 0) {
-            return divs[divs.length - 1].textContent || '';
           }
           return '';
         });
