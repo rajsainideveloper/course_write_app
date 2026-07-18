@@ -5,9 +5,12 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "chatgpt": "node chatgpt_index.js",
+    "gemini": "node gemini_index.js"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.24.1",
     "puppeteer": "^22.12.0",
     "puppeteer-extra": "^3.3.6",
     "puppeteer-extra-plugin-stealth": "^2.11.2"
