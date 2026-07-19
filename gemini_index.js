@@ -521,6 +521,9 @@ async function generateMCQs() {
         markdownContent = markdownMatch[1].trim();
       }
 
+      // Sometimes Gemini's web UI explicitly prepends "## Gemini said" to the extracted text
+      markdownContent = markdownContent.replace(/^## Gemini said\s*/i, '').trim();
+
       try {
         const outputFileName = getFilenameForChunk(chunk);
         const outputPath = path.resolve(outputFileName);
