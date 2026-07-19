@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%">
+  <defs>
+    <linearGradient id="p1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1E3A8A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0D9488;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="p2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#B45309;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D97706;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="p3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10B981;stop-opacity:1" />
+    </linearGradient>
+    <filter id="boxShadow" x="-2%" y="-5%" width="104%" height="110%">
+      <feDropShadow dx="1" dy="3" stdDeviation="3" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <rect x="50" y="30" width="700" height="90" rx="12" fill="url(#p1)" filter="url(#boxShadow)"/>
+  <text x="70" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF">1. बालाजी विश्वनाथ (1713-1720) - 'मराठा साम्राज्य के द्वितीय संस्थापक'</text>
+  <text x="70" y="95" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#E0F2FE">मुगलों के साथ दिल्ली की संधि (1719) की, जिसे मराठा इतिहास का मैग्नाकार्टा कहा जाता है।</text>
+
+  <rect x="50" y="150" width="700" height="90" rx="12" fill="url(#p2)" filter="url(#boxShadow)"/>
+  <text x="70" y="185" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF">2. बाजीराव प्रथम (1720-1740) - 'लड़ाकू पेशवा'</text>
+  <text x="70" y="215" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#FEF3C7">हिंदू पद पादशाही का नारा दिया। पालखेड के युद्ध (1728) में हैदराबाद के निज़ाम को परास्त किया।</text>
+
+  <rect x="50" y="270" width="700" height="90" rx="12" fill="url(#p3)" filter="url(#boxShadow)"/>
+  <text x="70" y="305" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF">3. बालाजी बाजीराव (1740-1761) - 'नाना साहब'</text>
+  <text x="70" y="335" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#E6F4EA">संगोला की संधि (1750) द्वारा छत्रपति के सारे अधिकार अपने हाथ में लिए। पानीपत का तृतीय युद्ध लड़ा।</text>
+</svg>

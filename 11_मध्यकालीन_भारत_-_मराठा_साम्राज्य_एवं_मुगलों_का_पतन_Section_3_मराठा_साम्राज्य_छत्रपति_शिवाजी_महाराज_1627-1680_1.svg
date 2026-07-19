@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E3A8A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D9488;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#14B8A6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10B981;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#B45309;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F59E0B;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.3"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <!-- Title background -->
+  <rect x="200" y="10" width="400" height="40" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="400" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#1E293B" text-anchor="middle">छत्रपति शिवाजी महाराज: जीवन के महत्वपूर्ण पड़ाव</text>
+
+  <!-- Node 1 -->
+  <rect x="40" y="90" width="190" height="70" rx="10" fill="url(#grad1)" filter="url(#shadow)"/>
+  <text x="135" y="120" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">जन्म एवं प्रारंभिक काल</text>
+  <text x="135" y="142" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#E0F2FE" text-anchor="middle">1627: शिवनेरी दुर्ग</text>
+
+  <!-- Node 2 -->
+  <rect x="295" y="90" width="210" height="70" rx="10" fill="url(#grad2)" filter="url(#shadow)"/>
+  <text x="400" y="120" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">प्रारंभिक सैन्य विजय</text>
+  <text x="400" y="142" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#E0F2FE" text-anchor="middle">1646: तोरण दुर्ग पर अधिकार</text>
+
+  <!-- Node 3 -->
+  <rect x="570" y="90" width="190" height="70" rx="10" fill="url(#grad1)" filter="url(#shadow)"/>
+  <text x="665" y="120" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">अफजल खान वध</text>
+  <text x="665" y="142" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#E0F2FE" text-anchor="middle">1659: बीजापुर को झटका</text>
+
+  <!-- Node 4 -->
+  <rect x="40" y="270" width="190" height="70" rx="10" fill="url(#grad3)" filter="url(#shadow)"/>
+  <text x="135" y="300" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">पुरंदर की संधि</text>
+  <text x="135" y="322" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#E6F4EA" text-anchor="middle">1665: जयसिंह के साथ वार्ता</text>
+
+  <!-- Node 5 -->
+  <rect x="295" y="270" width="210" height="70" rx="10" fill="url(#grad4)" filter="url(#shadow)"/>
+  <text x="400" y="300" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">भव्य राज्याभिषेक</text>
+  <text x="400" y="322" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#FEF3C7" text-anchor="middle">1674: रायगढ़ (गागाभट्ट द्वारा)</text>
+
+  <!-- Node 6 -->
+  <rect x="570" y="270" width="190" height="70" rx="10" fill="url(#grad3)" filter="url(#shadow)"/>
+  <text x="665" y="300" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">महाप्रयाण</text>
+  <text x="665" y="322" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#E6F4EA" text-anchor="middle">1680: स्वराज्य की विरासत</text>
+
+  <!-- Connectors -->
+  <path d="M 230 125 L 295 125" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 505 125 L 570 125" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 665 160 L 665 215 L 135 215 L 135 270" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 230 305 L 295 305" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 505 305 L 570 305" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+</svg>

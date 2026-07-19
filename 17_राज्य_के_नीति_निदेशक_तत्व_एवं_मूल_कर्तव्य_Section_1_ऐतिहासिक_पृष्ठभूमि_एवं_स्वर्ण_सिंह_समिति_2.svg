@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" width="100%">
+  <defs>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0F172A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E3A8A;stop-opacity:1" />
+    </linearGradient>
+    <filter id="subtleShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="1" dy="2" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#F1F5F9" rx="16"/>
+  <text x="400" y="45" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="bold" fill="#0F172A">मूल कर्तव्यों (Fundamental Duties) का विकास चक्र</text>
+
+  <!-- Step 1 -->
+  <rect x="50" y="90" width="700" height="70" rx="8" fill="url(#cardGrad)" filter="url(#subtleShadow)"/>
+  <text x="80" y="130" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF">1976 (42वाँ संशोधन): स्वर्ण सिंह समिति की सिफारिश पर प्रारंभ</text>
+  <text x="80" y="150" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#94A3B8">सोवियत संघ (USSR) से प्रेरित होकर कुल 10 मूल कर्तव्यों को अनुच्छेद 51A के तहत शामिल किया गया।</text>
+
+  <!-- Step 2 -->
+  <rect x="50" y="180" width="700" height="70" rx="8" fill="url(#cardGrad)" filter="url(#subtleShadow)"/>
+  <text x="80" y="220" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF">2002 (86वाँ संशोधन): शिक्षा संबंधी 11वाँ कर्तव्य जुड़ा</text>
+  <text x="80" y="240" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#94A3B8">माता-पिता या संरक्षक का यह कर्तव्य तय किया गया कि वे 6 से 14 वर्ष तक के बच्चों को शिक्षा के अवसर प्रदान करें।</text>
+
+  <!-- Legal Nature -->
+  <rect x="50" y="270" width="700" height="70" rx="8" fill="#0D9488" filter="url(#subtleShadow)"/>
+  <text x="80" y="310" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF">विधिक प्रकृति: गैर-न्यायोचित (Non-justiciable)</text>
+  <text x="80" y="330" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#CCFBF1">संविधान के अनुसार इनके सीधे उल्लंघन पर दंड का प्रावधान नहीं है, परंतु संसद विधिक कानून बनाकर इन्हें लागू कर सकती है।</text>
+</svg>

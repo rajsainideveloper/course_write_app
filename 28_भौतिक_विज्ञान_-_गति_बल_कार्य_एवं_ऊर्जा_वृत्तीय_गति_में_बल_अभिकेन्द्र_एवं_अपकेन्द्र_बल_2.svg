@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" width="100%">
+  <defs>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10B981;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9F1239;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E11D48;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadowEffect" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#F1F5F9" rx="12"/>
+  <text x="400" y="45" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="bold" fill="#0F172A">वृत्तीय गति: अभिकेन्द्र बनाम अपकेन्द्र बल</text>
+
+  <!-- Central Orbit -->
+  <circle cx="400" cy="210" r="90" stroke="#94A3B8" stroke-width="2" stroke-dasharray="6" fill="none"/>
+  <circle cx="400" cy="210" r="15" fill="#475569"/>
+  <text x="400" y="213" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF">केंद्र</text>
+
+  <!-- Object -->
+  <circle cx="400" cy="120" r="18" fill="#1E3A8A" filter="url(#shadowEffect)"/>
+  
+  <!-- Centripetal Force Arrow -->
+  <path d="M 400 120 L 400 185" stroke="#059669" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Centrifugal Force Arrow -->
+  <path d="M 400 120 L 400 55" stroke="#E11D48" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- Labels -->
+  <rect x="70" y="120" width="220" height="70" rx="6" fill="url(#emeraldGrad)" filter="url(#shadowEffect)"/>
+  <text x="180" y="145" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">अभिकेन्द्र बल (Centripetal)</text>
+  <text x="180" y="170" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#D1FAE5">केंद्र की ओर वास्तविक बल (F = mv²/r)</text>
+
+  <rect x="510" y="120" width="220" height="70" rx="6" fill="url(#roseGrad)" filter="url(#shadowEffect)"/>
+  <text x="620" y="145" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">अपकेन्द्र बल (Centrifugal)</text>
+  <text x="620" y="170" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#FFE4E6">केंद्र से बाहर आभासी/छद्म बल</text>
+</svg>

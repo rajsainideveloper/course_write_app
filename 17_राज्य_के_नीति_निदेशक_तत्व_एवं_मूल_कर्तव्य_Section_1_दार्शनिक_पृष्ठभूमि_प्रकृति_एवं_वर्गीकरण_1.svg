@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%">
+  <defs>
+    <linearGradient id="mainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E3A8A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0D9488;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="socialGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#B91C1C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EF4444;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gandhiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#047857;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10B981;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="liberalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7C3AED;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.3"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94A3B8" />
+    </marker>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#F8FAFC" rx="16"/>
+  <text x="400" y="45" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="bold" fill="#0F172A">नीति निदेशक तत्वों (DPSP) का वैचारिक वर्गीकरण</text>
+
+  <!-- Root Box -->
+  <rect x="250" y="90" width="300" height="60" rx="10" fill="url(#mainGrad)" filter="url(#shadow)"/>
+  <text x="400" y="125" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">राज्य के नीति निदेशक तत्व (भाग IV)</text>
+
+  <!-- Branch Lines -->
+  <path d="M 400 150 L 180 230" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 400 150 L 400 230" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 400 150 L 620 230" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Category 1 -->
+  <rect x="40" y="240" width="220" height="120" rx="8" fill="url(#socialGrad)" filter="url(#shadow)"/>
+  <text x="150" y="275" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF">समाजवादी सिद्धांत</text>
+  <text x="150" y="305" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#FFE4E6">अनुच्छेद 38, 39, 39A,</text>
+  <text x="150" y="330" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#FFE4E6">41, 42, 43, 43A, 47</text>
+
+  <!-- Category 2 -->
+  <rect x="290" y="240" width="220" height="120" rx="8" fill="url(#gandhiGrad)" filter="url(#shadow)"/>
+  <text x="400" y="275" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF">गांधीवादी सिद्धांत</text>
+  <text x="400" y="305" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#D1FAE5">अनुच्छेद 40, 43, 43B,</text>
+  <text x="400" y="330" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#D1FAE5">46, 47, 48</text>
+
+  <!-- Category 3 -->
+  <rect x="540" y="240" width="220" height="120" rx="8" fill="url(#liberalGrad)" filter="url(#shadow)"/>
+  <text x="650" y="275" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF">उदार-बौद्धिक सिद्धांत</text>
+  <text x="650" y="305" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#EDE9FE">अनुच्छेद 44, 45, 48,</text>
+  <text x="650" y="330" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#EDE9FE">48A, 49, 50, 51</text>
+</svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E3A8A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D9488;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#14B8A6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10B981;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.2"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94A3B8" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#F8FAFC" rx="16"/>
+
+  <text x="400" y="40" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="bold" fill="#0F172A">संविधान निर्माण की समयरेखा (Timeline)</text>
+
+  <!-- Node 1 -->
+  <rect x="50" y="90" width="700" height="75" rx="10" fill="url(#grad1)" filter="url(#shadow)"/>
+  <text x="70" y="120" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">9 दिसंबर, 1946: संविधान सभा की प्रथम बैठक</text>
+  <text x="70" y="145" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#E2E8F0">अस्थायी अध्यक्ष: डॉ. सच्चिदानंद सिन्हा | मुस्लिम लीग द्वारा बैठक का पूर्ण बहिष्कार।</text>
+
+  <!-- Arrow 1 -->
+  <path d="M 400 165 L 400 195" stroke="#94A3B8" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Node 2 -->
+  <rect x="50" y="205" width="700" height="75" rx="10" fill="url(#grad2)" filter="url(#shadow)"/>
+  <text x="70" y="235" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">26 नवंबर, 1949: संविधान अंगीकार (संविधान दिवस)</text>
+  <text x="70" y="260" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#E2E8F0">2 वर्ष, 11 माह, 18 दिन में निर्माण पूर्ण | 395 अनुच्छेद और 8 अनुसूचियों के साथ अंगीकृत।</text>
+
+  <!-- Arrow 2 -->
+  <path d="M 400 280 L 400 310" stroke="#94A3B8" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Node 3 -->
+  <rect x="50" y="320" width="700" height="75" rx="10" fill="url(#grad3)" filter="url(#shadow)"/>
+  <text x="70" y="350" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">26 जनवरी, 1950: संपूर्ण संविधान देश में प्रभावी (गणतंत्र दिवस)</text>
+  <text x="70" y="375" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#E2E8F0">1930 के पूर्ण स्वराज्य दिवस की स्मृति में लागू | भारत एक संप्रभु लोकतांत्रिक गणराज्य बना।</text>
+</svg>
