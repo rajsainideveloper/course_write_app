@@ -585,6 +585,15 @@ export const TOTAL_CHUNKS = Object.keys(chunkTopics).length;
 //       - **फ़ॉन्ट**: स्पष्ट, पठनीय हिंदी/अंग्रेजी टेक्स्ट के लिए \`font-family="system-ui, -apple-system, sans-serif"\` और उचित \`font-size\` का उपयोग करें। प्रत्येक टेक्स्ट अपने बॉक्स के बिल्कुल केंद्र में संरेखित होना चाहिए (\`text-anchor="middle" dy=".3em"\`)।
 //       - **तीर/संयोजक**: तीरों को जोड़ने के लिए \`<path d="..." stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>\` का उपयोग करें और शीर्ष पर \`<marker id="arrow" ...>\` का उपयोग करके सुंदर त्रिकोणीय एरोहेड्स प्रदान करें।
 //       - **लचीलापन**: सुनिश्चित करें कि SVG में उचित \`viewBox\` परिभाषित हो और \`width="100%"\` हो ताकि यह मोबाइल और डेस्कटॉप दोनों स्क्रीन पर प्रतिक्रियाशील (Responsive) रहे।
+//       - **अनिवार्य आवश्यकता**: आपको प्रत्येक अध्याय/ब्लॉक में कम से कम 1 से 2 SVG आरेख **अवश्य** शामिल करने होंगे। चाहे वह कोई प्रक्रिया हो, वर्गीकरण हो, या मुख्य बिंदुओं का पदानुक्रम हो, इसे एक आकर्षक SVG आरेख के रूप में प्रस्तुत करें।
+//       - **पूर्ण कोड अनिवार्य / कोई प्लेसहोल्डर नहीं**: "SVG", "[SVG]", "[Diagram]", "[Image]", या "[चित्र यहाँ डालें]" जैसे आलसी प्लेसहोल्डर शब्दों या संक्षिप्त रूपों का उपयोग कभी न करें। आपको सभी संरचनात्मक XML तत्वों (जैसे \`<rect>\`, \`<text>\`, \`<circle>\`, \`<path>\`, \`<linearGradient>\` आदि) को शामिल करते हुए **पूर्ण, कच्चा, उच्च-गुणवत्ता वाला SVG कोड** स्वयं लिखना होगा।
+//       - **कोड ब्लॉक अनिवार्य**: अति महत्वपूर्ण: आपको SVG कोड को **\`\`\`html** और **\`\`\`** कोड ब्लॉक के अंदर ही लपेटना (wrap) होगा। सीधे टेक्स्ट में कच्चा HTML/SVG टैग न लिखें, अन्यथा यह रेंडरिंग को तोड़ देगा।
+//           उदाहरण:
+//           \`\`\`html
+//           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%">
+//             ...
+//           </svg>
+//           \`\`\`
 
 // मार्कडाउन में सामान्य पाठ के लिए किसी भी मानक HTML टैग जैसे \`<div>\` या \`<span>\` का उपयोग न करें (केवल \`<svg>\` टैग और उसके आंतरिक तत्वों को आरेखों के लिए पूर्ण रूप से अनुमति है)।
 // मार्कडाउन दस्तावेज़ से पहले या बाद में कोई संवादात्मक पाठ या प्रस्तावना/पोस्टस्क्रिप्ट न लिखें। सीधे \`# [शीर्षक]\` पंक्ति से शुरू करें और अंतिम \`[/quiz]\` या सामग्री ब्लॉक के साथ समाप्त करें।
@@ -665,7 +674,16 @@ You must output ONLY valid text in our custom Markdown dialect. Follow these str
       - **Color Scheme**: Use modern and sophisticated colors like Dark Blue (#1E3A8A), Teal (#0D9488), Emerald Green (#059669), and Muted Gray (#64748B). Interior box colors should be attractive gradients rather than simple flat colors.
       - **Font**: Use \`font-family="system-ui, -apple-system, sans-serif"\` and appropriate \`font-size\` for clear, readable text. Each text should be perfectly centered inside its box (\`text-anchor="middle" dy=".3em"\`).
       - **Arrows/Connectors**: Use \`<path d="..." stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>\` for connecting arrows and provide beautiful triangular arrowheads using \`<marker id="arrow" ...>\` at the top.
-      - **Responsiveness**: Ensure the SVG has a proper \`viewBox\` defined and \`width="100%\`" so it is responsive on both mobile and desktop screens.
+      - **Responsiveness**: Ensure the SVG has a proper \`viewBox\` defined and \`width="100%"\` so it is responsive on both mobile and desktop screens.
+      - **MANDATORY REQUIREMENT**: You MUST generate at least 1 to 2 SVG diagrams in every single chapter/block you write. Whether it's a process, classification, timeline, or hierarchy of key points, visualize it as a beautiful SVG diagram.
+      - **NO PLACEHOLDERS / FULL CODE REQUIRED**: Under no circumstances should you write lazy placeholder words or abbreviations like "SVG", "[SVG]", "[Diagram]", "[Image]", or "[Insert diagram here]". You MUST write the **FULL, raw, high-fidelity SVG code** containing all structural XML elements (such as \`<rect>\`, \`<text>\`, \`<circle>\`, \`<path>\`, \`<linearGradient>\`, etc.) yourself directly at the appropriate spot in the chapter.
+      - **CODE BLOCKS MANDATORY**: CRITICAL: You MUST wrap the SVG code inside an **\`\`\`html** and **\`\`\`** code block. Do not write raw HTML/SVG tags directly in the text without the wrapper, as it breaks rendering.
+          Example:
+          \`\`\`html
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%">
+            ...
+          </svg>
+          \`\`\`
 
 Do not use any standard HTML tags like \`<div>\` or \`<span>\` for regular text in the Markdown (only \`<svg>\` tags and their inner elements are fully permitted for diagrams).
 Do not write any conversational text or preamble/postscript before or after the Markdown document. Start directly with the \`# [Title]\` line and end with the last \`[/quiz]\` or content block.

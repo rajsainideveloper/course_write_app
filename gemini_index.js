@@ -85,15 +85,24 @@ async function waitForGeminiResponse(page, initialCount, timeoutMs = 150000) {
     
     // If stop button/loading bar is gone and we have content
     if (!stopOrLoadingExists && currentLength > 100) {
-      // Check if it's stable for another 2 seconds
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      const finalLength = await page.evaluate(() => {
-        const containers = Array.from(document.querySelectorAll('.model-response-text, .message-content, message-outer'));
-        if (containers.length === 0) return 0;
-        return containers[containers.length - 1].textContent?.length || 0;
+      // Check if the response footer / actions are now visible
+      const footerExists = await page.evaluate(() => {
+        const containers = Array.from(document.querySelectorAll('.model-response-text, .message-content, message-outer, article'));
+        if (containers.length === 0) return false;
+        const lastContainer = containers[containers.length - 1];
+        
+        // Find if this container has the action footer
+        return !!(
+          lastContainer.querySelector('.model-response-footer') || 
+          lastContainer.querySelector('.message-actions') ||
+          lastContainer.parentElement?.querySelector('.model-response-footer') ||
+          lastContainer.parentElement?.querySelector('.message-actions') ||
+          lastContainer.closest('message-outer, article')?.querySelector('.model-response-footer, .message-actions, [aria-label*="Copy" i], [aria-label*="Regenerate" i]')
+        );
       });
-      if (finalLength === currentLength) {
-        console.log('✅ Response complete! Generation stopped and text is stable.');
+
+      if (footerExists) {
+        console.log('✅ Response complete! Generation stopped and footer actions are visible.');
         break;
       }
     }
@@ -101,8 +110,8 @@ async function waitForGeminiResponse(page, initialCount, timeoutMs = 150000) {
     // Standard stabilization fallback
     if (currentLength > 0 && currentLength === previousLength) {
       stableCount++;
-      if (stableCount >= 10) { // Stable for ~5 seconds
-        console.log('✅ Response content has stabilized. Proceeding...');
+      if (stableCount >= 20) { // Stable for ~10 seconds
+        console.log('✅ Response content has stabilized for 10 seconds. Proceeding...');
         break;
       }
     } else {
@@ -114,7 +123,7 @@ async function waitForGeminiResponse(page, initialCount, timeoutMs = 150000) {
   }
   
   // Extra buffer to make sure UI is fully rendered
-  await new Promise(resolve => setTimeout(resolve, 2000));
+  await new Promise(resolve => setTimeout(resolve, 3000));
 }
 
 /**
@@ -515,8 +524,8 @@ async function generateMCQs() {
       console.log('🧹 Cleaning and saving Markdown content...');
       let markdownContent = extractedText.trim();
       
-      // Strip markdown code block markers if the AI wrapped its entire response inside them
-      const markdownMatch = extractedText.match(/```markdown\s*([\s\S]*?)\s*```/) || extractedText.match(/```\s*([\s\S]*?)\s*```/);
+      // Strip markdown code block markers only if the AI wrapped its ENTIRE response inside them
+      const markdownMatch = extractedText.match(/^```(?:markdown)?\s*([\s\S]*?)\s*```$/i);
       if (markdownMatch && markdownMatch[1]) {
         markdownContent = markdownMatch[1].trim();
       }
@@ -567,6 +576,35 @@ async function generateMCQs() {
         const mdOutputPath = path.resolve(mdFileName);
         await fs.writeFile(mdOutputPath, markdownContent, 'utf-8');
         console.log(`📝 Raw Markdown also saved side-by-side to ${mdFileName}`);
+
+        // Extract and save SVGs separately
+        const svgs = [...markdownContent.matchAll(/<svg[\s\S]*?<\/svg>/gi)];
+        if (svgs.length > 0) {
+          console.log(`🖼️ Found ${svgs.length} SVG diagram(s). Saving to separate files...`);
+          
+          // Clean base topic string for filename
+          const baseTopic = currentChunk.title.replace(/[^a-zA-Z0-9_\u0900-\u097F-]/g, '_').replace(/_+/g, '_').replace(/^_|_$/g, '');
+          
+          for (let i = 0; i < svgs.length; i++) {
+            const svgContent = svgs[i][0];
+            const svgIndex = svgs[i].index;
+            
+            // Find the closest heading before this SVG
+            const textBeforeSvg = markdownContent.substring(0, svgIndex);
+            const headingMatches = [...textBeforeSvg.matchAll(/^(#{2,4})\s+(.+)$/gm)];
+            let subtopic = `diagram_${i + 1}`;
+            
+            if (headingMatches.length > 0) {
+              const lastHeading = headingMatches[headingMatches.length - 1][2];
+              subtopic = lastHeading.replace(/[^a-zA-Z0-9_\u0900-\u097F-]/g, '_').replace(/_+/g, '_').replace(/^_|_$/g, '');
+              subtopic = `${subtopic}_${i + 1}`;
+            }
+            
+            const svgFilename = `${chunk}_${baseTopic}_${subtopic}.svg`.replace(/_{2,}/g, '_');
+            await fs.writeFile(path.resolve(svgFilename), svgContent, 'utf-8');
+            console.log(`🖼️ Saved SVG to ${svgFilename}`);
+          }
+        }
 
       } catch (saveError) {
         console.error(`\n❌ Save Error in Chunk ${chunk}:`, saveError.message);
