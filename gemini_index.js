@@ -39,7 +39,7 @@ const CONFIG = {
  * First, it waits for a new assistant container to appear (message count increases), then monitors
  * active loading elements, gradient progress bars, and content length stabilization.
  */
-async function waitForGeminiResponse(page, initialCount, timeoutMs = 90000) {
+async function waitForGeminiResponse(page, initialCount, timeoutMs = 150000) {
   console.log('⏳ Waiting for Gemini response generation to start...');
   const startTime = Date.now();
   

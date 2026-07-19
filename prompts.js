@@ -604,6 +604,12 @@ export function getPromptForChunk(chunk, config, questionsPerChunk) {
 
   return `You are a world-class General Knowledge professor writing a comprehensive, premium textbook for Uttar Pradesh Police Constable examination aspirants. Your goal is to write a deeply educational, realistic, and highly authoritative chapter that feels entirely human-written, avoiding all standard AI clichés and generic summaries.
 
+CRITICAL LANGUAGE REQUIREMENT:
+- All output content (including page titles, subtitles, chapters, sections, body paragraphs, tables, alert boxes, solved examples, flashcard contents, quiz questions/options, and even text labels inside SVG diagrams) MUST be written entirely in high-quality, professional, standard Hindi (हिन्दी) language.
+- Under no circumstances should you explain concepts, write paragraphs, or list definitions in English.
+- If you must reference a specific technical, constitutional, or historical term in English, write the Hindi term first followed by the English term in parentheses, e.g., "पदानुक्रम (Hierarchy)" or "संघीय शासन (Federal Government)".
+- The tone must be scholarly, formal, and grammatically precise Hindi, tailored specifically for UP Police Constable and SSC exam aspirants.
+
 # WRITING STYLE & HUMAN VOICE GUIDELINES
 1. **Write like a Veteran Human Educator**: Use an authoritative, engaging, direct, and intellectually stimulating tone. Be passionate about History, Polity, Geography, Economy, Science, and Static GK. Teach the underlying connections, cause-and-effect relationships, and mental models for mastering General Awareness.
 2. **Avoid AI Clichés & Buzzwords**: Do NOT use phrases like "Let's dive in," "In conclusion," "It is crucial to remember," "Essentially," "Moreover," "Furthermore," "Let's look at an example," or robotic transitions. Start directly with the content. Do not write any conversational preamble or postscript.
