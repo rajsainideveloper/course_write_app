@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%">
+  <defs>
+    <linearGradient id="geo1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <linearGradient id="geo2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+    <linearGradient id="geo3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+    <linearGradient id="geo4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488" />
+      <stop offset="100%" stop-color="#14B8A6" />
+    </linearGradient>
+    <filter id="geoShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Title Line -->
+  <line x1="100" y1="50" x2="700" y2="50" stroke="#E2E8F0" stroke-width="2" />
+  <text x="400" y="30" fill="#64748B" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">भारत का भू-आकृतिक वर्गीकरण</text>
+
+  <!-- Box 1 -->
+  <g transform="translate(40, 90)" filter="url(#geoShadow)">
+    <rect width="330" height="110" rx="10" fill="url(#geo1)" />
+    <text x="25" y="45" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" text-anchor="start">1. उत्तरी पर्वतीय क्षेत्र (हिमालय)</text>
+    <text x="25" y="75" fill="#E0F2FE" font-family="system-ui, sans-serif" font-size="13" text-anchor="start">नवीन वलित पर्वत, विवर्तनिक रूप से सक्रिय</text>
+  </g>
+
+  <!-- Box 2 -->
+  <g transform="translate(430, 90)" filter="url(#geoShadow)">
+    <rect width="330" height="110" rx="10" fill="url(#geo2)" />
+    <text x="25" y="45" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" text-anchor="start">2. विशाल मध्यवर्ती मैदान</text>
+    <text x="25" y="75" fill="#ECFDF5" font-family="system-ui, sans-serif" font-size="13" text-anchor="start">गंगा, सिंधु, ब्रह्मपुत्र के जलोढ़ निक्षेपों से निर्मित</text>
+  </g>
+
+  <!-- Box 3 -->
+  <g transform="translate(40, 240)" filter="url(#geoShadow)">
+    <rect width="330" height="110" rx="10" fill="url(#geo3)" />
+    <text x="25" y="45" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" text-anchor="start">3. प्रायद्वीपीय पठार</text>
+    <text x="25" y="75" fill="#FEF3C7" font-family="system-ui, sans-serif" font-size="13" text-anchor="start">गोंडवाना लैंड का भाग, प्राचीनतम व कठोरतम भूखंड</text>
+  </g>
+
+  <!-- Box 4 -->
+  <g transform="translate(430, 240)" filter="url(#geoShadow)">
+    <rect width="330" height="110" rx="10" fill="url(#geo4)" />
+    <text x="25" y="45" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" text-anchor="start">4. तटीय मैदान एवं द्वीप समूह</text>
+    <text x="25" y="75" fill="#CCFBF1" font-family="system-ui, sans-serif" font-size="13" text-anchor="start">पूर्वी व पश्चिमी तट, अंडमान-निकोबार एवं लक्षद्वीप</text>
+  </g>
+</svg>

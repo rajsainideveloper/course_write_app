@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" width="100%">
+  <defs>
+    <linearGradient id="gradBox" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#0D9488" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000" flood-opacity="0.1" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="320" fill="#F1F5F9" rx="12" />
+  
+  <text x="400" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" fill="#0F172A" text-anchor="middle">अशोक के अभिलेखों का त्रिविध वर्गीकरण</text>
+
+  <!-- Type 1: Rock Edicts -->
+  <rect x="40" y="70" width="210" height="180" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2" filter="url(#shadow)" />
+  <rect x="40" y="70" width="210" height="40" rx="8" fill="url(#gradBox)" />
+  <text x="145" y="95" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">1. शिलालेख (Rock Edicts)</text>
+  <text x="145" y="140" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#334155" text-anchor="middle">• चट्टानों को काटकर निर्मित</text>
+  <text x="145" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#334155" text-anchor="middle">• 14 प्रमुख शिलालेख (8 स्थानों से)</text>
+  <text x="145" y="200" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#334155" text-anchor="middle">• लघु शिलालेख (व्यक्तिगत इतिहास)</text>
+
+  <!-- Type 2: Pillar Edicts -->
+  <rect x="295" y="70" width="210" height="180" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2" filter="url(#shadow)" />
+  <rect x="295" y="70" width="210" height="40" rx="8" fill="url(#gradBox)" />
+  <text x="400" y="95" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">2. स्तम्भ लेख (Pillar Edicts)</text>
+  <text x="400" y="140" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#334155" text-anchor="middle">• बलुआ पत्थरों के एकल खंभे</text>
+  <text x="400" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#334155" text-anchor="middle">• 7 दीर्घ स्तम्भ लेख (6 स्थानों से)</text>
+  <text x="400" y="200" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#334155" text-anchor="middle">• लघु स्तम्भ लेख (राजकीय घोषणाएं)</text>
+
+  <!-- Type 3: Cave Inscriptions -->
+  <rect x="550" y="70" width="210" height="180" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2" filter="url(#shadow)" />
+  <rect x="550" y="70" width="210" height="40" rx="8" fill="url(#gradBox)" />
+  <text x="655" y="95" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">3. गुहा लेख (Cave Inscriptions)</text>
+  <text x="655" y="140" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#334155" text-anchor="middle">• गुफाओं की दीवारों पर उत्कीर्ण</text>
+  <text x="655" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#334155" text-anchor="middle">• आजीवक संप्रदाय को दान</text>
+  <text x="655" y="200" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#334155" text-anchor="middle">• जैसे: बराबर की पहाड़ियाँ</text>
+
+  <text x="400" y="290" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-style="italic" fill="#64748B" text-anchor="middle">नोट: उत्तर प्रदेश के मिर्जापुर का 'अहरौरा' लघु शिलालेख भी एक प्रमुख स्रोत है।</text>
+</svg>

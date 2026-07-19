@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%">
+  <defs>
+    <linearGradient id="mamlukBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <linearGradient id="mamlukTeal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F766E" />
+      <stop offset="100%" stop-color="#0D9488" />
+    </linearGradient>
+    <linearGradient id="mamlukEmerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#065F46" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+    <filter id="boxShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000" flood-opacity="0.15" />
+    </filter>
+    <marker id="flowArrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748B" />
+    </marker>
+  </defs>
+  <rect width="800" height="480" fill="#F8FAFC" rx="15" />
+  <text x="400" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="bold" fill="#0F172A" text-anchor="middle">गुलाम वंश का प्रशासनिक एवं राजनीतिक विकासक्रम</text>
+  
+  <!-- Step 1 -->
+  <rect x="50" y="80" width="700" height="75" rx="10" fill="url(#mamlukBlue)" filter="url(#boxShadow)" />
+  <text x="70" y="115" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">कुतुबुद्दीन ऐबक (1206-1210 ई.) | आधारशिला</text>
+  <text x="70" y="140" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#E0F2FE">लाहौर राजधानी • सुल्तान की उपाधि नहीं ली • 'लख बख्श' (उदारता हेतु) • कुतुब मीनार का प्रारंभ</text>
+
+  <!-- Arrow 1 -->
+  <path d="M 400 155 L 400 185" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#flowArrow)" />
+
+  <!-- Step 2 -->
+  <rect x="50" y="195" width="700" height="95" rx="10" fill="url(#mamlukTeal)" filter="url(#boxShadow)" />
+  <text x="70" y="225" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">शम्सुद्दीन इल्तुतमिश (1211-1236 ई.) | वास्तविक सुदृढ़ीकरण</text>
+  <text x="70" y="250" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#CCFBF1">राजधानी दिल्ली स्थानांतरित • इक्ता प्रणाली (Iqta System) का संस्थानीकरण • चाँदी का टंका और ताँबे का जीतल</text>
+  <text x="70" y="272" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#CCFBF1">तुर्कान-ए-चहलगानी (40 सरदारों का दल) का गठन • मंगोल आक्रमण (चंगेज खाँ) से रक्षा</text>
+
+  <!-- Arrow 2 -->
+  <path d="M 400 290 L 400 320" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#flowArrow)" />
+
+  <!-- Step 3 -->
+  <rect x="50" y="330" width="700" height="95" rx="10" fill="url(#mamlukEmerald)" filter="url(#boxShadow)" />
+  <text x="70" y="360" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">गयासुद्दीन बलबन (1266-1286 ई.) | निरंकुश राजत्व</text>
+  <text x="70" y="385" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#D1FAE5">रक्त एवं लौह की नीति (Blood and Iron Policy) • सिजदा और पाबोस प्रथा का आरंभ • सैन्य विभाग 'दीवान-ए-आरिज'</text>
+  <text x="70" y="407" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#D1FAE5">तुर्कान-ए-चहलगानी का दमन • राजत्व सिद्धांत: सुल्तान को ईश्वर की छाया (जिल-ए-इलाही) माना</text>
+</svg>

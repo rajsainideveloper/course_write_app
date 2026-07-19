@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%">
+  <defs>
+    <linearGradient id="cholaRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#991B1B" />
+      <stop offset="100%" stop-color="#DC2626" />
+    </linearGradient>
+    <linearGradient id="oceanBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+    <linearGradient id="tealBox" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F766E" />
+      <stop offset="100%" stop-color="#14B8A6" />
+    </linearGradient>
+    <filter id="shadowFilter" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000" flood-opacity="0.2" />
+    </filter>
+    <marker id="arrowPointer" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748B" />
+    </marker>
+  </defs>
+
+  <rect width="800" height="450" fill="#F8FAFC" rx="15" />
+
+  <text x="400" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="bold" fill="#0F172A" text-anchor="middle">
+    चोल साम्राज्य के दो महान स्तंभ और उनका ऐतिहासिक योगदान
+  </text>
+
+  <!-- Left Structure: Rajaraja I -->
+  <rect x="50" y="80" width="320" height="330" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2" filter="url(#shadowFilter)" />
+  <rect x="50" y="80" width="320" height="50" rx="12" fill="url(#cholaRed)" />
+  <text x="210" y="112" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">राजराज प्रथम (985-1014 ई.)</text>
+  
+  <text x="70" y="165" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#1E293B">• वास्तविक संस्थापक &amp; विस्तारवादी</text>
+  <text x="90" y="195" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#475569">चेर, पांड्य और श्रीलंका के उत्तरी भाग को जीता</text>
+  
+  <text x="70" y="240" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#1E293B">• स्थापत्य का शिखर</text>
+  <text x="90" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#475569">तंजावुर में भव्य 'बृहदेश्वर मंदिर' (राजराजेश्वर) का निर्माण</text>
+  
+  <text x="70" y="315" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#1E293B">• प्रशासनिक सुधार</text>
+  <text x="90" y="345" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#475569">भू-राजस्व निर्धारण हेतु विशाल भूमि सर्वेक्षण कराया</text>
+
+  <!-- Right Structure: Rajendra I -->
+  <rect x="430" y="80" width="320" height="330" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2" filter="url(#shadowFilter)" />
+  <rect x="430" y="80" width="320" height="50" rx="12" fill="url(#oceanBlue)" />
+  <text x="590" y="112" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">राजेंद्र प्रथम (1014-1044 ई.)</text>
+  
+  <text x="450" y="165" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#1E293B">• नौसैनिक विजय (Naval Supremacy)</text>
+  <text x="470" y="195" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#475569">बंगाल की खाड़ी को 'चोल झील' (Chola Lake) में बदला</text>
+  
+  <text x="450" y="240" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#1E293B">• गंगा घाटी का अभियान</text>
+  <text x="470" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#475569">बंगाल के पाल शासक महिपाल को हराकर 'गंगैकोंड' उपाधि ली</text>
+  
+  <text x="450" y="315" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#1E293B">• अंतर्राष्ट्रीय कूटनीति</text>
+  <text x="470" y="345" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#475569">श्रीविजय (सुमात्रा/मलेशिया) के शैलेन्द्र शासकों को परास्त किया</text>
+</svg>

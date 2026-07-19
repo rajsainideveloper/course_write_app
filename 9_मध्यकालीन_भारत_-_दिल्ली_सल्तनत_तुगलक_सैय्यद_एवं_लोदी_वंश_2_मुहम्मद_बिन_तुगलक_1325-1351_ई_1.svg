@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E3A8A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D9488;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#14B8A6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10B981;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#B45309;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F59E0B;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#991B1B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EF4444;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="bold" fill="#1E293B" text-anchor="middle">मुहम्मद बिन तुगलक की 5 मुख्य असफल योजनाएं (क्रमानुसार)</text>
+
+  <!-- Step 1 -->
+  <rect x="50" y="80" width="700" height="60" rx="10" ry="10" fill="url(#grad1)" filter="url(#shadow)"/>
+  <text x="80" y="115" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">1. दोआब में कर वृद्धि (1325-26 ई.)</text>
+  <text x="400" y="115" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#E2E8F0">गंगा-यमुना के उपजाऊ क्षेत्र में कर वृद्धि की, परंतु उसी वर्ष भीषण अकाल पड़ गया।</text>
+
+  <!-- Arrow 1 to 2 -->
+  <path d="M 400 140 L 400 160" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Step 2 -->
+  <rect x="50" y="160" width="700" height="60" rx="10" ry="10" fill="url(#grad2)" filter="url(#shadow)"/>
+  <text x="80" y="195" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">2. राजधानी स्थानांतरण (1326-27 ई.)</text>
+  <text x="400" y="195" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#E2E8F0">दिल्ली से देवगिरि (दौलताबाद) राजधानी बदली। प्रशासनिक असफलता के बाद पुनः दिल्ली लौटे।</text>
+
+  <!-- Arrow 2 to 3 -->
+  <path d="M 400 220 L 400 240" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Step 3 -->
+  <rect x="50" y="240" width="700" height="60" rx="10" ry="10" fill="url(#grad3)" filter="url(#shadow)"/>
+  <text x="80" y="275" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">3. सांकेतिक मुद्रा का प्रचलन (1329-30 ई.)</text>
+  <text x="400" y="275" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#E2E8F0">चांदी के टंके के स्थान पर तांबे/कांस्य के सिक्के जारी किए। घर-घर में नकली सिक्के बनने लगे।</text>
+
+  <!-- Arrow 3 to 4 -->
+  <path d="M 400 300 L 400 320" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Step 4 -->
+  <rect x="50" y="320" width="700" height="60" rx="10" ry="10" fill="url(#grad4)" filter="url(#shadow)"/>
+  <text x="80" y="355" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">4. खुरासन अभियान (1330-31 ई.)</text>
+  <text x="400" y="355" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#E2E8F0">मध्य एशिया विजय हेतु 3,70,000 सैनिकों को 1 वर्ष का अग्रिम वेतन दिया, योजना अंततः रद्द हुई।</text>
+
+  <!-- Arrow 4 to 5 -->
+  <path d="M 400 380 L 400 400" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Step 5 -->
+  <rect x="50" y="400" width="700" height="60" rx="10" ry="10" fill="url(#grad5)" filter="url(#shadow)"/>
+  <text x="80" y="435" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">5. कराचिल अभियान (1332-33 ई.)</text>
+  <text x="400" y="435" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#E2E8F0">हिमालय के दुर्गम कुमाऊं क्षेत्र में सेना भेजी, जहां पहाड़ी अवरोधों एवं ठंड से अधिकांश सेना नष्ट हो गई।</text>
+</svg>

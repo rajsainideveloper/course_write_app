@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%">
+  <defs>
+    <linearGradient id="maroonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7F1D1D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#991B1B;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0F766E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#115E59;stop-opacity:1" />
+    </linearGradient>
+    <filter id="boxShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="3" dy="4" stdDeviation="3" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <text x="400" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="bold" fill="#1E293B" text-anchor="middle">छत्रपति शिवाजी महाराज: जीवन-क्रम एवं सामरिक विजय</text>
+
+  <!-- Step 1 -->
+  <rect x="50" y="75" width="700" height="75" rx="10" fill="url(#maroonGrad)" filter="url(#boxShadow)"/>
+  <text x="80" y="118" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">1627 ई. - जन्म एवं प्रारंभिक काल</text>
+  <text x="350" y="117" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#FEE2E2">• शिवनेरी दुर्ग में जन्म। पिता: शाहजी भोंसले, माता: जीजाबाई। संरक्षक: दादाजी कोणदेव।</text>
+
+  <!-- Connection Line 1 -->
+  <path d="M 400 150 L 400 180" stroke="#94A3B8" stroke-width="2.5" fill="none"/>
+
+  <!-- Step 2 -->
+  <rect x="50" y="180" width="700" height="75" rx="10" fill="url(#tealGrad)" filter="url(#boxShadow)"/>
+  <text x="80" y="223" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">1646-1659 ई. - सैन्य विस्तार</text>
+  <text x="350" y="222" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#CCFBF1">• तोरण, कोंडाणा, पुरंदर दुर्गों पर विजय। 1659 में बीजापुर के सेनापति अफजल खान का वध।</text>
+
+  <!-- Connection Line 2 -->
+  <path d="M 400 255 L 400 285" stroke="#94A3B8" stroke-width="2.5" fill="none"/>
+
+  <!-- Step 3 -->
+  <rect x="50" y="285" width="700" height="75" rx="10" fill="url(#maroonGrad)" filter="url(#boxShadow)"/>
+  <text x="80" y="328" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">1665 ई. - पुरंदर की संधि</text>
+  <text x="350" y="327" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#FEE2E2">• मुगलों के जयसिंह के साथ संधि। 23 दुर्ग मुगलों को सौंपे। शंभाजी को 5000 का मनसब।</text>
+
+  <!-- Connection Line 3 -->
+  <path d="M 400 360 L 400 390" stroke="#94A3B8" stroke-width="2.5" fill="none"/>
+
+  <!-- Step 4 -->
+  <rect x="50" y="390" width="700" height="75" rx="10" fill="url(#tealGrad)" filter="url(#boxShadow)"/>
+  <text x="80" y="433" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">1674 ई. - संप्रभु राज्याभिषेक</text>
+  <text x="350" y="432" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#CCFBF1">• रायगढ़ दुर्ग में काशी के गंगाभट्ट द्वारा राज्याभिषेक। 'छत्रपति' की उपाधि धारण की।</text>
+</svg>

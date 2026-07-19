@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%">
+  <defs>
+    <linearGradient id="mainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#0D9488" />
+    </linearGradient>
+    <linearGradient id="subGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F1F5F9" />
+      <stop offset="100%" stop-color="#E2E8F0" />
+    </linearGradient>
+    <filter id="boxShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <drop-shadow dx="3" dy="5" stdDeviation="5" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#F8FAFC" rx="12" />
+
+  <!-- Center Core: PM -->
+  <circle cx="400" cy="225" r="75" fill="url(#mainGrad)" filter="url(#boxShadow)" />
+  <text x="400" y="220" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">प्रधानमंत्री</text>
+  <text x="400" y="245" fill="#CCFBF1" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle">(वास्तविक प्रमुख)</text>
+
+  <!-- Surrounding Nodes -->
+  <!-- Node 1: President Connection -->
+  <rect x="300" y="30" width="200" height="60" rx="8" fill="url(#subGrad)" stroke="#94A3B8" stroke-width="1.5" filter="url(#boxShadow)" />
+  <text x="400" y="65" fill="#1E293B" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">राष्ट्रपति व मंत्रिपरिषद के बीच कड़ी</text>
+  <path d="M 400 90 L 400 150" stroke="#0D9488" stroke-width="2" stroke-dasharray="4" fill="none" />
+
+  <!-- Node 2: Council of Ministers -->
+  <rect x="550" y="195" width="220" height="60" rx="8" fill="url(#subGrad)" stroke="#94A3B8" stroke-width="1.5" filter="url(#boxShadow)" />
+  <text x="660" y="230" fill="#1E293B" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">मंत्रिपरिषद का मुखिया</text>
+  <path d="M 550 225 L 475 225" stroke="#0D9488" stroke-width="2" stroke-dasharray="4" fill="none" />
+
+  <!-- Node 3: Lok Sabha Leader -->
+  <rect x="300" y="360" width="200" height="60" rx="8" fill="url(#subGrad)" stroke="#94A3B8" stroke-width="1.5" filter="url(#boxShadow)" />
+  <text x="400" y="395" fill="#1E293B" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">लोकसभा में बहुमत दल का नेता</text>
+  <path d="M 400 360 L 400 300" stroke="#0D9488" stroke-width="2" stroke-dasharray="4" fill="none" />
+
+  <!-- Node 4: NITI Aayog -->
+  <rect x="30" y="195" width="220" height="60" rx="8" fill="url(#subGrad)" stroke="#94A3B8" stroke-width="1.5" filter="url(#boxShadow)" />
+  <text x="140" y="230" fill="#1E293B" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">नीति आयोग का पदेन अध्यक्ष</text>
+  <path d="M 250 225 L 325 225" stroke="#0D9488" stroke-width="2" stroke-dasharray="4" fill="none" />
+</svg>

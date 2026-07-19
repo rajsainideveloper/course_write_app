@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="100%">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488" />
+      <stop offset="100%" stop-color="#14B8A6" />
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="3" dy="3" stdDeviation="4" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <text x="400" y="30" fill="#0F172A" font-family="system-ui, sans-serif" font-size="22" font-weight="bold" text-anchor="middle">महाद्वीपों का क्षेत्रफल के अनुसार अवरोही क्रम (Descending Order)</text>
+  
+  <g transform="translate(40, 70)" filter="url(#dropShadow)">
+    <rect width="220" height="70" rx="10" fill="url(#blueGrad)" />
+    <text x="110" y="33" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">1. एशिया</text>
+    <text x="110" y="53" fill="#93C5FD" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">विश्व का 30% भूभाग</text>
+  </g>
+
+  <g transform="translate(290, 70)" filter="url(#dropShadow)">
+    <rect width="220" height="70" rx="10" fill="url(#blueGrad)" />
+    <text x="110" y="33" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">2. अफ्रीका</text>
+    <text x="110" y="53" fill="#93C5FD" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">तीनों प्रमुख अक्षांश रेखाएं</text>
+  </g>
+
+  <g transform="translate(540, 70)" filter="url(#dropShadow)">
+    <rect width="220" height="70" rx="10" fill="url(#blueGrad)" />
+    <text x="110" y="33" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">3. उत्तरी अमेरिका</text>
+    <text x="110" y="53" fill="#93C5FD" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">नई दुनिया, सुपेरियर झील</text>
+  </g>
+
+  <g transform="translate(40, 170)" filter="url(#dropShadow)">
+    <rect width="220" height="70" rx="10" fill="url(#tealGrad)" />
+    <text x="110" y="33" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">4. दक्षिण अमेरिका</text>
+    <text x="110" y="53" fill="#CCFBF1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">अमेज़न बेसिन, एंडीज माला</text>
+  </g>
+
+  <g transform="translate(290, 170)" filter="url(#dropShadow)">
+    <rect width="220" height="70" rx="10" fill="url(#tealGrad)" />
+    <text x="110" y="33" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">5. अंटार्कटिका</text>
+    <text x="110" y="53" fill="#CCFBF1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">श्वेत महाद्वीप, निर्जन भूमि</text>
+  </g>
+
+  <g transform="translate(540, 170)" filter="url(#dropShadow)">
+    <rect width="220" height="70" rx="10" fill="url(#tealGrad)" />
+    <text x="110" y="33" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">6. यूरोप</text>
+    <text x="110" y="53" fill="#CCFBF1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">मरुस्थल विहीन महाद्वीप</text>
+  </g>
+
+  <g transform="translate(290, 270)" filter="url(#dropShadow)">
+    <rect width="220" height="70" rx="10" fill="url("##emeraldGrad")" />
+    <text x="110" y="33" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">7. ऑस्ट्रेलिया</text>
+    <text x="110" y="53" fill="#D1FAE5" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">सबसे छोटा, प्यासी भूमि</text>
+  </g>
+</svg>

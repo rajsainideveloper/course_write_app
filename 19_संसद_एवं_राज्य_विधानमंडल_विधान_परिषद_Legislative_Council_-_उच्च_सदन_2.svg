@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%">
+  <defs>
+    <linearGradient id="upGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#0D9488" />
+    </linearGradient>
+    <linearGradient id="vsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B45309" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+    <linearGradient id="vpGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#047857" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+    <filter id="shadowStyle" x="-5%" y="-5%" width="110%" height="110%">
+      <drop-shadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#FAFAFA" rx="15" stroke="#E2E8F0" stroke-width="2"/>
+
+  <!-- UP Title Box -->
+  <rect x="200" y="20" width="400" height="70" rx="12" fill="url(#upGrad)" filter="url(#shadowStyle)" />
+  <text x="400" y="50" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">उत्तर प्रदेश राज्य विधानमंडल (द्विसदनीय स्वरूप)</text>
+  <text x="400" y="75" fill="#CCFBF1" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle">देश की सबसे बड़ी विधायी संरचना</text>
+
+  <!-- Connectors -->
+  <path d="M 400 90 L 400 140" stroke="#94A3B8" stroke-width="2" fill="none" />
+  <path d="M 400 140 L 160 140 L 160 180" stroke="#94A3B8" stroke-width="2" fill="none" />
+  <path d="M 400 140 L 640 140 L 640 180" stroke="#94A3B8" stroke-width="2" fill="none" />
+
+  <!-- विधानसभा (UP Legislative Assembly) -->
+  <rect x="30" y="180" width="260" height="220" rx="10" fill="url(#vsGrad)" filter="url(#shadowStyle)" />
+  <text x="160" y="215" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">उत्तर प्रदेश विधानसभा</text>
+  <line x1="50" y1="230" x2="270" y2="230" stroke="#FFFBEB" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="50" y="260" fill="#FEF3C7" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold">• कुल सीटें:</text>
+  <text x="180" y="260" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold">403 (सर्वाधिक)</text>
+  <text x="50" y="295" fill="#FEF3C7" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold">• सदन का स्वरूप:</text>
+  <text x="180" y="295" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="13">अस्थायी (निचला)</text>
+  <text x="50" y="330" fill="#FEF3C7" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold">• चुनाव प्रणाली:</text>
+  <text x="180" y="330" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="13">प्रत्यक्ष (जनता द्वारा)</text>
+  <text x="50" y="365" fill="#FEF3C7" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold">• न्यूनतम आयु:</text>
+  <text x="180" y="365" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold">25 वर्ष</text>
+
+  <!-- विधान परिषद (UP Legislative Council) -->
+  <rect x="510" y="180" width="260" height="220" rx="10" fill="url(#vpGrad)" filter="url(#shadowStyle)" />
+  <text x="640" y="215" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">उत्तर प्रदेश विधान परिषद</text>
+  <line x1="530" y1="230" x2="750" y2="230" stroke="#E6FFFA" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="530" y="260" fill="#E6FFFA" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold">• कुल सीटें:</text>
+  <text x="660" y="260" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold">100 (सर्वाधिक)</text>
+  <text x="530" y="295" fill="#E6FFFA" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold">• सदन का स्वरूप:</text>
+  <text x="660" y="295" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="13">स्थायी (उच्च सदन)</text>
+  <text x="530" y="330" fill="#E6FFFA" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold">• चुनाव प्रणाली:</text>
+  <text x="660" y="330" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="13">अप्रत्यक्ष (निर्वाचक मंडल)</text>
+  <text x="530" y="365" fill="#E6FFFA" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold">• न्यूनतम आयु:</text>
+  <text x="660" y="365" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold">30 वर्ष</text>
+</svg>

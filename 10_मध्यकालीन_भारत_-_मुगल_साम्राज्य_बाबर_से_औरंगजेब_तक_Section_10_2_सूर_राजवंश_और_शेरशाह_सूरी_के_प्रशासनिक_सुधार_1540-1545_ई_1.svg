@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%">
+  <defs>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D9488;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#115E59;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#064E3B;stop-opacity:1" />
+    </linearGradient>
+    <filter id="dropShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="3" dy="4" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="bold" fill="#0F172A" text-anchor="middle">शेरशाह सूरी के चतुष्कोणीय प्रशासनिक सुधार</text>
+
+  <!-- Box 1: Land Revenue -->
+  <rect x="50" y="70" width="330" height="150" rx="10" fill="url(#cyanGrad)" filter="url(#dropShadow)"/>
+  <text x="215" y="105" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">1. भू-राजस्व एवं पटवारी प्रणाली</text>
+  <line x1="80" y1="120" x2="350" y2="120" stroke="#2DD4BF" stroke-width="1.5"/>
+  <text x="215" y="145" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#CCFBF1" text-anchor="middle">• रैयतवाड़ी व्यवस्था: सीधे किसानों से संपर्क</text>
+  <text x="215" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#CCFBF1" text-anchor="middle">• 'रई' (उपज दर सूची) एवं 'पटवारी' तंत्र का सुदृढ़ीकरण</text>
+  <text x="215" y="195" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#CCFBF1" text-anchor="middle">• कबूलियत एवं पट्टा प्रथा की शुरुआत</text>
+
+  <!-- Box 2: Currency System -->
+  <rect x="420" y="70" width="330" height="150" rx="10" fill="url(#cyanGrad)" filter="url(#dropShadow)"/>
+  <text x="585" y="105" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">2. मौद्रिक सुधार (रुपया प्रचलन)</text>
+  <line x1="450" y1="120" x2="720" y2="120" stroke="#2DD4BF" stroke-width="1.5"/>
+  <text x="585" y="145" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#CCFBF1" text-anchor="middle">• पुराने अशुद्ध सिक्कों को बंद किया</text>
+  <text x="585" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#CCFBF1" text-anchor="middle">• शुद्ध चांदी का 'रुपया' (178 ग्रेन) चलाया</text>
+  <text x="585" y="195" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#CCFBF1" text-anchor="middle">• तांबे का 'दाम' (380 ग्रेन) का प्रचलन</text>
+
+  <!-- Box 3: Infrastructure -->
+  <rect x="50" y="260" width="330" height="150" rx="10" fill="url(#emeraldGrad)" filter="url(#dropShadow)"/>
+  <text x="215" y="295" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">3. बुनियादी ढांचा (Grand Trunk Road)</text>
+  <line x1="80" y1="310" x2="350" y2="310" stroke="#34D399" stroke-width="1.5"/>
+  <text x="215" y="335" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#D1FAE5" text-anchor="middle">• 'सड़क-ए-आज़म' (पेशावर से सोनारगांव/कलकत्ता)</text>
+  <text x="215" y="360" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#D1FAE5" text-anchor="middle">• मार्ग में 1700 सरायों का निर्माण करवाया</text>
+  <text x="215" y="385" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#D1FAE5" text-anchor="middle">• सरायों को व्यापारिक चौकियों में बदला</text>
+
+  <!-- Box 4: Postal System -->
+  <rect x="420" y="260" width="330" height="150" rx="10" fill="url(#emeraldGrad)" filter="url(#dropShadow)"/>
+  <text x="585" y="295" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">4. उन्नत डाक एवं गुप्तचर प्रणाली</text>
+  <line x1="450" y1="310" x2="720" y2="310" stroke="#34D399" stroke-width="1.5"/>
+  <text x="585" y="335" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#D1FAE5" text-anchor="middle">• डाक चौकियों के रूप में सरायों का प्रयोग</text>
+  <text x="585" y="360" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#D1FAE5" text-anchor="middle">• हरकारों (सवारों) द्वारा तीव्र संदेश प्रेषण</text>
+  <text x="585" y="385" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#D1FAE5" text-anchor="middle">• 'दरोगा-ए-चौकी' के अधीन गुप्तचर नेटवर्क</text>
+</svg>

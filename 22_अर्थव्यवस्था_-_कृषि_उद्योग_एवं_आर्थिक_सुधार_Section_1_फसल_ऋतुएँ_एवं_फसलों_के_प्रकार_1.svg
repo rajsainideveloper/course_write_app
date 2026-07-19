@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%">
+  <defs>
+    <linearGradient id="kharifGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <linearGradient id="rabiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+    <linearGradient id="zaidGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background Grid Concept Line -->
+  <line x1="50" y1="250" x2="750" y2="250" stroke="#E2E8F0" stroke-width="4" stroke-dasharray="5 5" />
+
+  <!-- Kharif Box -->
+  <g transform="translate(50, 80)" filter="url(#shadow)">
+    <rect width="210" height="220" rx="12" fill="url(#kharifGrad)" />
+    <text x="105" y="40" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="22" font-weight="bold" text-anchor="middle">खरीफ ऋतु</text>
+    <text x="105" y="80" fill="#E0F2FE" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">बुआई: जून - जुलाई</text>
+    <text x="105" y="110" fill="#E0F2FE" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">कटाई: अक्टूबर - नवंबर</text>
+    <rect x="20" y="140" width="170" height="60" rx="6" fill="#FFFFFF" fill-opacity="0.15" />
+    <text x="105" y="165" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">धान, मक्का, बाजरा</text>
+    <text x="105" y="185" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">कपास, जूट</text>
+  </g>
+
+  <!-- Rabi Box -->
+  <g transform="translate(295, 80)" filter="url(#shadow)">
+    <rect width="210" height="220" rx="12" fill="url(#rabiGrad)" />
+    <text x="105" y="40" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="22" font-weight="bold" text-anchor="middle">रबी ऋतु</text>
+    <text x="105" y="80" fill="#ECFDF5" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">बुआई: अक्टूबर - नवंबर</text>
+    <text x="105" y="110" fill="#ECFDF5" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">कटाई: मार्च - अप्रैल</text>
+    <rect x="20" y="140" width="170" height="60" rx="6" fill="#FFFFFF" fill-opacity="0.15" />
+    <text x="105" y="165" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">गेहूँ, जौ, चना</text>
+    <text x="105" y="185" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">मटर, सरसों, आलू</text>
+  </g>
+
+  <!-- Zaid Box -->
+  <g transform="translate(540, 80)" filter="url(#shadow)">
+    <rect width="210" height="220" rx="12" fill="url(#zaidGrad)" />
+    <text x="105" y="40" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="22" font-weight="bold" text-anchor="middle">जायद ऋतु</text>
+    <text x="105" y="80" fill="#FEF3C7" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">बुआई: मार्च - अप्रैल</text>
+    <text x="105" y="110" fill="#FEF3C7" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">कटाई: जून - जुलाई</text>
+    <rect x="20" y="140" width="170" height="60" rx="6" fill="#FFFFFF" fill-opacity="0.15" />
+    <text x="105" y="165" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">तरबूज, खरबूजा</text>
+    <text x="105" y="185" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">ककड़ी, हरी सब्जियाँ</text>
+  </g>
+</svg>

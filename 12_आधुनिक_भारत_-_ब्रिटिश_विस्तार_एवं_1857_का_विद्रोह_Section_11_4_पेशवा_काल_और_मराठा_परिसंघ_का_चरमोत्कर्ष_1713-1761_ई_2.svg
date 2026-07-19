@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E3A8A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E40AF;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#064E3B;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D97706;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#78350F;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="bold" fill="#0F172A" text-anchor="middle">पेशवाओं का त्रिकोण: मराठा शक्ति का उत्थान</text>
+
+  <!-- Peshwa 1 -->
+  <rect x="40" y="80" width="220" height="180" rx="12" fill="url(#blueGrad)" filter="url(#shadow)"/>
+  <text x="150" y="115" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">बालाजी विश्वनाथ</text>
+  <text x="150" y="135" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#93C5FD" text-anchor="middle">(1713 - 1720 ई.)</text>
+  <line x1="60" y1="150" x2="240" y2="150" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="150" y="175" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#E0F2FE" text-anchor="middle">• प्रथम शक्तिशाली पेशवा</text>
+  <text x="150" y="200" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#E0F2FE" text-anchor="middle">• मुगल-मराठा संधि (1719)</text>
+  <text x="150" y="225" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#E0F2FE" text-anchor="middle">• मराठा मैग्नाकार्टा के सूत्रधार</text>
+
+  <!-- Peshwa 2 -->
+  <rect x="290" y="80" width="220" height="180" rx="12" fill="url(#emeraldGrad)" filter="url(#shadow)"/>
+  <text x="400" y="115" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">बाजीराव प्रथम</text>
+  <text x="400" y="135" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#A7F3D0" text-anchor="middle">(1720 - 1740 ई.)</text>
+  <line x1="310" y1="150" x2="490" y2="150" stroke="#10B981" stroke-width="1.5"/>
+  <text x="400" y="175" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#ECFDF5" text-anchor="middle">• 'लड़ाकू पेशवा' के नाम से विख्यात</text>
+  <text x="400" y="200" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#ECFDF5" text-anchor="middle">• हिंदू पाद-पादशाही का लक्ष्य</text>
+  <text x="400" y="225" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#ECFDF5" text-anchor="middle">• कटक से अटक तक विस्तार</text>
+
+  <!-- Peshwa 3 -->
+  <rect x="540" y="80" width="220" height="180" rx="12" fill="url(#amberGrad)" filter="url(#shadow)"/>
+  <text x="660" y="115" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">बालाजी बाजीराव</text>
+  <text x="660" y="135" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#FDE68A" text-anchor="middle">(1740 - 1761 ई.)</text>
+  <line x1="560" y1="150" x2="740" y2="150" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="660" y="175" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#FFFBEB" text-anchor="middle">• 'नाना साहेब' के नाम से लोकप्रिय</text>
+  <text x="660" y="200" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#FFFBEB" text-anchor="middle">• संगोला की संधि (1750)</text>
+  <text x="660" y="225" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#FFFBEB" text-anchor="middle">• पानीपत का तृतीय युद्ध (1761)</text>
+
+  <!-- Summary Banner -->
+  <rect x="40" y="300" width="720" height="100" rx="10" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="400" y="335" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#334155" text-anchor="middle">ऐतिहासिक महत्व का निष्कर्ष</text>
+  <text x="400" y="365" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#64748B" text-anchor="middle">इन तीन पेशवाओं के कार्यकाल में मराठा सत्ता एक क्षेत्रीय राज्य से उठकर अखिल भारतीय महाशक्ति बनी,</text>
+  <text x="400" y="385" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#64748B" text-anchor="middle">जिसने मुगलों को नाममात्र का शासक बनाकर दिल्ली की राजनीति को प्रत्यक्ष नियंत्रित किया।</text>
+</svg>

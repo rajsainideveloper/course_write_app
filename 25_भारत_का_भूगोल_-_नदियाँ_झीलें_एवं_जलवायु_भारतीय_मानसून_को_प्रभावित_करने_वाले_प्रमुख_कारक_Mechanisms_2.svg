@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" width="100%">
+  <defs>
+    <linearGradient id="monsoonGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="380" fill="#F8FAFC" rx="16" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="400" y="35" fill="#0F172A" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">भारतीय मानसून: आगमन एवं निवर्तन</text>
+  
+  <!-- Southwest Monsoon -->
+  <g transform="translate(50, 80)">
+    <rect width="330" height="260" rx="12" fill="url(#monsoonGrad)" />
+    <text x="165" y="35" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">1. दक्षिण-पश्चिम मानसून (SW Monsoon)</text>
+    <line x1="20" y1="55" x2="310" y2="55" stroke="#FFFFFF" stroke-dasharray="4 4" stroke-opacity="0.6"/>
+    
+    <text x="25" y="90" fill="#F0FDF4" font-family="system-ui, sans-serif" font-size="13" text-anchor="start">• अवधि: जून से सितंबर</text>
+    <text x="25" y="130" fill="#F0FDF4" font-family="system-ui, sans-serif" font-size="13" text-anchor="start">• आगमन: सबसे पहले 1 जून को केरल तट पर</text>
+    <text x="25" y="160" fill="#F0FDF4" font-family="system-ui, sans-serif" font-size="11" font-style="italic" text-anchor="start">  (दो शाखाएं: अरब सागर शाखा एवं बंगाल की खाड़ी शाखा)</text>
+    <text x="25" y="200" fill="#F0FDF4" font-family="system-ui, sans-serif" font-size="13" text-anchor="start">• योगदान: भारत की कुल वर्षा का लगभग 75-80% भाग</text>
+    <text x="25" y="230" fill="#F0FDF4" font-family="system-ui, sans-serif" font-size="13" text-anchor="start">• प्रभाव: खरीफ फसलों के लिए जीवनदायिनी</text>
+  </g>
+
+  <!-- Northeast Monsoon -->
+  <g transform="translate(420, 80)">
+    <rect width="330" height="260" rx="12" fill="#64748B" />
+    <text x="165" y="35" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">2. उत्तर-पूर्वी मानसून / लौटता मानसून</text>
+    <line x1="20" y1="55" x2="310" y2="55" stroke="#FFFFFF" stroke-dasharray="4 4" stroke-opacity="0.6"/>
+    
+    <text x="25" y="90" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="13" text-anchor="start">• अवधि: अक्टूबर से दिसंबर</text>
+    <text x="25" y="130" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="13" text-anchor="start">• क्रियाविधि: स्थल खंड के ठंडे होने पर हवाएं</text>
+    <text x="25" y="155" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="13" text-anchor="start">  स्थल से समुद्र की ओर चलती हैं।</text>
+    <text x="25" y="195" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="13" text-anchor="start">• मुख्य वर्षा क्षेत्र: कोरोमंडल तट (तमिलनाडु)</text>
+    <text x="25" y="230" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="11" font-style="italic" text-anchor="start">  (बंगाल की खाड़ी से नमी ग्रहण कर तमिलनाडु में वर्षा)</text>
+  </g>
+</svg>

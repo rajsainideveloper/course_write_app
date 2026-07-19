@@ -1,3 +1,3 @@
-2026/07/19-11:14:45.188 9903 Reusing MANIFEST /Applications/XAMPP/xamppfiles/htdocs/course_write_app/user_data_gemini/Default/Sync Data/LevelDB/MANIFEST-000001
-2026/07/19-11:14:45.202 9903 Recovering log #3
-2026/07/19-11:14:45.203 9903 Reusing old log /Applications/XAMPP/xamppfiles/htdocs/course_write_app/user_data_gemini/Default/Sync Data/LevelDB/000003.log 
+2026/07/19-16:28:42.327 f803 Reusing MANIFEST /Applications/XAMPP/xamppfiles/htdocs/course_write_app/user_data_gemini/Default/Sync Data/LevelDB/MANIFEST-000001
+2026/07/19-16:28:42.335 f803 Recovering log #3
+2026/07/19-16:28:42.347 f803 Reusing old log /Applications/XAMPP/xamppfiles/htdocs/course_write_app/user_data_gemini/Default/Sync Data/LevelDB/000003.log 

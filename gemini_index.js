@@ -91,7 +91,6 @@ async function waitForGeminiResponse(page, initialCount, timeoutMs = 150000) {
         if (containers.length === 0) return false;
         const lastContainer = containers[containers.length - 1];
         
-        // Find if this container has the action footer
         return !!(
           lastContainer.querySelector('.model-response-footer') || 
           lastContainer.querySelector('.message-actions') ||
@@ -101,22 +100,33 @@ async function waitForGeminiResponse(page, initialCount, timeoutMs = 150000) {
         );
       });
 
-      if (footerExists) {
-        console.log('✅ Response complete! Generation stopped and footer actions are visible.');
-        break;
-      }
-    }
-    
-    // Standard stabilization fallback
-    if (currentLength > 0 && currentLength === previousLength) {
-      stableCount++;
-      if (stableCount >= 20) { // Stable for ~10 seconds
-        console.log('✅ Response content has stabilized for 10 seconds. Proceeding...');
-        break;
+      if (footerExists && currentLength === previousLength) {
+        stableCount++;
+        if (stableCount >= 10) { // Stable for 5 seconds AFTER footer is visible
+          console.log('✅ Response complete! Footer is visible and text is stable for 5 seconds.');
+          break;
+        }
+      } else if (currentLength > 0 && currentLength === previousLength) {
+        stableCount++;
+        if (stableCount >= 40) { // Stable for 20 seconds as absolute fallback
+          console.log('✅ Response content has stabilized for 20 seconds (fallback). Proceeding...');
+          break;
+        }
+      } else {
+        stableCount = 0;
+        previousLength = currentLength;
       }
     } else {
-      stableCount = 0;
-      previousLength = currentLength;
+      if (currentLength > 0 && currentLength === previousLength) {
+        stableCount++;
+        if (stableCount >= 60) { // 30 seconds stable even if stop button is somehow stuck
+          console.log('✅ Response content stabilized for 30 seconds despite loading indicator. Proceeding...');
+          break;
+        }
+      } else {
+        stableCount = 0;
+        previousLength = currentLength;
+      }
     }
     
     await new Promise(resolve => setTimeout(resolve, 500));

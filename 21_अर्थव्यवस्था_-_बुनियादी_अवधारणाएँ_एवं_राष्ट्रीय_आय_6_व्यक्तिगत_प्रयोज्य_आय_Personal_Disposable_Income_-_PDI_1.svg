@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%">
+  <defs>
+    <linearGradient id="gdpGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <linearGradient id="gnpGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488" />
+      <stop offset="100%" stop-color="#14B8A6" />
+    </linearGradient>
+    <linearGradient id="nnpGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <drop-shadow dx="3" dy="5" stdDeviation="4" flood-opacity="0.25"/>
+    </filter>
+    <marker id="arrowHead" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748B" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#F8FAFC" rx="12" />
+
+  <!-- GDP Block -->
+  <rect x="50" y="160" width="200" height="90" rx="10" fill="url(#gdpGrad)" filter="url(#dropShadow)" />
+  <text x="150" y="200" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">सकल घरेलू उत्पाद (GDP)</text>
+  <text x="150" y="225" fill="#DBEAFE" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle">भौगोलिक सीमा के भीतर उत्पादन</text>
+
+  <!-- GNP Block -->
+  <rect x="300" y="160" width="200" height="90" rx="10" fill="url(#gnpGrad)" filter="url(#dropShadow)" />
+  <text x="400" y="200" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">सकल राष्ट्रीय उत्पाद (GNP)</text>
+  <text x="400" y="225" fill="#CCFBF1" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle">GDP + विदेशों से शुद्ध साधन आय</text>
+
+  <!-- NNP Block -->
+  <rect x="550" y="160" width="200" height="90" rx="10" fill="url(#nnpGrad)" filter="url(#dropShadow)" />
+  <text x="650" y="200" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">शुद्ध राष्ट्रीय उत्पाद (NNP)</text>
+  <text x="650" y="225" fill="#D1FAE5" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle">GNP - मूल्यह्रास (राष्ट्रीय आय)</text>
+
+  <!-- Connectors and Labels -->
+  <path d="M 250 205 L 300 205" stroke="#64748B" stroke-width="2" fill="none" marker-end="url(#arrowHead)" />
+  <text x="275" y="195" fill="#475569" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">+ NFIA</text>
+
+  <path d="M 500 205 L 550 205" stroke="#64748B" stroke-width="2" fill="none" marker-end="url(#arrowHead)" />
+  <text x="525" y="195" fill="#475569" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">- मूल्यह्रास</text>
+</svg>
