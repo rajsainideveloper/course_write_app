@@ -1,0 +1,5 @@
+2026/07/22-21:55:29.524 3a03 Creating DB /Applications/XAMPP/xamppfiles/htdocs/course_write_app/user_data_grok/Default/Local Storage/leveldb since it was missing.
+2026/07/22-21:55:29.527 3a03 Reusing MANIFEST /Applications/XAMPP/xamppfiles/htdocs/course_write_app/user_data_grok/Default/Local Storage/leveldb/MANIFEST-000001
+2026/07/22-21:55:41.363 3e0b Level-0 table #5: started
+2026/07/22-21:55:41.368 3e0b Level-0 table #5: 87793 bytes OK
+2026/07/22-21:55:41.374 3e0b Delete type=0 #3

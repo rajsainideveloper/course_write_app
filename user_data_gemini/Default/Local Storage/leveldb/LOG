@@ -1,3 +1,6 @@
-2026/07/22-21:20:22.377 3f0b Reusing MANIFEST /Applications/XAMPP/xamppfiles/htdocs/course_write_app/user_data_gemini/Default/Local Storage/leveldb/MANIFEST-000001
-2026/07/22-21:20:22.379 3f0b Recovering log #3
-2026/07/22-21:20:22.380 3f0b Reusing old log /Applications/XAMPP/xamppfiles/htdocs/course_write_app/user_data_gemini/Default/Local Storage/leveldb/000003.log 
+2026/07/22-22:11:13.060 2e03 Reusing MANIFEST /Applications/XAMPP/xamppfiles/htdocs/course_write_app/user_data_gemini/Default/Local Storage/leveldb/MANIFEST-000001
+2026/07/22-22:11:13.062 2e03 Recovering log #3
+2026/07/22-22:11:13.063 2e03 Reusing old log /Applications/XAMPP/xamppfiles/htdocs/course_write_app/user_data_gemini/Default/Local Storage/leveldb/000003.log 
+2026/07/22-22:12:17.038 2e03 Level-0 table #5: started
+2026/07/22-22:12:17.042 2e03 Level-0 table #5: 11379 bytes OK
+2026/07/22-22:12:17.043 2e03 Delete type=0 #3

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 220" width="100%">
+  <defs>
+    <style>
+      .txt { font-family: system-ui; font-size: 14px; font-weight: bold; fill: #FFFFFF; }
+      .subtxt { font-family: system-ui; font-size: 12px; fill: #CBD5E1; }
+    </style>
+  </defs>
+  <rect width="800" height="220" rx="10" fill="#1E1B4B"/>
+
+  <!-- Series -->
+  <g transform="translate(20, 20)">
+    <rect width="360" height="180" rx="8" fill="#312E81" stroke="#6366F1" stroke-width="2"/>
+    <text x="180" y="30" class="txt" text-anchor="middle">श्रेणीक्रम (Series Connection)</text>
+    <path d="M 40,100 L 90,100 L 100,80 L 120,120 L 140,80 L 160,120 L 170,100 L 210,100 L 220,80 L 240,120 L 260,80 L 280,120 L 290,100 L 320,100" fill="none" stroke="#F59E0B" stroke-width="3"/>
+    <text x="135" y="70" class="subtxt" text-anchor="middle">R1</text>
+    <text x="250" y="70" class="subtxt" text-anchor="middle">R2</text>
+    <text x="180" y="150" class="txt" fill="#FCD34D" text-anchor="middle">R_eq = R1 + R2</text>
+  </g>
+
+  <!-- Parallel -->
+  <g transform="translate(420, 20)">
+    <rect width="360" height="180" rx="8" fill="#312E81" stroke="#6366F1" stroke-width="2"/>
+    <text x="180" y="30" class="txt" text-anchor="middle">समांतर क्रम (Parallel Connection)</text>
+    <path d="M 40,100 L 100,100 M 100,60 L 100,140" stroke="#38BDF8" stroke-width="3"/>
+    <path d="M 100,60 L 130,60 L 140,45 L 160,75 L 180,45 L 200,75 L 210,60 L 260,60" fill="none" stroke="#38BDF8" stroke-width="3"/>
+    <path d="M 100,140 L 130,140 L 140,125 L 160,155 L 180,125 L 200,155 L 210,140 L 260,140" fill="none" stroke="#38BDF8" stroke-width="3"/>
+    <path d="M 260,60 L 260,140 M 260,100 L 320,100" stroke="#38BDF8" stroke-width="3"/>
+    <text x="170" y="40" class="subtxt" text-anchor="middle">R1</text>
+    <text x="170" y="120" class="subtxt" text-anchor="middle">R2</text>
+    <text x="180" y="175" class="txt" fill="#7DD3FC" text-anchor="middle">1/R_eq = 1/R1 + 1/R2</text>
+  </g>
+</svg>

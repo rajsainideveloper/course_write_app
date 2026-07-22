@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" width="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="350" rx="12" fill="url(#bg)"/>
+
+  <!-- Light Source Ray -->
+  <line x1="50" y1="200" x2="300" y2="180" stroke="#FFFFFF" stroke-width="4" filter="url(#shadow)"/>
+  <text x="80" y="170" fill="#F8FAFC" font-family="system-ui" font-size="14" font-weight="bold">श्वेत प्रकाश (White Light)</text>
+
+  <!-- Prism -->
+  <polygon points="300,80 480,280 220,280" fill="rgba(255, 255, 255, 0.15)" stroke="#38BDF8" stroke-width="3" filter="url(#shadow)"/>
+  <text x="325" y="240" fill="#93C5FD" font-family="system-ui" font-size="16" font-weight="bold">प्रिज्म (Prism)</text>
+
+  <!-- Dispersed Rays -->
+  <!-- Red -->
+  <line x1="390" y1="190" x2="700" y2="100" stroke="#EF4444" stroke-width="3"/>
+  <text x="710" y="105" fill="#EF4444" font-family="system-ui" font-size="13" font-weight="bold">लाल (Red) - न्यूनतम विचलन, अधिकतम λ</text>
+
+  <!-- Yellow -->
+  <line x1="390" y1="190" x2="700" y2="150" stroke="#FACC15" stroke-width="3"/>
+
+  <!-- Green -->
+  <line x1="390" y1="190" x2="700" y2="200" stroke="#22C55E" stroke-width="3"/>
+
+  <!-- Blue -->
+  <line x1="390" y1="190" x2="700" y2="250" stroke="#3B82F6" stroke-width="3"/>
+
+  <!-- Violet -->
+  <line x1="390" y1="190" x2="700" y2="300" stroke="#A855F7" stroke-width="3"/>
+  <text x="710" y="305" fill="#A855F7" font-family="system-ui" font-size="13" font-weight="bold">बैंगनी (Violet) - अधिकतम विचलन, न्यूनतम λ</text>
+</svg>
