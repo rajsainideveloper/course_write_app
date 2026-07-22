@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="fluidGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0D9488" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+    <filter id="shadow2" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.3"/>
+    </filter>
+    <marker id="arrow2" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94A3B8"/>
+    </marker>
+  </defs>
+
+  <rect x="20" y="20" width="760" height="380" rx="15" fill="url(#bgGrad2)" filter="url(#shadow2)"/>
+  
+  <text x="400" y="55" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">पास्कल के नियम पर आधारित द्रवचालित उपकरण</text>
+
+  <!-- Hydraulic Lift Card -->
+  <rect x="50" y="90" width="210" height="280" rx="10" fill="#FFFFFF" fill-opacity="0.15" stroke="#FFFFFF" stroke-width="1.5"/>
+  <text x="155" y="125" fill="#FDE047" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="bold" text-anchor="middle">हाइड्रोलिक लिफ्ट</text>
+  <text x="155" y="165" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle">• भारी वाहनों को उठाने हेतु</text>
+  <text x="155" y="195" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle">• छोटा पिस्टन (कम बल)</text>
+  <text x="155" y="225" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle">• बड़ा पिस्टन (अधिक भार)</text>
+  <text x="155" y="255" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle">• सर्वरूप से दाब संचरण</text>
+  <text x="155" y="310" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">उपयोग: सर्विस स्टेशन</text>
+
+  <!-- Arrow 1 -->
+  <path d="M 270 230 L 290 230" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow2)"/>
+
+  <!-- Hydraulic Brake Card -->
+  <rect x="295" y="90" width="210" height="280" rx="10" fill="#FFFFFF" fill-opacity="0.15" stroke="#FFFFFF" stroke-width="1.5"/>
+  <text x="400" y="125" fill="#FDE047" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="bold" text-anchor="middle">हाइड्रोलिक ब्रेक</text>
+  <text x="400" y="165" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle">• पैर द्वारा पेडल पर दाब</text>
+  <text x="400" y="195" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle">• मास्टर सिलिंडर में द्रव</text>
+  <text x="400" y="225" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle">• पहियों के सिलिंडर पर दाब</text>
+  <text x="400" y="255" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle">• ब्रेक शू का पहिये से घर्षण</text>
+  <text x="400" y="310" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">उपयोग: ऑटोमोबाइल</text>
+
+  <!-- Arrow 2 -->
+  <path d="M 510 230 L 530 230" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow2)"/>
+
+  <!-- Hydraulic Press Card -->
+  <rect x="535" y="90" width="210" height="280" rx="10" fill="#FFFFFF" fill-opacity="0.15" stroke="#FFFFFF" stroke-width="1.5"/>
+  <text x="640" y="125" fill="#FDE047" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="bold" text-anchor="middle">हाइड्रोलिक प्रेस</text>
+  <text x="640" y="165" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle">• अत्यधिक दाब निर्माण</text>
+  <text x="640" y="195" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle">• धातुओं को आकार देना</text>
+  <text x="640" y="225" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle">• कपास/कागज की बंडलिंग</text>
+  <text x="640" y="255" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle">• बीजों से तेल निकालना</text>
+  <text x="640" y="310" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">उपयोग: भारी उद्योग</text>
+</svg>
