@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%">
+  <defs>
+    <linearGradient id="nucleusGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <linearGradient id="electronGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Title Background -->
+  <rect x="20" y="20" width="760" height="50" rx="10" fill="#F1F5F9" filter="url(#shadow)"/>
+  <text x="400" y="52" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="bold" fill="#1E3A8A" text-anchor="middle">परमाणु की आंतरिक संरचना (Internal Atomic Structure)</text>
+
+  <!-- Orbits -->
+  <ellipse cx="400" cy="230" rx="280" ry="110" fill="none" stroke="#64748B" stroke-width="2" stroke-dasharray="6,6"/>
+  <ellipse cx="400" cy="230" rx="180" ry="70" fill="none" stroke="#94A3B8" stroke-width="2" stroke-dasharray="4,4"/>
+
+  <!-- Nucleus -->
+  <circle cx="400" cy="230" r="55" fill="url(#nucleusGrad)" filter="url(#shadow)"/>
+  <text x="400" y="222" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">नाभिक (Nucleus)</text>
+  <text x="400" y="245" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#E2E8F0" text-anchor="middle">प्रोटॉन + न्यूट्रॉन</text>
+
+  <!-- Electrons -->
+  <circle cx="220" cy="230" r="16" fill="url(#electronGrad)" filter="url(#shadow)"/>
+  <text x="220" y="235" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">e⁻</text>
+
+  <circle cx="580" cy="230" r="16" fill="url(#electronGrad)" filter="url(#shadow)"/>
+  <text x="580" y="235" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">e⁻</text>
+
+  <circle cx="400" cy="120" r="16" fill="url(#electronGrad)" filter="url(#shadow)"/>
+  <text x="400" y="125" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">e⁻</text>
+
+  <!-- Labels -->
+  <path d="M 220 214 L 220 160 L 290 160" stroke="#059669" stroke-width="2" fill="none"/>
+  <rect x="290" y="140" width="180" height="36" rx="6" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5"/>
+  <text x="380" y="163" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold" fill="#047857" text-anchor="middle">इलेक्ट्रॉन (ऋणावेशित)</text>
+</svg>

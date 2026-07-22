@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" width="100%">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+    <linearGradient id="cardGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#1D4ED8" />
+    </linearGradient>
+    <linearGradient id="cardGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488" />
+      <stop offset="100%" stop-color="#0F766E" />
+    </linearGradient>
+    <linearGradient id="cardGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#bgGrad2)" rx="15"/>
+  <text x="400" y="45" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">प्रकाशीय घटक एवं मानव नेत्र: मुख्य वर्गीकरण</text>
+
+  <!-- Box 1 -->
+  <rect x="40" y="80" width="220" height="260" rx="10" fill="url(#cardGrad1)" stroke="#60A5FA" stroke-width="1.5"/>
+  <text x="150" y="115" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">1. उत्तल लेंस</text>
+  <text x="60" y="155" fill="#E0F2FE" font-family="system-ui, -apple-system, sans-serif" font-size="13">• अभिसारी (Converging)</text>
+  <text x="60" y="185" fill="#E0F2FE" font-family="system-ui, -apple-system, sans-serif" font-size="13">• फोकस दूरी: धनात्मक (+)</text>
+  <text x="60" y="215" fill="#E0F2FE" font-family="system-ui, -apple-system, sans-serif" font-size="13">• क्षमता (Power): धनात्मक (+)</text>
+  <text x="60" y="245" fill="#E0F2FE" font-family="system-ui, -apple-system, sans-serif" font-size="13">• उपयोग: दूर दृष्टि दोष</text>
+  <text x="60" y="275" fill="#E0F2FE" font-family="system-ui, -apple-system, sans-serif" font-size="13">• सूक्ष्मदर्शी व दूरदर्शी में</text>
+
+  <!-- Box 2 -->
+  <rect x="290" y="80" width="220" height="260" rx="10" fill="url(#cardGrad2)" stroke="#5EEAD4" stroke-width="1.5"/>
+  <text x="400" y="115" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">2. अवतल लेंस</text>
+  <text x="310" y="155" fill="#CCFBF1" font-family="system-ui, -apple-system, sans-serif" font-size="13">• अपसारी (Diverging)</text>
+  <text x="310" y="185" fill="#CCFBF1" font-family="system-ui, -apple-system, sans-serif" font-size="13">• फोकस दूरी: ऋणात्मक (-)</text>
+  <text x="310" y="215" fill="#CCFBF1" font-family="system-ui, -apple-system, sans-serif" font-size="13">• क्षमता (Power): ऋणात्मक (-)</text>
+  <text x="310" y="245" fill="#CCFBF1" font-family="system-ui, -apple-system, sans-serif" font-size="13">• उपयोग: निकट दृष्टि दोष</text>
+  <text x="310" y="275" fill="#CCFBF1" font-family="system-ui, -apple-system, sans-serif" font-size="13">• सदैव सीधा व आभासी चित्र</text>
+
+  <!-- Box 3 -->
+  <rect x="540" y="80" width="220" height="260" rx="10" fill="url(#cardGrad3)" stroke="#6EE7B7" stroke-width="1.5"/>
+  <text x="650" y="115" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">3. प्रिज्म वर्ण-विक्षेपण</text>
+  <text x="560" y="155" fill="#D1FAE5" font-family="system-ui, -apple-system, sans-serif" font-size="13">• श्वेत प्रकाश -> 7 रंग</text>
+  <text x="560" y="185" fill="#D1FAE5" font-family="system-ui, -apple-system, sans-serif" font-size="13">• क्रम: VIBGYOR (बैजानीहपीनाला)</text>
+  <text x="560" y="215" fill="#D1FAE5" font-family="system-ui, -apple-system, sans-serif" font-size="13">• बैगनी: सर्वाधिक विचलन</text>
+  <text x="560" y="245" fill="#D1FAE5" font-family="system-ui, -apple-system, sans-serif" font-size="13">• लाल: न्यूनतम विचलन</text>
+  <text x="560" y="275" fill="#D1FAE5" font-family="system-ui, -apple-system, sans-serif" font-size="13">• तरंगदैर्ध्य: लाल > बैगनी</text>
+</svg>

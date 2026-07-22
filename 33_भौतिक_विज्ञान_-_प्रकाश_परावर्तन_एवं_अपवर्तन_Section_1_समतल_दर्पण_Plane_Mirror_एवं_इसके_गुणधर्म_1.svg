@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <linearGradient id="boxGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488" />
+      <stop offset="100%" stop-color="#0f766e" />
+    </linearGradient>
+    <linearGradient id="boxGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94A3B8"/>
+    </marker>
+  </defs>
+  
+  <rect width="100%" height="100%" fill="url(#bgGrad)" rx="15"/>
+  
+  <text x="400" y="45" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">प्रकाश परावर्तन एवं अपवर्तन की परिघटनाएँ</text>
+  
+  <!-- Mirror Section -->
+  <rect x="50" y="90" width="320" height="260" rx="10" fill="url(#boxGrad1)" stroke="#5EEAD4" stroke-width="1.5"/>
+  <text x="210" y="125" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">1. परावर्तन (Reflection)</text>
+  <text x="70" y="165" fill="#CCFBF1" font-family="system-ui, -apple-system, sans-serif" font-size="14">• समतल दर्पण: आभासी, सीधा व बराबर प्रतिबिंब</text>
+  <text x="70" y="195" fill="#CCFBF1" font-family="system-ui, -apple-system, sans-serif" font-size="14">• अवतल दर्पण: वास्तविक/आभासी (फोकसिंग)</text>
+  <text x="70" y="225" fill="#CCFBF1" font-family="system-ui, -apple-system, sans-serif" font-size="14">• उत्तल दर्पण: पश्च-दृश्य (Wide Rear View)</text>
+  <text x="70" y="255" fill="#CCFBF1" font-family="system-ui, -apple-system, sans-serif" font-size="14">• नियम: आपतन कोण (i) = परावर्तन कोण (r)</text>
+  <text x="70" y="285" fill="#CCFBF1" font-family="system-ui, -apple-system, sans-serif" font-size="14">• माध्यम परिवर्तन: नहीं होता है</text>
+
+  <!-- Refraction Section -->
+  <rect x="430" y="90" width="320" height="260" rx="10" fill="url(#boxGrad2)" stroke="#6EE7B7" stroke-width="1.5"/>
+  <text x="590" y="125" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">2. अपवर्तन (Refraction)</text>
+  <text x="450" y="165" fill="#D1FAE5" font-family="system-ui, -apple-system, sans-serif" font-size="14">• स्नेल का नियम: sin(i) / sin(r) = μ</text>
+  <text x="450" y="195" fill="#D1FAE5" font-family="system-ui, -apple-system, sans-serif" font-size="14">• विरल से सघन: अभिलंब की ओर झुकाव</text>
+  <text x="450" y="225" fill="#D1FAE5" font-family="system-ui, -apple-system, sans-serif" font-size="14">• सघन से विरल: अभिलंब से दूर हटना</text>
+  <text x="450" y="255" fill="#D1FAE5" font-family="system-ui, -apple-system, sans-serif" font-size="14">• क्रांतिक कोण (C): जब अपवर्तन कोण = 90°</text>
+  <text x="450" y="285" fill="#D1FAE5" font-family="system-ui, -apple-system, sans-serif" font-size="14">• पूर्ण आंतरिक परावर्तन: i > C पर प्रकाशीय तंतु</text>
+</svg>

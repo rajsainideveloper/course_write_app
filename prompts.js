@@ -1183,11 +1183,6 @@ You must output ONLY valid text in our custom Markdown dialect. Follow these str
    **Question:** ...
    **Solution:** ...
    [/example]
-10. **Flashcards (Multiple per block)**: If there are terms, dates, persons, facts, or definitions to memorize, group them into a single flashcard block:
-    [flashcards title="[Topic]"]
-    | [Front Term] | [Back Definition] |
-    | [Front Term] | [Back Definition] |
-    [/flashcards]
 11. **Quizzes (Multiple questions per block)**: For quizzes, group exactly 2 high-quality questions together using the \`[quiz]\` shortcode and \`Q:\` for each question exactly like this:
     [quiz title="[Quiz Title]"]
     Q: [Question 1 text]
@@ -1250,3 +1245,10 @@ export function getFilenameForChunk(chunk) {
     
   return `${prefix}_${cleanTitle}.json`;
 }
+
+
+// 10. **Flashcards (Multiple per block)**: If there are terms, dates, persons, facts, or definitions to memorize, group them into a single flashcard block:
+//     [flashcards title="[Topic]"]
+//     | [Front Term] | [Back Definition] |
+//     | [Front Term] | [Back Definition] |
+//     [/flashcards]
