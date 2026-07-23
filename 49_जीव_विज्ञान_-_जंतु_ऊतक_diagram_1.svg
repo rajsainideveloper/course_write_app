@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%">
+  <defs>
+    <linearGradient id="mainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <linearGradient id="childGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488" />
+      <stop offset="100%" stop-color="#14B8A6" />
+    </linearGradient>
+    <linearGradient id="childGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+    <linearGradient id="childGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+    <linearGradient id="childGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DC2626" />
+      <stop offset="100%" stop-color="#EF4444" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <!-- Main Root -->
+  <rect x="300" y="20" width="200" height="50" rx="10" fill="url(#mainGrad)" filter="url(#shadow)"/>
+  <text x="400" y="45" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" dy=".3em">जंतु ऊतक (Animal Tissues)</text>
+
+  <!-- Connectors -->
+  <path d="M 400 70 L 400 120" stroke="#94A3B8" stroke-width="2" fill="none"/>
+  <path d="M 110 120 L 690 120" stroke="#94A3B8" stroke-width="2" fill="none"/>
+  
+  <path d="M 110 120 L 110 160" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 300 120 L 300 160" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 500 120 L 500 160" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 690 120 L 690 160" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Level 1 Nodes -->
+  <rect x="20" y="160" width="180" height="60" rx="8" fill="url(#childGrad1)" filter="url(#shadow)"/>
+  <text x="110" y="190" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" dy=".3em">उपकला ऊतक</text>
+
+  <rect x="210" y="160" width="180" height="60" rx="8" fill="url(#childGrad2)" filter="url(#shadow)"/>
+  <text x="300" y="190" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" dy=".3em">संयोजी ऊतक</text>
+
+  <rect x="410" y="160" width="180" height="60" rx="8" fill="url(#childGrad3)" filter="url(#shadow)"/>
+  <text x="500" y="190" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" dy=".3em">पेशीय ऊतक</text>
+
+  <rect x="600" y="160" width="180" height="60" rx="8" fill="url(#childGrad4)" filter="url(#shadow)"/>
+  <text x="690" y="190" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" dy=".3em">तंत्रिका ऊतक</text>
+
+  <!-- Descriptions -->
+  <rect x="20" y="240" width="180" height="120" rx="6" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="110" y="260" fill="#334155" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">मुख्य कार्य: आवरण एवं सुरक्षा</text>
+  <text x="110" y="290" fill="#64748B" font-family="system-ui, -apple-system, sans-serif" font-size="11" text-anchor="middle">• त्वचा</text>
+  <text x="110" y="310" fill="#64748B" font-family="system-ui, -apple-system, sans-serif" font-size="11" text-anchor="middle">• आंतों की भीतरी परत</text>
+
+  <rect x="210" y="240" width="180" height="120" rx="6" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="300" y="260" fill="#334155" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">मुख्य कार्य: जोड़ना एवं सहारा देना</text>
+  <text x="300" y="290" fill="#64748B" font-family="system-ui, -apple-system, sans-serif" font-size="11" text-anchor="middle">• रक्त (Blood)</text>
+  <text x="300" y="310" fill="#64748B" font-family="system-ui, -apple-system, sans-serif" font-size="11" text-anchor="middle">• अस्थि व उपास्थि</text>
+
+  <rect x="410" y="240" width="180" height="120" rx="6" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="500" y="260" fill="#334155" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">मुख्य कार्य: संकुचन एवं गति</text>
+  <text x="500" y="290" fill="#64748B" font-family="system-ui, -apple-system, sans-serif" font-size="11" text-anchor="middle">• ऐच्छिक पेशी</text>
+  <text x="500" y="310" fill="#64748B" font-family="system-ui, -apple-system, sans-serif" font-size="11" text-anchor="middle">• अनैच्छिक व हृद पेशी</text>
+
+  <rect x="600" y="240" width="180" height="120" rx="6" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="690" y="260" fill="#334155" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">मुख्य कार्य: संवेदना एवं नियंत्रण</text>
+  <text x="690" y="290" fill="#64748B" font-family="system-ui, -apple-system, sans-serif" font-size="11" text-anchor="middle">• मस्तिष्क</text>
+  <text x="690" y="310" fill="#64748B" font-family="system-ui, -apple-system, sans-serif" font-size="11" text-anchor="middle">• मेरुरज्जु (Spinal Cord)</text>
+</svg>

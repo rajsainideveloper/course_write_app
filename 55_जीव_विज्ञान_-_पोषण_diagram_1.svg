@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%">
+  <defs>
+    <linearGradient id="gradMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E3A8A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gradMacro" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D9488;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#14B8A6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gradMicro" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10B981;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gradBox" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#334155;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#475569;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.3"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748B" />
+    </marker>
+  </defs>
+
+  <!-- Root Node -->
+  <rect x="275" y="20" width="250" height="60" rx="10" ry="10" fill="url(#gradMain)" filter="url(#shadow)" />
+  <text x="400" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dy=".3em">मानव पोषक तत्व</text>
+
+  <!-- Level 1 Branches -->
+  <path d="M 330 80 L 200 140" stroke="#64748B" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 470 80 L 600 140" stroke="#64748B" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Macro Node -->
+  <rect x="75" y="140" width="250" height="50" rx="8" ry="8" fill="url(#gradMacro)" filter="url(#shadow)" />
+  <text x="200" y="165" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dy=".3em">मैक्रोन्यूट्रिएंट्स (ऊर्जा एवं संरचना)</text>
+
+  <!-- Micro Node -->
+  <rect x="475" y="140" width="250" height="50" rx="8" ry="8" fill="url(#gradMicro)" filter="url(#shadow)" />
+  <text x="600" y="165" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dy=".3em">माइक्रोन्यूट्रिएंट्स (जैविक नियंत्रण)</text>
+
+  <!-- Sub Branches Macro -->
+  <path d="M 120 190 L 80 250" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 200 190 L 200 250" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 280 190 L 320 250" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <rect x="20" y="250" width="120" height="40" rx="6" ry="6" fill="url(#gradBox)" filter="url(#shadow)" />
+  <text x="80" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle" dy=".3em">कार्बोहाइड्रेट</text>
+
+  <rect x="150" y="250" width="100" height="40" rx="6" ry="6" fill="url(#gradBox)" filter="url(#shadow)" />
+  <text x="200" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle" dy=".3em">प्रोटीन</text>
+
+  <rect x="260" y="250" width="120" height="40" rx="6" ry="6" fill="url(#gradBox)" filter="url(#shadow)" />
+  <text x="320" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle" dy=".3em">वसा (Lipids)</text>
+
+  <!-- Sub Branches Micro -->
+  <path d="M 530 190 L 520 250" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 670 190 L 680 250" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <rect x="450" y="250" width="140" height="40" rx="6" ry="6" fill="url(#gradBox)" filter="url(#shadow)" />
+  <text x="520" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle" dy=".3em">विटामिन (जल/वसा)</text>
+
+  <rect x="610" y="250" width="140" height="40" rx="6" ry="6" fill="url(#gradBox)" filter="url(#shadow)" />
+  <text x="680" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle" dy=".3em">खनिज (मैक्रो/माइक्रो)</text>
+</svg>

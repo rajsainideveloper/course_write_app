@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#0D9488" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F1F5F9" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.3"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748B" />
+    </marker>
+  </defs>
+
+  <rect width="800" height="400" rx="15" fill="url(#bgGrad)" />
+
+  <text x="400" y="45" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="bold" text-anchor="middle">
+    मार्च-अप्रैल-मई-जून का महत्वपूर्ण पर्यावरणीय एवं सामाजिक चक्र
+  </text>
+
+  <!-- Box 1: March 22 -->
+  <g filter="url(#shadow)">
+    <rect x="50" y="90" width="320" height="110" rx="10" fill="url(#cardGrad)" />
+    <text x="210" y="125" fill="#1E3A8A" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">22 मार्च: विश्व जल दिवस</text>
+    <text x="210" y="155" fill="#334155" font-family="system-ui, -apple-system, sans-serif" font-size="14" text-anchor="middle">जल संरक्षण एवं SDG-6 का लक्ष्य</text>
+    <text x="210" y="180" fill="#059669" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">(UNCED रियो सम्मेलन 1992 से प्रेरित)</text>
+  </g>
+
+  <!-- Box 2: April 22 -->
+  <g filter="url(#shadow)">
+    <rect x="430" y="90" width="320" height="110" rx="10" fill="url(#cardGrad)" />
+    <text x="590" y="125" fill="#1E3A8A" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">22 अप्रैल: पृथ्वी दिवस</text>
+    <text x="590" y="155" fill="#334155" font-family="system-ui, -apple-system, sans-serif" font-size="14" text-anchor="middle">पर्यावरण संरक्षण एवं जैव विविधता</text>
+    <text x="590" y="180" fill="#059669" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">(गेलॉर्ड नेल्सन द्वारा 1970 में प्रारंभ)</text>
+  </g>
+
+  <!-- Box 3: June 5 -->
+  <g filter="url(#shadow)">
+    <rect x="50" y="240" width="320" height="110" rx="10" fill="url(#cardGrad)" />
+    <text x="210" y="275" fill="#1E3A8A" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">5 जून: विश्व पर्यावरण दिवस</text>
+    <text x="210" y="305" fill="#334155" font-family="system-ui, -apple-system, sans-serif" font-size="14" text-anchor="middle">UNEP द्वारा वैश्विक पर्यावरण जागरूकता</text>
+    <text x="210" y="330" fill="#059669" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">(स्टॉकहोम सम्मेलन 1972 की याद में)</text>
+  </g>
+
+  <!-- Box 4: June 21 -->
+  <g filter="url(#shadow)">
+    <rect x="430" y="240" width="320" height="110" rx="10" fill="url(#cardGrad)" />
+    <text x="590" y="275" fill="#1E3A8A" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">21 जून: अंतर्राष्ट्रीय योग दिवस</text>
+    <text x="590" y="305" fill="#334155" font-family="system-ui, -apple-system, sans-serif" font-size="14" text-anchor="middle">मानसिक एवं शारीरिक कल्याण (भारत की पहल)</text>
+    <text x="590" y="330" fill="#059669" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">(UNGA संकल्प 2014, प्रथम आयोजन 2015)</text>
+  </g>
+
+  <!-- Connecting Lines -->
+  <path d="M 370 145 L 430 145" stroke="#94A3B8" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 590 200 L 590 240" stroke="#94A3B8" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 430 295 L 370 295" stroke="#94A3B8" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+</svg>

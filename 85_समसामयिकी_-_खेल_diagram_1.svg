@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+    <linearGradient id="boxGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <linearGradient id="boxGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+    <linearGradient id="boxGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.4" />
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94A3B8" />
+    </marker>
+  </defs>
+
+  <rect width="800" height="400" fill="url(#bgGrad)" rx="12" />
+
+  <text x="400" y="40" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="bold" fill="#F8FAFC" text-anchor="middle">
+    ICC T20 विश्व कप 2024: भारत का विजय पथ (Tournament Structure)
+  </text>
+
+  <!-- Stage 1 -->
+  <rect x="50" y="80" width="200" height="80" rx="10" fill="url(#boxGrad1)" filter="url(#shadow)" />
+  <text x="150" y="110" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">ग्रुप चरण (Group A)</text>
+  <text x="150" y="135" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#E2E8F0" text-anchor="middle">4 मैच (शीर्ष स्थान पर भारत)</text>
+
+  <!-- Stage 2 -->
+  <rect x="300" y="80" width="200" height="80" rx="10" fill="url(#boxGrad1)" filter="url(#shadow)" />
+  <text x="400" y="110" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">सुपर-8 चरण (Group 1)</text>
+  <text x="400" y="135" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#E2E8F0" text-anchor="middle">3 मैच जीत (अविजित)</text>
+
+  <!-- Semi Final -->
+  <rect x="550" y="80" width="200" height="80" rx="10" fill="url(#boxGrad1)" filter="url(#shadow)" />
+  <text x="650" y="110" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">सेमीफाइनल (गयाना)</text>
+  <text x="650" y="135" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#E2E8F0" text-anchor="middle">भारत ने इंग्लैंड को 68 रन से हराया</text>
+
+  <!-- Arrows Top -->
+  <path d="M 250 120 L 300 120" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <path d="M 500 120 L 550 120" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+
+  <!-- Connector Down to Final -->
+  <path d="M 650 160 L 650 220 L 400 220 L 400 250" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+
+  <!-- Final Box -->
+  <rect x="250" y="250" width="300" height="110" rx="12" fill="url(#boxGrad2)" filter="url(#shadow)" stroke="#34D399" stroke-width="2" />
+  <text x="400" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">फाइनल मैच (बारबाडोस)</text>
+  <text x="400" y="305" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#ECFDF5" text-anchor="middle">भारत 176/7 vs दक्षिण अफ्रीका 169/8</text>
+  <text x="400" y="330" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#FEF08A" text-anchor="middle">भारत 7 रन से विजयी (द्वितीय T20 विश्व कप खिताब)</text>
+</svg>

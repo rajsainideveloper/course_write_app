@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#991B1B" />
+      <stop offset="100%" stop-color="#EF4444" />
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F766E" />
+      <stop offset="100%" stop-color="#14B8A6" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.15" />
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748B" />
+    </marker>
+  </defs>
+
+  <!-- Title Background -->
+  <rect x="10" y="10" width="780" height="40" rx="8" fill="#1E293B" />
+  <text x="400" y="35" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">मानव परिसंचरण तंत्र - दोहरा परिसंचरण (Double Circulation)</text>
+
+  <!-- Body Parts -->
+  <rect x="30" y="180" width="160" height="80" rx="10" fill="url(#blueGrad)" filter="url(#shadow)" />
+  <text x="110" y="215" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">शरीर के अंग</text>
+  <text x="110" y="238" fill="#E0F2FE" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">(अशुद्ध रक्त $CO_2$ युक्त)</text>
+
+  <rect x="320" y="80" width="160" height="70" rx="10" fill="url(#blueGrad)" filter="url(#shadow)" />
+  <text x="400" y="110" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">दायां अलिंद एवं निलय</text>
+  <text x="400" y="130" fill="#E0F2FE" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">(Right Atrium &amp; Ventricle)</text>
+
+  <rect x="610" y="180" width="160" height="80" rx="10" fill="url(#tealGrad)" filter="url(#shadow)" />
+  <text x="690" y="215" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">फेफड़े (Lungs)</text>
+  <text x="690" y="238" fill="#CCFBF1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">(रक्त का शुद्धिकरण)</text>
+
+  <rect x="320" y="280" width="160" height="70" rx="10" fill="url(#redGrad)" filter="url(#shadow)" />
+  <text x="400" y="310" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">बायां अलिंद एवं निलय</text>
+  <text x="400" y="330" fill="#FEE2E2" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">(Left Atrium &amp; Ventricle)</text>
+
+  <!-- Connectors with Label text -->
+  <path d="M 190 200 L 320 115" stroke="#64748B" stroke-width="2.5" fill="none" marker-end="url(#arrow)" />
+  <text x="235" y="145" fill="#1E3A8A" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">महाशिरा (Vena Cava)</text>
+
+  <path d="M 480 115 L 610 200" stroke="#64748B" stroke-width="2.5" fill="none" marker-end="url(#arrow)" />
+  <text x="505" y="145" fill="#1E3A8A" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">फुफ्फुस धमनी (Pulmonary Artery)</text>
+
+  <path d="M 610 240 L 480 315" stroke="#64748B" stroke-width="2.5" fill="none" marker-end="url(#arrow)" />
+  <text x="505" y="290" fill="#0F766E" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">फुफ्फुस शिरा (Pulmonary Vein)</text>
+
+  <path d="M 320 315 L 190 240" stroke="#64748B" stroke-width="2.5" fill="none" marker-end="url(#arrow)" />
+  <text x="235" y="290" fill="#991B1B" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">महाधमनी (Aorta)</text>
+</svg>

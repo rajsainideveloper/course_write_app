@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E3A8A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D9488;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#14B8A6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10B981;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <!-- Title Background -->
+  <rect x="150" y="20" width="500" height="45" rx="8" fill="#1E293B" filter="url(#shadow)"/>
+  <text x="400" y="48" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">भारत का तीन प्रमुख देशों के साथ रक्षा ढांचा</text>
+
+  <!-- Central Node: India -->
+  <rect x="300" y="110" width="200" height="60" rx="10" fill="url(#blueGrad)" filter="url(#shadow)"/>
+  <text x="400" y="145" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">भारत (रक्षा मंत्रालय)</text>
+
+  <!-- Partner 1: France -->
+  <rect x="50" y="270" width="200" height="90" rx="10" fill="url(#tealGrad)" filter="url(#shadow)"/>
+  <text x="150" y="298" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">फ्रांस</text>
+  <text x="150" y="323" fill="#F0FDFA" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle">• राफेल लड़ाकू विमान</text>
+  <text x="150" y="343" fill="#F0FDFA" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle">• स्कॉर्पीन पनडुब्बी (P-75)</text>
+
+  <!-- Partner 2: USA -->
+  <rect x="300" y="270" width="200" height="90" rx="10" fill="url(#tealGrad)" filter="url(#shadow)"/>
+  <text x="400" y="298" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">यूएसए (अमेरिका)</text>
+  <text x="400" y="323" fill="#F0FDFA" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle">• अपाचे व चिनूक हेलीकॉप्टर</text>
+  <text x="400" y="343" fill="#F0FDFA" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle">• MQ-9B ड्रोन / GE इंजनों</text>
+
+  <!-- Partner 3: Russia -->
+  <rect x="550" y="270" width="200" height="90" rx="10" fill="url(#emeraldGrad)" filter="url(#shadow)"/>
+  <text x="650" y="298" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">रूस</text>
+  <text x="650" y="323" fill="#ECFDF5" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle">• S-400 वायु रक्षा प्रणाली</text>
+  <text x="650" y="343" fill="#ECFDF5" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle">• AK-203 (अमेठी) &amp; ब्रह्मोस</text>
+
+  <!-- Connectors -->
+  <path d="M 350 170 L 180 270" stroke="#64748B" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 400 170 L 400 270" stroke="#64748B" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 450 170 L 620 270" stroke="#64748B" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E3A8A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D9488;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#14B8A6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10B981;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.3"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="bold" fill="#1E293B" text-anchor="middle">उत्तर प्रदेश जिला एवं राजस्व प्रशासन पदानुक्रम</text>
+
+  <!-- Level 1: Divisional Level -->
+  <rect x="250" y="70" width="300" height="55" rx="10" ry="10" fill="url(#grad1)" filter="url(#shadow)"/>
+  <text x="400" y="95" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">मंडल आयुक्त (Divisional Commissioner)</text>
+  <text x="400" y="115" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#E2E8F0" text-anchor="middle">मंडलीय प्रशासनिक एवं राजस्व प्रमुख</text>
+
+  <!-- Arrow 1 -->
+  <path d="M 400 125 L 400 165" stroke="#64748B" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Level 2: District Level -->
+  <rect x="220" y="170" width="360" height="55" rx="10" ry="10" fill="url(#grad2)" filter="url(#shadow)"/>
+  <text x="400" y="195" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">जिलाधिकारी / जिला मजिस्ट्रेट (DM / Collector)</text>
+  <text x="400" y="215" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#CCFBF1" text-anchor="middle">जिले का कानून-व्यवस्था एवं राजस्व प्रमुख</text>
+
+  <!-- Arrow 2 -->
+  <path d="M 300 225 L 200 265" stroke="#64748B" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 500 225 L 600 265" stroke="#64748B" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Level 3: Sub-Division & Tehsil Level -->
+  <rect x="70" y="270" width="260" height="50" rx="10" ry="10" fill="url(#grad3)" filter="url(#shadow)"/>
+  <text x="200" y="292" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">उप-जिलाधिकारी (SDM)</text>
+  <text x="200" y="308" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#D1FAE5" text-anchor="middle">उप-प्रभाग का प्रशासनिक प्रमुख</text>
+
+  <rect x="470" y="270" width="260" height="50" rx="10" ry="10" fill="url(#grad3)" filter="url(#shadow)"/>
+  <text x="600" y="292" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">तहसीलदार एवं नायब तहसीलदार</text>
+  <text x="600" y="308" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#D1FAE5" text-anchor="middle">तहसील राजस्व वसूली अधिकारी</text>
+
+  <!-- Level 4: Grassroots -->
+  <path d="M 600 320 L 600 350" stroke="#64748B" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <rect x="490" y="355" width="220" height="35" rx="8" ry="8" fill="#64748B" filter="url(#shadow)"/>
+  <text x="600" y="377" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">राजस्व निरीक्षक / लेखपाल</text>
+</svg>

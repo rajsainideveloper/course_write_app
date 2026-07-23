@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="100%">
+  <defs>
+    <linearGradient id="gradVirus" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E3A8A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gradImmune" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D9488;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#14B8A6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gradDisease" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#B91C1C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EF4444;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.3"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <rect x="30" y="100" width="210" height="100" rx="12" ry="12" fill="url(#gradVirus)" filter="url(#shadow)"/>
+  <text x="135" y="140" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">विषाणु का प्रवेश</text>
+  <text x="135" y="165" fill="#E0F2FE" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle">(Virus Entry)</text>
+
+  <path d="M 240 150 L 280 150" stroke="#64748B" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+
+  <rect x="295" y="100" width="210" height="100" rx="12" ry="12" fill="url(#gradImmune)" filter="url(#shadow)"/>
+  <text x="400" y="140" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">परपोषी कोशिका पर कब्जा</text>
+  <text x="400" y="165" fill="#CCFBF1" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle">(Host Machinery Takeover)</text>
+
+  <path d="M 505 150 L 545 150" stroke="#64748B" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+
+  <rect x="560" y="100" width="210" height="100" rx="12" ry="12" fill="url(#gradDisease)" filter="url(#shadow)"/>
+  <text x="665" y="140" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">कोशिका क्षति व लक्षण</text>
+  <text x="665" y="165" fill="#FEE2E2" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle">(Pathogenesis)</text>
+</svg>

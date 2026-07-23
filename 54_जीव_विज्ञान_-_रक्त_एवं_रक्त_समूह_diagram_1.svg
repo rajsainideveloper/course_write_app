@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%">
+  <defs>
+    <linearGradient id="mainBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <linearGradient id="rbcGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#EF4444" />
+      <stop offset="100%" stop-color="#991B1B" />
+    </linearGradient>
+    <linearGradient id="wbcGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488" />
+      <stop offset="100%" stop-color="#115E59" />
+    </linearGradient>
+    <linearGradient id="platGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#065F46" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.3" />
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94A3B8" />
+    </marker>
+  </defs>
+
+  <!-- Title Background -->
+  <rect x="0" y="0" width="800" height="400" fill="url(#mainBg)" rx="12" />
+
+  <!-- Root Node: Human Blood -->
+  <rect x="300" y="30" width="200" height="50" rx="8" fill="#2563EB" filter="url(#shadow)" />
+  <text x="400" y="55" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" dy=".3em">मानव रक्त (Blood)</text>
+
+  <!-- Connectors from Root -->
+  <path d="M 400 80 L 400 130" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+
+  <!-- Level 2 Node: Formed Elements -->
+  <rect x="260" y="130" width="280" height="45" rx="8" fill="#3B82F6" filter="url(#shadow)" />
+  <text x="400" y="152" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" dy=".3em">संगठित घटक / रुधिराणु (45%)</text>
+
+  <!-- Branches to Sub-nodes -->
+  <path d="M 400 175 L 140 240" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <path d="M 400 175 L 400 240" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <path d="M 400 175 L 660 240" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+
+  <!-- Node 1: RBC -->
+  <rect x="40" y="240" width="200" height="120" rx="10" fill="url(#rbcGrad)" filter="url(#shadow)" />
+  <text x="140" y="265" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" dy=".3em">RBC (इरीथ्रोसाइट्स)</text>
+  <text x="140" y="295" fill="#FCA5A5" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle" dy=".3em">संख्या: 4.5-5.5 मिलियन/mm³</text>
+  <text x="140" y="320" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" dy=".3em">जीवनकाल: 120 दिन</text>
+  <text x="140" y="340" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" dy=".3em">कार्य: O₂ एवं CO₂ परिवहन</text>
+
+  <!-- Node 2: WBC -->
+  <rect x="300" y="240" width="200" height="120" rx="10" fill="url(#wbcGrad)" filter="url(#shadow)" />
+  <text x="400" y="265" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" dy=".3em">WBC (ल्यूकोसाइट्स)</text>
+  <text x="400" y="295" fill="#99F6E4" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle" dy=".3em">संख्या: 5,000-10,000/mm³</text>
+  <text x="400" y="320" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" dy=".3em">जीवनकाल: 2 से 5 दिन</text>
+  <text x="400" y="340" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" dy=".3em">कार्य: प्रतिरक्षा सुरक्षा</text>
+
+  <!-- Node 3: Platelets -->
+  <rect x="560" y="240" width="200" height="120" rx="10" fill="url(#platGrad)" filter="url(#shadow)" />
+  <text x="660" y="265" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" dy=".3em">प्लेटलेट्स (थ्रॉम्बोसाइट्स)</text>
+  <text x="660" y="295" fill="#A7F3D0" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle" dy=".3em">संख्या: 1.5-4.0 लाख/mm³</text>
+  <text x="660" y="320" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" dy=".3em">जीवनकाल: 7 से 10 दिन</text>
+  <text x="660" y="340" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" dy=".3em">कार्य: रक्त का थक्का जमाना</text>
+</svg>

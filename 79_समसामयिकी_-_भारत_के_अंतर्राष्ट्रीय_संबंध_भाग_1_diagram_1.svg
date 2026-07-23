@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="100%">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488" />
+      <stop offset="100%" stop-color="#14B8A6" />
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.15" />
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748B" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" fill="#1E293B" text-anchor="middle">भारत-रूस रणनीतिक सहयोग के तीन मुख्य स्तंभ</text>
+
+  <!-- Node 1: Defence -->
+  <rect x="50" y="80" width="200" height="150" rx="12" ry="12" fill="url(#blueGrad)" filter="url(#shadow)" />
+  <text x="150" y="115" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">1. रक्षा उपकरण एवं तकनीक</text>
+  <text x="150" y="145" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#E0F2FE" text-anchor="middle">• S-400 मिसाइल प्रणाली</text>
+  <text x="150" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#E0F2FE" text-anchor="middle">• ब्रह्मोस सुपरसोनिक मिसाइल</text>
+  <text x="150" y="195" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#E0F2FE" text-anchor="middle">• AK-203 (अमेठी, UP)</text>
+
+  <!-- Node 2: Energy -->
+  <rect x="300" y="80" width="200" height="150" rx="12" ry="12" fill="url(#tealGrad)" filter="url(#shadow)" />
+  <text x="400" y="115" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">2. परमाणु एवं ऊर्जा</text>
+  <text x="400" y="145" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#CCFBF1" text-anchor="middle">• कुडनकुलम (तमिलनाडु)</text>
+  <text x="400" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#CCFBF1" text-anchor="middle">• कच्चे तेल का आयात</text>
+  <text x="400" y="195" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#CCFBF1" text-anchor="middle">• आर्कटिक ऊर्जा परियोजनाएं</text>
+
+  <!-- Node 3: Multilateral -->
+  <rect x="550" y="80" width="200" height="150" rx="12" ry="12" fill="url(#emeraldGrad)" filter="url(#shadow)" />
+  <text x="650" y="115" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">3. बहुपक्षीय मंच</text>
+  <text x="650" y="145" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#D1FAE5" text-anchor="middle">• BRICS संगठन</text>
+  <text x="650" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#D1FAE5" text-anchor="middle">• SCO (शांघाई सहयोग)</text>
+  <text x="650" y="195" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#D1FAE5" text-anchor="middle">• UNSC में स्थायी समर्थन</text>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" width="100%">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E3A8A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D9488;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#14B8A6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10B981;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <!-- Box 1 -->
+  <rect x="50" y="40" width="700" height="80" rx="12" fill="url(#grad1)" filter="url(#shadow)"/>
+  <text x="400" y="70" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">राष्ट्रीय व्यक्तित्व एवं प्रशासनिक संरचना</text>
+  <text x="400" y="95" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="14" text-anchor="middle">कार्यपालिका, न्यायपालिका एवं संवैधानिक निकायों के प्रमुख पद</text>
+
+  <!-- Connectors -->
+  <path d="M 250 120 L 250 180" stroke="#64748B" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 550 120 L 550 180" stroke="#64748B" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Box 2 Left -->
+  <rect x="50" y="180" width="320" height="140" rx="10" fill="url(#grad2)" filter="url(#shadow)"/>
+  <text x="210" y="215" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">संवैधानिक प्रमुख (Constitutional Head)</text>
+  <text x="210" y="245" fill="#F0FDFA" font-family="system-ui, -apple-system, sans-serif" font-size="14" text-anchor="middle">• राष्ट्रपति (अनुच्छेद 52)</text>
+  <text x="210" y="270" fill="#F0FDFA" font-family="system-ui, -apple-system, sans-serif" font-size="14" text-anchor="middle">• उपराष्ट्रपति (अनुच्छेद 63)</text>
+  <text x="210" y="295" fill="#F0FDFA" font-family="system-ui, -apple-system, sans-serif" font-size="14" text-anchor="middle">• मुख्य न्यायाधीश (अनुच्छेद 124)</text>
+
+  <!-- Box 3 Right -->
+  <rect x="430" y="180" width="320" height="140" rx="10" fill="url(#grad3)" filter="url(#shadow)"/>
+  <text x="590" y="215" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">वैधानिक व निकाय प्रमुख (Statutory Head)</text>
+  <text x="590" y="245" fill="#ECFDF5" font-family="system-ui, -apple-system, sans-serif" font-size="14" text-anchor="middle">• मुख्य चुनाव आयुक्त (अनुच्छेद 324)</text>
+  <text x="590" y="270" fill="#ECFDF5" font-family="system-ui, -apple-system, sans-serif" font-size="14" text-anchor="middle">• नियंत्रक एवं महालेखापरीक्षक (CAG)</text>
+  <text x="590" y="295" fill="#ECFDF5" font-family="system-ui, -apple-system, sans-serif" font-size="14" text-anchor="middle">• महान्यायवादी (Att. General - Art. 76)</text>
+</svg>

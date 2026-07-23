@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" width="100%">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488" />
+      <stop offset="100%" stop-color="#14B8A6" />
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748B" />
+    </marker>
+  </defs>
+
+  <!-- Node 1 -->
+  <rect x="40" y="110" width="200" height="100" rx="10" fill="url(#blueGrad)" filter="url(#shadow)" />
+  <text x="140" y="145" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">1893: शिकागो भाषण</text>
+  <text x="140" y="175" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle">विश्व धर्म संसद में प्रतिनिधित्व</text>
+
+  <!-- Arrow 1 -->
+  <path d="M 240 160 L 290 160" stroke="#64748B" stroke-width="2.5" fill="none" marker-end="url(#arrow)" />
+
+  <!-- Node 2 -->
+  <rect x="300" y="110" width="200" height="100" rx="10" fill="url(#tealGrad)" filter="url(#shadow)" />
+  <text x="400" y="145" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">1897: रामकृष्ण मिशन</text>
+  <text x="400" y="175" fill="#CCFBF1" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle">बेलूर मठ की स्थापना</text>
+
+  <!-- Arrow 2 -->
+  <path d="M 500 160 L 550 160" stroke="#64748B" stroke-width="2.5" fill="none" marker-end="url(#arrow)" />
+
+  <!-- Node 3 -->
+  <rect x="560" y="110" width="200" height="100" rx="10" fill="url(#emeraldGrad)" filter="url(#shadow)" />
+  <text x="660" y="145" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">1985: राष्ट्रीय युवा दिवस</text>
+  <text x="660" y="175" fill="#D1FAE5" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle">12 जनवरी को वार्षिक उत्सव</text>
+</svg>

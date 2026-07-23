@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" width="100%">
+  <defs>
+    <linearGradient id="phGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EF4444" />
+      <stop offset="25%" stop-color="#F97316" />
+      <stop offset="50%" stop-color="#10B981" />
+      <stop offset="75%" stop-color="#3B82F6" />
+      <stop offset="100%" stop-color="#1E1B4B" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- Background Card -->
+  <rect x="10" y="10" width="780" height="300" rx="16" ry="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2" filter="url(#shadow)" />
+
+  <!-- Title -->
+  <text x="400" y="45" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="bold" fill="#1E293B" text-anchor="middle">pH पैमाने का विभाजन एवं प्रकृति (pH Scale Spectrum)</text>
+
+  <!-- Spectrum Bar -->
+  <rect x="50" y="80" width="700" height="50" rx="8" ry="8" fill="url(#phGradient)" />
+
+  <!-- Scale Ticks & Numbers -->
+  <g font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#334155" text-anchor="middle">
+    <line x1="50" y1="130" x2="50" y2="142" stroke="#475569" stroke-width="2"/>
+    <text x="50" y="160">0</text>
+
+    <line x1="225" y1="130" x2="225" y2="142" stroke="#475569" stroke-width="2"/>
+    <text x="225" y="160">3.5</text>
+
+    <line x1="400" y1="130" x2="400" y2="142" stroke="#475569" stroke-width="2"/>
+    <text x="400" y="160">7.0</text>
+
+    <line x1="575" y1="130" x2="575" y2="142" stroke="#475569" stroke-width="2"/>
+    <text x="575" y="160">10.5</text>
+
+    <line x1="750" y1="130" x2="750" y2="142" stroke="#475569" stroke-width="2"/>
+    <text x="750" y="160">14</text>
+  </g>
+
+  <!-- Section Labels -->
+  <!-- Acidic -->
+  <rect x="50" y="185" width="330" height="90" rx="8" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5" />
+  <text x="215" y="215" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#991B1B" text-anchor="middle">अम्लीय क्षेत्र (Acidic)</text>
+  <text x="215" y="240" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#B91C1C" text-anchor="middle">pH &lt; 7.0 | H⁺ आयन की सांद्रता अधिक</text>
+  <text x="215" y="260" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#7F1D1D" text-anchor="middle">उदाहरण: HCl, सिरका, नींबू रस</text>
+
+  <!-- Neutral Marker -->
+  <circle cx="400" cy="105" r="8" fill="#FFFFFF" stroke="#059669" stroke-width="3" />
+  <line x1="400" y1="135" x2="400" y2="185" stroke="#059669" stroke-width="2" stroke-dasharray="4" />
+  <rect x="350" y="185" width="100" height="35" rx="6" fill="#ECFDF5" stroke="#6EE7B7" stroke-width="1.5" />
+  <text x="400" y="207" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold" fill="#065F46" text-anchor="middle">उदासीन (pH = 7)</text>
+
+  <!-- Alkaline -->
+  <rect x="420" y="185" width="330" height="90" rx="8" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1.5" />
+  <text x="585" y="215" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#1E40AF" text-anchor="middle">क्षारीय क्षेत्र (Alkaline/Basic)</text>
+  <text x="585" y="240" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1D4ED8" text-anchor="middle">pH &gt; 7.0 | OH⁻ आयन की सांद्रता अधिक</text>
+  <text x="585" y="260" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1E3A8A" text-anchor="middle">उदाहरण: NaOH, साबुन का घोल, चूने का पानी</text>
+</svg>

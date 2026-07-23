@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" width="100%">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488" />
+      <stop offset="100%" stop-color="#14B8A6" />
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748B" />
+    </marker>
+  </defs>
+
+  <!-- Flow Boxes -->
+  <rect x="20" y="90" width="220" height="100" rx="10" fill="url(#blueGrad)" filter="url(#shadow)"/>
+  <text x="130" y="130" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">केंद्रीय तंत्रिका तंत्र (CNS)</text>
+  <text x="130" y="160" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="14" text-anchor="middle">मस्तिष्क + मेरुरज्जु</text>
+
+  <rect x="290" y="90" width="220" height="100" rx="10" fill="url(#tealGrad)" filter="url(#shadow)"/>
+  <text x="400" y="130" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">परिधीय तंत्रिका तंत्र (PNS)</text>
+  <text x="400" y="160" fill="#CCFBF1" font-family="system-ui, -apple-system, sans-serif" font-size="14" text-anchor="middle">कपाल (12 जोड़) + मेरु (31 जोड़)</text>
+
+  <rect x="560" y="90" width="220" height="100" rx="10" fill="url(#emeraldGrad)" filter="url(#shadow)"/>
+  <text x="670" y="130" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">स्वायत्त तंत्रिका तंत्र (ANS)</text>
+  <text x="670" y="160" fill="#D1FAE5" font-family="system-ui, -apple-system, sans-serif" font-size="14" text-anchor="middle">अनुकंपी + परानुकंपी</text>
+
+  <!-- Connecting Arrows -->
+  <path d="M 240 140 L 290 140" stroke="#64748B" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 510 140 L 560 140" stroke="#64748B" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+</svg>

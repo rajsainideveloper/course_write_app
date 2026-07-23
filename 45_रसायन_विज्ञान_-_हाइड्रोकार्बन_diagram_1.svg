@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="gradMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E3A8A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gradSat" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10B981;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gradUnsat" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D9488;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#14B8A6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gradLeaf" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#475569;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#64748B;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Shadow Filter -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+
+    <!-- Arrowhead -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94A3B8"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#F8FAFC" />
+
+  <!-- Main Node: Hydrocarbons -->
+  <rect x="300" y="40" width="200" height="60" rx="10" ry="10" fill="url(#gradMain)" filter="url(#shadow)"/>
+  <text x="400" y="75" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">हाइड्रोकार्बन</text>
+
+  <!-- Connectors from Main -->
+  <path d="M 400 100 L 400 130 L 200 130 L 200 160" stroke="#94A3B8" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 400 100 L 400 130 L 600 130 L 600 160" stroke="#94A3B8" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Level 2: Saturated / Unsaturated -->
+  <rect x="100" y="160" width="200" height="60" rx="10" ry="10" fill="url(#gradSat)" filter="url(#shadow)"/>
+  <text x="200" y="195" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">संतृप्त (Saturated)</text>
+
+  <rect x="500" y="160" width="200" height="60" rx="10" ry="10" fill="url(#gradUnsat)" filter="url(#shadow)"/>
+  <text x="600" y="195" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">असंतृप्त (Unsaturated)</text>
+
+  <!-- Connectors Level 2 to Level 3 -->
+  <path d="M 200 220 L 200 280" stroke="#94A3B8" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  
+  <path d="M 600 220 L 600 250 L 450 250 L 450 280" stroke="#94A3B8" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 600 220 L 600 250 L 750 250 L 750 280" stroke="#94A3B8" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Level 3: Alkane, Alkene, Alkyne -->
+  <rect x="100" y="280" width="200" height="80" rx="10" ry="10" fill="url(#gradLeaf)" filter="url(#shadow)"/>
+  <text x="200" y="315" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">ऐल्केन (Alkane)</text>
+  <text x="200" y="340" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#E2E8F0" text-anchor="middle">CₙH₂ₙ₊₂ (एकल बंध)</text>
+
+  <rect x="350" y="280" width="200" height="80" rx="10" ry="10" fill="url(#gradLeaf)" filter="url(#shadow)"/>
+  <text x="450" y="315" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">ऐल्कीन (Alkene)</text>
+  <text x="450" y="340" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#E2E8F0" text-anchor="middle">CₙH₂ₙ (द्वि-बंध)</text>
+
+  <rect x="650" y="280" width="200" height="80" rx="10" ry="10" fill="url(#gradLeaf)" filter="url(#shadow)"/>
+  <text x="750" y="315" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">ऐल्काइन (Alkyne)</text>
+  <text x="750" y="340" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#E2E8F0" text-anchor="middle">CₙH₂ₙ₋₂ (त्रि-बंध)</text>
+</svg>

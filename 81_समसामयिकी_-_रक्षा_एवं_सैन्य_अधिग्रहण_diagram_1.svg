@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <linearGradient id="rafaleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0D9488" />
+      <stop offset="100%" stop-color="#115E59" />
+    </linearGradient>
+    <linearGradient id="tejasGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="400" rx="15" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="400" y="45" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="bold" fill="#F8FAFC" text-anchor="middle" dy=".3em">वायु सेना क्षमता तुलना: राफेल बनाम तेजस</text>
+
+  <!-- Rafale Box -->
+  <g filter="url(#dropShadow)">
+    <rect x="50" y="80" width="320" height="280" rx="12" fill="url(#rafaleGrad)" stroke="#5EEAD4" stroke-width="1.5"/>
+    <text x="210" y="115" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dy=".3em">राफेल (Rafale)</text>
+    <line x1="80" y1="140" x2="340" y2="140" stroke="#5EEAD4" stroke-width="1" stroke-dasharray="4"/>
+    
+    <text x="70" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#F0FDFA" text-anchor="start" dy=".3em">• मूल: फ्रांस (Dassault Aviation)</text>
+    <text x="70" y="205" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#F0FDFA" text-anchor="start" dy=".3em">• इंजन: ट्विन इंजन (Twin-Engine)</text>
+    <text x="70" y="240" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#F0FDFA" text-anchor="start" dy=".3em">• पेलोड क्षमता: ~9.5 टन (भारी/मध्यम)</text>
+    <text x="70" y="275" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#F0FDFA" text-anchor="start" dy=".3em">• प्रमुख हथियार: Meteor, SCALP, HAMMER</text>
+    <text x="70" y="310" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#F0FDFA" text-anchor="start" dy=".3em">• परिचालन सीमा: रणनीतिक/लॉन्ग-रेंज strike</text>
+  </g>
+
+  <!-- Tejas Box -->
+  <g filter="url(#dropShadow)">
+    <rect x="430" y="80" width="320" height="280" rx="12" fill="url(#tejasGrad)" stroke="#6EE7B7" stroke-width="1.5"/>
+    <text x="590" y="115" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dy=".3em">तेजस (Tejas LCA)</text>
+    <line x1="460" y1="140" x2="720" y2="140" stroke="#6EE7B7" stroke-width="1" stroke-dasharray="4"/>
+
+    <text x="450" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#ECFDF5" text-anchor="start" dy=".3em">• मूल: स्वदेशी (ADA / HAL, भारत)</text>
+    <text x="450" y="205" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#ECFDF5" text-anchor="start" dy=".3em">• इंजन: सिंगल इंजन (Single-Engine)</text>
+    <text x="450" y="240" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#ECFDF5" text-anchor="start" dy=".3em">• पेलोड क्षमता: ~5.3 टन (हल्का लड़ाकू)</text>
+    <text x="450" y="275" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#ECFDF5" text-anchor="start" dy=".3em">• प्रमुख हथियार: Astra, R-73, बम प्रणालियाँ</text>
+    <text x="450" y="310" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#ECFDF5" text-anchor="start" dy=".3em">• परिचालन सीमा: बिंदु रक्षा एवं सामरिक युद्ध</text>
+  </g>
+</svg>

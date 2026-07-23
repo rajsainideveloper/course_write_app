@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1E3A8A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0D9488;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#14B8A6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10B981;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" fill="#1E293B" text-anchor="middle">पाचन प्रक्रिया का क्रमबद्ध प्रवाह (Digestive Sequence)</text>
+
+  <!-- Step 1 -->
+  <rect x="30" y="80" width="210" height="70" rx="10" ry="10" fill="url(#grad1)" filter="url(#shadow)"/>
+  <text x="135" y="108" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">1. मुख गुहा (Mouth)</text>
+  <text x="135" y="130" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#E2E8F0" text-anchor="middle">टायलीन एंजाइम (स्टार्च का पाचन)</text>
+
+  <!-- Arrow 1 -->
+  <path d="M 240 115 L 280 115" stroke="#64748B" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Step 2 -->
+  <rect x="295" y="80" width="210" height="70" rx="10" ry="10" fill="url(#grad1)" filter="url(#shadow)"/>
+  <text x="400" y="108" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">2. आमाशय (Stomach)</text>
+  <text x="400" y="130" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#E2E8F0" text-anchor="middle">HCl, पेप्सिन एवं रेनिन</text>
+
+  <!-- Arrow 2 -->
+  <path d="M 505 115 L 545 115" stroke="#64748B" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Step 3 -->
+  <rect x="560" y="80" width="210" height="70" rx="10" ry="10" fill="url(#grad2)" filter="url(#shadow)"/>
+  <text x="665" y="108" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">3. ग्रहणी (Duodenum)</text>
+  <text x="665" y="130" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#CCFBF1" text-anchor="middle">पित्त रस एवं अग्न्याशयिक रस</text>
+
+  <!-- Arrow Down -->
+  <path d="M 665 150 L 665 220" stroke="#64748B" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Step 4 -->
+  <rect x="560" y="235" width="210" height="70" rx="10" ry="10" fill="url(#grad2)" filter="url(#shadow)"/>
+  <text x="665" y="263" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">4. छोटी आंत (Small Intestine)</text>
+  <text x="665" y="285" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#CCFBF1" text-anchor="middle">पूर्ण पाचन एवं रसांकुर द्वारा अवशोषण</text>
+
+  <!-- Arrow Left -->
+  <path d="M 560 270 L 520 270" stroke="#64748B" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Step 5 -->
+  <rect x="295" y="235" width="210" height="70" rx="10" ry="10" fill="url(#grad3)" filter="url(#shadow)"/>
+  <text x="400" y="263" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">5. बड़ी आंत (Large Intestine)</text>
+  <text x="400" y="285" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#D1FAE5" text-anchor="middle">जल तथा लवणों का अवशोषण</text>
+
+  <!-- Arrow Left 2 -->
+  <path d="M 295 270 L 255 270" stroke="#64748B" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Step 6 -->
+  <rect x="30" y="235" width="210" height="70" rx="10" ry="10" fill="url(#grad3)" filter="url(#shadow)"/>
+  <text x="135" y="263" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">6. मलाशय/गुदा (Rectum/Anus)</text>
+  <text x="135" y="285" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#D1FAE5" text-anchor="middle">अपचित अपशिष्ट का बहिष्क्षेपण</text>
+
+</svg>

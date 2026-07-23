@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488"/>
+      <stop offset="100%" stop-color="#14B8A6"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="slateGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#475569"/>
+      <stop offset="100%" stop-color="#64748B"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94A3B8"/>
+    </marker>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#F8FAFC" rx="12"/>
+
+  <!-- Core Hub -->
+  <g filter="url(#shadow)">
+    <rect x="275" y="170" width="250" height="60" rx="10" fill="url(#blueGrad)"/>
+    <text x="400" y="200" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" dy=".3em">वैश्विक बहुपक्षीय मंच</text>
+  </g>
+
+  <!-- Nodes -->
+  <g filter="url(#shadow)">
+    <!-- Top Node -->
+    <rect x="300" y="30" width="200" height="50" rx="8" fill="url(#tealGrad)"/>
+    <text x="400" y="55" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" dy=".3em">आर्थिक मंच (G20, G7, WEF)</text>
+
+    <!-- Right Node -->
+    <rect x="560" y="175" width="200" height="50" rx="8" fill="url(#emeraldGrad)"/>
+    <text x="660" y="200" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" dy=".3em">सुरक्षा/क्षेत्रीय (SCO, SAARC)</text>
+
+    <!-- Bottom Node -->
+    <rect x="300" y="320" width="200" height="50" rx="8" fill="url(#slateGrad)"/>
+    <text x="400" y="345" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" dy=".3em">वैश्विक शासन (UNGA, COP, WTO)</text>
+
+    <!-- Left Node -->
+    <rect x="40" y="175" width="200" height="50" rx="8" fill="url(#tealGrad)"/>
+    <text x="140" y="200" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" dy=".3em">उभरती अर्थव्यवस्थाएं (BRICS)</text>
+  </g>
+
+  <!-- Connectors -->
+  <path d="M 400 170 L 400 90" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 525 200 L 550 200" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 400 230 L 400 310" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 275 200 L 250 200" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+</svg>

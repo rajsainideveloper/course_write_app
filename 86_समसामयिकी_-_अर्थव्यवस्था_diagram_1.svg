@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%">
+  <defs>
+    <linearGradient id="rbiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <linearGradient id="rateGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+    <linearGradient id="bankGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488" />
+      <stop offset="100%" stop-color="#14B8A6" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="bold" fill="#1E293B">RBI मौद्रिक नीति प्रवाह चक्र (Liquidity Mechanism)</text>
+
+  <!-- RBI Box -->
+  <rect x="250" y="70" width="300" height="70" rx="12" fill="url(#rbiGrad)" filter="url(#shadow)" />
+  <text x="400" y="100" text-anchor="middle" dy=".3em" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">भारतीय रिज़र्व बैंक (RBI)</text>
+  <text x="400" y="122" text-anchor="middle" dy=".3em" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#E2E8F0">(देश का केंद्रीय बैंक)</text>
+
+  <!-- Left Arrow: Repo Rate -->
+  <path d="M 320 140 L 180 250" stroke="#64748B" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+  <rect x="180" y="175" width="120" height="30" rx="6" fill="#F1F5F9" stroke="#CBD5E1" />
+  <text x="240" y="190" text-anchor="middle" dy=".3em" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" fill="#0F172A">रेपो दर (ऋण देना)</text>
+
+  <!-- Right Arrow: Reverse Repo Rate -->
+  <path d="M 620 250 L 480 140" stroke="#64748B" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+  <rect x="500" y="175" width="140" height="30" rx="6" fill="#F1F5F9" stroke="#CBD5E1" />
+  <text x="570" y="190" text-anchor="middle" dy=".3em" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" fill="#0F172A">रिवर्स रेपो दर (अधिशेष जमा)</text>
+
+  <!-- Commercial Banks Box Left -->
+  <rect x="50" y="250" width="260" height="80" rx="12" fill="url(#bankGrad)" filter="url(#shadow)" />
+  <text x="180" y="282" text-anchor="middle" dy=".3em" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF">व्यावसायिक बैंक</text>
+  <text x="180" y="305" text-anchor="middle" dy=".3em" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#CCFBF1">(SBI, PNB, BOB आदि)</text>
+
+  <!-- Commercial Banks Box Right -->
+  <rect x="490" y="250" width="260" height="80" rx="12" fill="url(#rateGrad)" filter="url(#shadow)" />
+  <text x="620" y="282" text-anchor="middle" dy=".3em" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF">बाजार / अर्थव्यवस्था</text>
+  <text x="620" y="305" text-anchor="middle" dy=".3em" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#D1FAE5">(उपभोक्ता एवं उद्योग)</text>
+
+  <!-- Bottom Connector -->
+  <path d="M 310 290 L 490 290" stroke="#64748B" stroke-width="2.5" stroke-dasharray="6,6" fill="none" marker-end="url(#arrow)"/>
+  <text x="400" y="280" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#475569">ऋण प्रवाह (Credit Flow)</text>
+</svg>

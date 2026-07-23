@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+    <linearGradient id="nucleusGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <linearGradient id="organelleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488" />
+      <stop offset="100%" stop-color="#14B8A6" />
+    </linearGradient>
+    <linearGradient id="energyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B45309" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.4" />
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94A3B8" />
+    </marker>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bgGrad)" rx="12" />
+
+  <text x="400" y="40" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="bold" fill="#F8FAFC" text-anchor="middle">कोशिका का कार्यात्मक विभाजन एवं समन्वय</text>
+
+  <!-- Control Center -->
+  <g filter="url(#shadow)">
+    <rect x="300" y="80" width="200" height="70" rx="10" fill="url(#nucleusGrad)" stroke="#60A5FA" stroke-width="2" />
+    <text x="400" y="110" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">केन्द्रक (Nucleus)</text>
+    <text x="400" y="132" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#93C5FD" text-anchor="middle">नियंत्रण केंद्र (DNA / आनुवंशिक सूचना)</text>
+  </g>
+
+  <!-- Arrows from Nucleus -->
+  <path d="M 350 150 L 200 220" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <path d="M 400 150 L 400 220" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <path d="M 450 150 L 600 220" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+
+  <!-- Middle Layer: Synthesis & Processing -->
+  <g filter="url(#shadow)">
+    <rect x="100" y="225" width="200" height="70" rx="10" fill="url(#organelleGrad)" stroke="#2DD4BF" stroke-width="2" />
+    <text x="200" y="255" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">एंडोप्लाज्मिक रेटिकुलम</text>
+    <text x="200" y="277" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#CCFBF1" text-anchor="middle">प्रोटीन व लिपिड संश्लेषण</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="300" y="225" width="200" height="70" rx="10" fill="url(#organelleGrad)" stroke="#2DD4BF" stroke-width="2" />
+    <text x="400" y="255" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">गॉल्जी तंत्र (Golgi Apparatus)</text>
+    <text x="400" y="277" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#CCFBF1" text-anchor="middle">पैकिंग एवं परिवहन केंद्र</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="500" y="225" width="200" height="70" rx="10" fill="url(#energyGrad)" stroke="#FBBF24" stroke-width="2" />
+    <text x="600" y="255" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">माइटोकॉण्ड्रिया</text>
+    <text x="600" y="277" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#FEF3C7" text-anchor="middle">ऊर्जा उत्पादन (ATP संश्लेषण)</text>
+  </g>
+
+  <!-- Arrows to Bottom Layer -->
+  <path d="M 200 295 L 200 355" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <path d="M 400 295 L 400 355" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+
+  <!-- Bottom Layer: End Products & Clearance -->
+  <g filter="url(#shadow)">
+    <rect x="100" y="360" width="200" height="60" rx="10" fill="#334155" stroke="#94A3B8" stroke-width="1.5" />
+    <text x="200" y="385" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#F8FAFC" text-anchor="middle">राइबोसोम (Ribosome)</text>
+    <text x="200" y="405" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#CBD5E1" text-anchor="middle">प्रोटीन की फैक्ट्री</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="300" y="360" width="200" height="60" rx="10" fill="#334155" stroke="#94A3B8" stroke-width="1.5" />
+    <text x="400" y="385" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#F8FAFC" text-anchor="middle">लाइसोसोम (Lysosome)</text>
+    <text x="400" y="405" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#CBD5E1" text-anchor="middle">आत्मघाती थैली / अपशिष्ट निपटान</text>
+  </g>
+</svg>

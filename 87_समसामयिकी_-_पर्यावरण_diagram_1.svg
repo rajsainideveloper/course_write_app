@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 260" width="100%">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E3A8A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10B981;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D9488;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#14B8A6;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <!-- Box 1: UNFCCC -->
+  <rect x="40" y="80" width="200" height="90" rx="10" ry="10" fill="url(#grad1)" filter="url(#shadow)"/>
+  <text x="140" y="115" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" dy=".3em">UNFCCC (1992)</text>
+  <text x="140" y="142" fill="#E0F2FE" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle" dy=".3em">वैश्विक ढांचा संधि</text>
+
+  <!-- Arrow 1 -->
+  <path d="M 240 125 L 290 125" stroke="#64748B" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Box 2: COP -->
+  <rect x="300" y="80" width="200" height="90" rx="10" ry="10" fill="url(#grad2)" filter="url(#shadow)"/>
+  <text x="400" y="115" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" dy=".3em">COP (वार्षिक बैठक)</text>
+  <text x="400" y="142" fill="#D1FAE5" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle" dy=".3em">नीति निर्धारण व समीक्षा</text>
+
+  <!-- Arrow 2 -->
+  <path d="M 500 125 L 550 125" stroke="#64748B" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Box 3: Key Agreements -->
+  <rect x="560" y="80" width="200" height="90" rx="10" ry="10" fill="url(#grad3)" filter="url(#shadow)"/>
+  <text x="660" y="110" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" dy=".3em">प्रमुख समझौते</text>
+  <text x="660" y="132" fill="#CCFBF1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle" dy=".3em">क्योटो (1997) / पेरिस (2015)</text>
+  <text x="660" y="150" fill="#CCFBF1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle" dy=".3em">लक्ष्य: 1.5°C ताप नियंत्रण</text>
+</svg>
