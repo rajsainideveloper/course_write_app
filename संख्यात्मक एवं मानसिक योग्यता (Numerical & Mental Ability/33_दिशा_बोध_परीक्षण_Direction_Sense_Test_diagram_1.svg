@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" width="100%">
+  <defs>
+    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="100%" stop-color="#0D9488"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="500" rx="15" fill="#F8FAFC"/>
+
+  <!-- Compass Lines -->
+  <line x1="300" y1="80" x2="300" y2="420" stroke="#94A3B8" stroke-width="3" stroke-dasharray="5,5"/>
+  <line x1="120" y1="250" x2="480" y2="250" stroke="#94A3B8" stroke-width="3" stroke-dasharray="5,5"/>
+  <line x1="175" y1="125" x2="425" y2="375" stroke="#CBD5E1" stroke-width="2"/>
+  <line x1="175" y1="375" x2="425" y2="125" stroke="#CBD5E1" stroke-width="2"/>
+
+  <!-- Center Circle -->
+  <circle cx="300" cy="250" r="30" fill="url(#boxGrad)"/>
+  <text x="300" y="254" fill="#FFFFFF" font-size="14" font-weight="bold" text-anchor="middle">केंद्र</text>
+
+  <!-- Direction Labels -->
+  <rect x="260" y="35" width="80" height="35" rx="8" fill="#1E3A8A"/>
+  <text x="300" y="58" fill="#FFFFFF" font-size="16" font-weight="bold" text-anchor="middle">उत्तर (N)</text>
+
+  <rect x="260" y="430" width="80" height="35" rx="8" fill="#1E3A8A"/>
+  <text x="300" y="453" fill="#FFFFFF" font-size="16" font-weight="bold" text-anchor="middle">दक्षिण (S)</text>
+
+  <rect x="490" y="232" width="80" height="35" rx="8" fill="#1E3A8A"/>
+  <text x="530" y="255" fill="#FFFFFF" font-size="16" font-weight="bold" text-anchor="middle">पूर्व (E)</text>
+
+  <rect x="30" y="232" width="80" height="35" rx="8" fill="#1E3A8A"/>
+  <text x="70" y="255" fill="#FFFFFF" font-size="16" font-weight="bold" text-anchor="middle">पश्चिम (W)</text>
+
+  <!-- Sub-directions -->
+  <text x="410" y="160" fill="#0D9488" font-size="14" font-weight="bold" text-anchor="middle">ईशान (NE)</text>
+  <text x="190" y="160" fill="#0D9488" font-size="14" font-weight="bold" text-anchor="middle">वायव्य (NW)</text>
+  <text x="410" y="355" fill="#0D9488" font-size="14" font-weight="bold" text-anchor="middle">आग्नेय (SE)</text>
+  <text x="190" y="355" fill="#0D9488" font-size="14" font-weight="bold" text-anchor="middle">नैऋत्य (SW)</text>
+</svg>

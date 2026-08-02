@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%">
+  <defs>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#0D9488" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="450" fill="#F8FAFC" rx="12"/>
+
+  <!-- Central Box: Rasa Nishpatti -->
+  <rect x="300" y="35" width="200" height="70" rx="10" fill="url(#primaryGrad)" filter="url(#shadow)"/>
+  <text x="400" y="65" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" dy=".3em">रस निष्पत्ति (Rasa)</text>
+  <text x="400" y="85" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle" dy=".3em">सहृदय हृदय का आनंद</text>
+
+  <!-- Four Elements Boxes -->
+  <!-- 1. Sthayi Bhava -->
+  <rect x="50" y="180" width="150" height="80" rx="8" fill="#FFFFFF" stroke="#0D9488" stroke-width="2" filter="url(#shadow)"/>
+  <text x="125" y="210" fill="#1E3A8A" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" dy=".3em">स्थायी भाव</text>
+  <text x="125" y="235" fill="#475569" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle" dy=".3em">(मूल भाव - 9/11)</text>
+
+  <!-- 2. Vibhav -->
+  <rect x="240" y="180" width="150" height="80" rx="8" fill="#FFFFFF" stroke="#0D9488" stroke-width="2" filter="url(#shadow)"/>
+  <text x="315" y="210" fill="#1E3A8A" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" dy=".3em">विभाव</text>
+  <text x="315" y="235" fill="#475569" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle" dy=".3em">(आलंबन व उद्दीपन)</text>
+
+  <!-- 3. Anubhav -->
+  <rect x="430" y="180" width="150" height="80" rx="8" fill="#FFFFFF" stroke="#0D9488" stroke-width="2" filter="url(#shadow)"/>
+  <text x="505" y="210" fill="#1E3A8A" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" dy=".3em">अनुभाव</text>
+  <text x="505" y="235" fill="#475569" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle" dy=".3em">(शारीरिक चेष्टाएँ)</text>
+
+  <!-- 4. Sanchari Bhava -->
+  <rect x="620" y="180" width="150" height="80" rx="8" fill="#FFFFFF" stroke="#0D9488" stroke-width="2" filter="url(#shadow)"/>
+  <text x="695" y="210" fill="#1E3A8A" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" dy=".3em">संचारी भाव</text>
+  <text x="695" y="235" fill="#475569" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle" dy=".3em">(व्यभिचारी - 33)</text>
+
+  <!-- Connecting Lines from Central Node -->
+  <path d="M 400 105 L 400 145 L 125 145 L 125 180" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 400 105 L 400 145 L 315 145 L 315 180" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 400 105 L 400 145 L 505 145 L 505 180" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 400 105 L 400 145 L 695 145 L 695 180" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Footer explanation note -->
+  <rect x="150" y="310" width="500" height="90" rx="8" fill="#E2E8F0"/>
+  <text x="400" y="338" fill="#1E3A8A" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" dy=".3em">भरतमुनि का रस सूत्र</text>
+  <text x="400" y="368" fill="#334155" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle" dy=".3em">"विभावानुभावसंचारीभावसंयोगाद्रसनिष्पत्तिः"</text>
+</svg>

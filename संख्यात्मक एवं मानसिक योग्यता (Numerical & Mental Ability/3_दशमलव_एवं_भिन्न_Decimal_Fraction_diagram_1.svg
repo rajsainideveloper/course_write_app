@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 220" width="100%">
+  <defs>
+    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#0D9488" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <rect width="800" height="220" fill="#F8FAFC" rx="12"/>
+  
+  <!-- Number representation box -->
+  <rect x="50" y="40" width="700" height="60" rx="8" fill="url(#boxGrad)" filter="url(#shadow)"/>
+  <text x="400" y="77" fill="#FFFFFF" font-size="28" font-family="system-ui, -apple-system, sans-serif" font-weight="bold" text-anchor="middle">4 8 5 . 3 7 2</text>
+  
+  <!-- Labels -->
+  <text x="120" y="140" fill="#1E3A8A" font-size="14" font-weight="bold" text-anchor="middle">सैकड़ा (100)</text>
+  <text x="235" y="140" fill="#1E3A8A" font-size="14" font-weight="bold" text-anchor="middle">दहाई (10)</text>
+  <text x="350" y="140" fill="#1E3A8A" font-size="14" font-weight="bold" text-anchor="middle">इकाई (1)</text>
+  
+  <text x="465" y="140" fill="#0D9488" font-size="14" font-weight="bold" text-anchor="middle">दंश (1/10)</text>
+  <text x="580" y="140" fill="#0D9488" font-size="14" font-weight="bold" text-anchor="middle">शतांश (1/100)</text>
+  <text x="695" y="140" fill="#0D9488" font-size="14" font-weight="bold" text-anchor="middle">सहस्रांश (1/1000)</text>
+  
+  <!-- Dividers -->
+  <line x1="400" y1="110" x2="400" y2="180" stroke="#EF4444" stroke-width="2" stroke-dasharray="4"/>
+  <text x="400" y="200" fill="#EF4444" font-size="14" font-weight="bold" text-anchor="middle">दशमलव बिंदु</text>
+</svg>

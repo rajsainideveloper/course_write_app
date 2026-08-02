@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" width="100%">
+  <defs>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="100%" stop-color="#0D9488"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F1F5F9"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="350" fill="#F8FAFC" rx="12"/>
+
+  <!-- Root Node -->
+  <g transform="translate(300, 30)">
+    <rect width="200" height="60" rx="10" fill="url(#primaryGrad)" filter="url(#shadow)"/>
+    <text x="100" y="35" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" dy=".3em">संधि के प्रकार (Types)</text>
+  </g>
+
+  <!-- Connectors from Root to Children -->
+  <path d="M 400 90 L 400 130 M 400 130 L 150 130 L 150 160 M 400 130 L 400 160 M 400 130 L 650 130 L 650 160" stroke="#64748B" stroke-width="2.5" fill="none"/>
+
+  <!-- Child 1: Swar Sandhi -->
+  <g transform="translate(50, 160)" filter="url(#shadow)">
+    <rect width="200" height="120" rx="10" fill="url(#cardGrad)" stroke="#0D9488" stroke-width="2"/>
+    <text x="100" y="30" fill="#1E3A8A" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">स्वर संधि</text>
+    <text x="100" y="60" fill="#334155" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle">(Swar Sandhi)</text>
+    <text x="100" y="90" fill="#0D9488" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle">स्वर का स्वर से मेल</text>
+  </g>
+
+  <!-- Child 2: Vyanjan Sandhi -->
+  <g transform="translate(300, 160)" filter="url(#shadow)">
+    <rect width="200" height="120" rx="10" fill="url(#cardGrad)" stroke="#0D9488" stroke-width="2"/>
+    <text x="100" y="30" fill="#1E3A8A" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">व्यंजन संधि</text>
+    <text x="100" y="60" fill="#334155" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle">(Vyanjan Sandhi)</text>
+    <text x="100" y="90" fill="#0D9488" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle">व्यंजन का स्वर/व्यंजन से मेल</text>
+  </g>
+
+  <!-- Child 3: Visarg Sandhi -->
+  <g transform="translate(550, 160)" filter="url(#shadow)">
+    <rect width="200" height="120" rx="10" fill="url(#cardGrad)" stroke="#0D9488" stroke-width="2"/>
+    <text x="100" y="30" fill="#1E3A8A" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">विसर्ग संधि</text>
+    <text x="100" y="60" fill="#334155" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle">(Visarg Sandhi)</text>
+    <text x="100" y="90" fill="#0D9488" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle">विसर्ग का स्वर/व्यंजन से मेल</text>
+  </g>
+</svg>

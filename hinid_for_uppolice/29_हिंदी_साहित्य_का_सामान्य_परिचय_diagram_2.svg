@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" width="100%">
+  <defs>
+    <linearGradient id="modGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488"/>
+      <stop offset="100%" stop-color="#1E3A8A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Step 1 -->
+  <rect x="50" y="30" width="320" height="50" rx="8" ry="8" fill="url(#modGrad)" />
+  <text x="210" y="60" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">1. भारतेंदु युग (1868-1900 ई.)</text>
+
+  <!-- Step 2 -->
+  <rect x="50" y="100" width="320" height="50" rx="8" ry="8" fill="url(#modGrad)" />
+  <text x="210" y="130" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">2. द्विवेदी युग (1900-1918 ई.)</text>
+
+  <!-- Step 3 -->
+  <rect x="50" y="170" width="320" height="50" rx="8" ry="8" fill="url(#modGrad)" />
+  <text x="210" y="200" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">3. छायावाद युग (1918-1936 ई.)</text>
+
+  <!-- Step 4 -->
+  <rect x="50" y="240" width="320" height="50" rx="8" ry="8" fill="url(#modGrad)" />
+  <text x="210" y="270" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">4. प्रगतिवाद एवं प्रयोगवाद (1936-1953 ई.)</text>
+
+  <!-- Step 5 -->
+  <rect x="50" y="310" width="320" height="50" rx="8" ry="8" fill="url(#modGrad)" />
+  <text x="210" y="340" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">5. नई कविता एवं साठोत्तरी (1953 के बाद)</text>
+
+  <!-- Right side descriptions -->
+  <text x="410" y="60" fill="#334155" font-family="system-ui, sans-serif" font-size="13">प्रमुख कवि: भारतेंदु हरिश्चंद्र, प्रताप नारायण मिश्र</text>
+  <text x="410" y="130" fill="#334155" font-family="system-ui, sans-serif" font-size="13">प्रमुख कवि: महावीर प्रसाद द्विवेदी, मैथिलीशरण गुप्त</text>
+  <text x="410" y="200" fill="#334155" font-family="system-ui, sans-serif" font-size="13">प्रमुख कवि: जयशंकर प्रसाद, निराला, सुमित्रानंदन पंत, महादेवी वर्मा</text>
+  <text x="410" y="270" fill="#334155" font-family="system-ui, sans-serif" font-size="13">प्रमुख कवि: नागार्जुन, केदारनाथ अग्रवाल, अज्ञेय</text>
+  <text x="410" y="340" fill="#334155" font-family="system-ui, sans-serif" font-size="13">प्रमुख कवि: दुष्यंत कुमार, मुक्तिबोध, धर्मवीर भारती</text>
+</svg>

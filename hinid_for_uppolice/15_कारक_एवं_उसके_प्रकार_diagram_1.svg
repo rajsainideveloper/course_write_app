@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" width="100%">
+  <defs>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#2563EB" />
+    </linearGradient>
+    <linearGradient id="secondaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#F8FAFC" rx="12"/>
+
+  <!-- Center Node: Kriya (Verb) -->
+  <rect x="330" y="120" width="140" height="90" rx="12" fill="url(#primaryGrad)" filter="url(#shadow)"/>
+  <text x="400" y="155" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">क्रिया (Verb)</text>
+  <text x="400" y="180" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">वाक्य का केंद्रबिंदु</text>
+
+  <!-- Left Node: Sangya/Sarvanam -->
+  <rect x="50" y="120" width="150" height="90" rx="12" fill="url(#secondaryGrad)" filter="url(#shadow)"/>
+  <text x="125" y="155" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">संज्ञा / सर्वनाम</text>
+  <text x="125" y="180" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">कर्ता, कर्म आदि</text>
+
+  <!-- Right Node: Vibhakti / Parsarga -->
+  <rect x="600" y="120" width="150" height="90" rx="12" fill="url(#secondaryGrad)" filter="url(#shadow)"/>
+  <text x="675" y="155" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">कारक चिह्न</text>
+  <text x="675" y="180" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">विभक्ति / परसर्ग</text>
+
+  <!-- Connectors -->
+  <path d="M 205 165 L 320 165" stroke="#64748B" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 595 165 L 480 165" stroke="#64748B" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Top Annotation -->
+  <text x="400" y="60" fill="#1E3A8A" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">कारक और क्रिया का अन्योन्याश्रित संबंध</text>
+  <line x1="250" y1="75" x2="550" y2="75" stroke="#CBD5E1" stroke-width="2"/>
+</svg>

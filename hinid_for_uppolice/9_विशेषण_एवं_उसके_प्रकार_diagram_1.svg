@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" width="100%">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E3A8A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0D9488;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#34D399;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="350" fill="#F8FAFC" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="40" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="bold" fill="#1E3A8A" text-anchor="middle">विशेषण के मुख्य भेद (Main Types of Adjectives)</text>
+
+  <!-- Node 1: गुणवाचक -->
+  <g transform="translate(50, 80)" filter="url(#shadow)">
+    <rect width="150" height="100" rx="10" fill="url(#grad1)"/>
+    <text x="75" y="40" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">गुणवाचक</text>
+    <text x="75" y="70" font-family="system-ui, sans-serif" font-size="12" fill="#E2E8F0" text-anchor="middle">सुन्दर, बड़ा, मीठा</text>
+  </g>
+
+  <!-- Node 2: संख्यावाचक -->
+  <g transform="translate(230, 80)" filter="url(#shadow)">
+    <rect width="150" height="100" rx="10" fill="url(#grad1)"/>
+    <text x="75" y="40" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">संख्यावाचक</text>
+    <text x="75" y="70" font-family="system-ui, sans-serif" font-size="12" fill="#E2E8F0" text-anchor="middle">एक, दो, प्रथम</text>
+  </g>
+
+  <!-- Node 3: परिमाणवाचक -->
+  <g transform="translate(410, 80)" filter="url(#shadow)">
+    <rect width="150" height="100" rx="10" fill="url(#grad1)"/>
+    <text x="75" y="40" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">परिमाणवाचक</text>
+    <text x="75" y="70" font-family="system-ui, sans-serif" font-size="12" fill="#E2E8F0" text-anchor="middle">थोड़ा, चार किलो</text>
+  </g>
+
+  <!-- Node 4: सार्वनामिक -->
+  <g transform="translate(590, 80)" filter="url(#shadow)">
+    <rect width="150" height="100" rx="10" fill="url(#grad1)"/>
+    <text x="75" y="40" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">सार्वनामिक</text>
+    <text x="75" y="70" font-family="system-ui, sans-serif" font-size="12" fill="#E2E8F0" text-anchor="middle">यह किताब, वह लड़का</text>
+  </g>
+
+  <!-- Bottom Box: Special note -->
+  <g transform="translate(150, 220)" filter="url(#shadow)">
+    <rect width="500" height="80" rx="8" fill="url(#grad2)"/>
+    <text x="250" y="32" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">विशेष ध्यान दें (Key Note)</text>
+    <text x="250" y="58" font-family="system-ui, sans-serif" font-size="12" fill="#ECFDF5" text-anchor="middle">हिन्दी व्याकरण में अर्थ की दृष्टि से विशेषण के ये **चार मुख्य भेद** माने गए हैं।</text>
+  </g>
+</svg>

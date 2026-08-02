@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 220" width="100%">
+  <defs>
+    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="100%" stop-color="#0D9488"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748B"/>
+    </marker>
+  </defs>
+  
+  <!-- Boxes -->
+  <rect x="30" y="60" width="160" height="100" rx="10" ry="10" fill="url(#boxGrad)" />
+  <text x="110" y="95" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">आदिकाल</text>
+  <text x="110" y="120" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle">(वीरगाथा काल)</text>
+  <text x="110" y="140" fill="#93C5FD" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">1050-1375 ई.</text>
+
+  <rect x="230" y="60" width="160" height="100" rx="10" ry="10" fill="url(#boxGrad)" />
+  <text x="310" y="95" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">भक्तिकाल</text>
+  <text x="310" y="120" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle">(पूर्वमध्यकाल)</text>
+  <text x="310" y="140" fill="#93C5FD" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">1375-1700 ई.</text>
+
+  <rect x="430" y="60" width="160" height="100" rx="10" ry="10" fill="url(#boxGrad)" />
+  <text x="510" y="95" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">रीतिकाल</text>
+  <text x="510" y="120" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle">(उत्तरमध्यकाल)</text>
+  <text x="510" y="140" fill="#93C5FD" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">1700-1900 ई.</text>
+
+  <rect x="630" y="60" width="140" height="100" rx="10" ry="10" fill="url(#boxGrad)" />
+  <text x="700" y="95" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">आधुनिक काल</text>
+  <text x="700" y="120" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle">(गद्यकाल)</text>
+  <text x="700" y="140" fill="#93C5FD" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">1900 से अब तक</text>
+
+  <!-- Connectors -->
+  <path d="M 190 110 L 230 110" stroke="#64748B" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 390 110 L 430 110" stroke="#64748B" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 590 110 L 630 110" stroke="#64748B" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+</svg>

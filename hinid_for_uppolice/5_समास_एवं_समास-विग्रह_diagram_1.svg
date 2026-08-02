@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488" />
+      <stop offset="100%" stop-color="#14B8A6" />
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#34D399" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="400" fill="#F8FAFC" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="40" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="bold" fill="#1E3A8A" text-anchor="middle">शब्द-रचना: समास एवं संधि में मूल अंतर</text>
+
+  <!-- Box 1: Sandhi -->
+  <rect x="80" y="80" width="280" height="120" rx="10" fill="url(#blueGrad)" filter="url(#shadow)"/>
+  <text x="220" y="120" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">संधि (Sandhi)</text>
+  <text x="220" y="150" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#E2E8F0" text-anchor="middle">दो वर्णों (ध्वनियों) का मेल</text>
+  <text x="220" y="175" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#93C5FD" text-anchor="middle">उदाहरण: विद्या + आलय = विद्यालय</text>
+
+  <!-- Box 2: Samas -->
+  <rect x="440" y="80" width="280" height="120" rx="10" fill="url(#tealGrad)" filter="url(#shadow)"/>
+  <text x="580" y="120" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">समास (Samas)</text>
+  <text x="580" y="150" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#E2E8F0" text-anchor="middle">दो शब्दों (पदों) का मेल</text>
+  <text x="580" y="175" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#5EEAD4" text-anchor="middle">उदाहरण: राजा का पुत्र = राजपुत्र</text>
+
+  <!-- Bottom Core Difference -->
+  <rect x="150" y="240" width="500" height="110" rx="10" fill="url(#emeraldGrad)" filter="url(#shadow)"/>
+  <text x="400" y="275" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">मुख्य अंतर (Key Distinction)</text>
+  <text x="400" y="305" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#ECFDF5" text-anchor="middle">संधि में वर्णों में परिवर्तन होता है, जबकि समास में शब्दों के</text>
+  <text x="400" y="325" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#ECFDF5" text-anchor="middle">बीच के विभक्ति चिह्नों या योजक शब्दों का लोप होता है।</text>
+</svg>

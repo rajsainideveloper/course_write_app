@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488"/>
+      <stop offset="100%" stop-color="#14B8A6"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 2 L 10 5 L 0 8 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="420" fill="#F8FAFC" rx="12"/>
+  
+  <text x="400" y="40" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="bold" fill="#1E293B" text-anchor="middle">तर्क मूल्यांकन प्रक्रिया (Argument Evaluation Framework)</text>
+
+  <!-- Central Statement Box -->
+  <rect x="250" y="70" width="300" height="60" rx="8" fill="url(#blueGrad)" filter="url(#shadow)"/>
+  <text x="400" y="105" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">कथन / प्रस्ताव (Statement)</text>
+
+  <!-- Connectors from Statement -->
+  <path d="M 320 130 L 200 200" stroke="#64748B" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 480 130 L 600 200" stroke="#64748B" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Strong Argument Box -->
+  <rect x="80" y="200" width="260" height="90" rx="8" fill="url(#emeraldGrad)" filter="url(#shadow)"/>
+  <text x="210" y="232" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">मजबूत तर्क (Strong Argument)</text>
+  <text x="210" y="258" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#ECFDF5" text-anchor="middle">प्रत्यक्ष, प्रासंगिक, तथ्यात्मक एवं तार्किक</text>
+
+  <!-- Weak Argument Box -->
+  <rect x="460" y="200" width="260" height="90" rx="8" fill="url(#tealGrad)" filter="url(#shadow)"/>
+  <text x="590" y="232" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">कमजोर तर्क (Weak Argument)</text>
+  <text x="590" y="258" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#F0FDFA" text-anchor="middle">अतार्किक, भावनात्मक, अप्रासंगिक, सतही</text>
+
+  <!-- Outcome Box -->
+  <rect x="250" y="325" width="300" height="55" rx="8" fill="#334155" filter="url(#shadow)"/>
+  <text x="400" y="357" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">निर्णय: कौन सा तर्क प्रभावी है?</text>
+  <path d="M 210 290 L 330 325" stroke="#64748B" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 590 290 L 470 325" stroke="#64748B" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+</svg>

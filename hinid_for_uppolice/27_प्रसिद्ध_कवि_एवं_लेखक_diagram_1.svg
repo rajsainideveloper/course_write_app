@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" width="100%">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488"/>
+      <stop offset="100%" stop-color="#14B8A6"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="350" fill="#F8FAFC" rx="15"/>
+
+  <!-- Title -->
+  <text x="400" y="40" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="bold" fill="#1E293B" text-anchor="middle">हिंदी गद्य और आधुनिक काल का कालक्रम विकास</text>
+
+  <!-- Box 1 -->
+  <g transform="translate(50, 80)" filter="url(#shadow)">
+    <rect width="200" height="200" rx="12" fill="url(#blueGrad)"/>
+    <text x="100" y="40" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">भारतेंदु युग</text>
+    <text x="100" y="75" font-family="system-ui, sans-serif" font-size="13" fill="#E2E8F0" text-anchor="middle">(1850 - 1900)</text>
+    <text x="100" y="115" font-family="system-ui, sans-serif" font-size="12" fill="#F1F5F9" text-anchor="middle">• भारतेंदु हरिश्चंद्र</text>
+    <text x="100" y="140" font-family="system-ui, sans-serif" font-size="12" fill="#F1F5F9" text-anchor="middle">• अंधेर नगरी</text>
+    <text x="100" y="165" font-family="system-ui, sans-serif" font-size="12" fill="#F1F5F9" text-anchor="middle">• भारत दुर्दशा</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <path d="M 260 180 L 290 180" stroke="#64748B" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Box 2 -->
+  <g transform="translate(300, 80)" filter="url(#shadow)">
+    <rect width="200" height="200" rx="12" fill="url(#tealGrad)"/>
+    <text x="100" y="40" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">द्विवेदी युग</text>
+    <text x="100" y="75" font-family="system-ui, sans-serif" font-size="13" fill="#E2E8F0" text-anchor="middle">(1900 - 1920)</text>
+    <text x="100" y="115" font-family="system-ui, sans-serif" font-size="12" fill="#F1F5F9" text-anchor="middle">• महावीर प्रसाद द्विवेदी</text>
+    <text x="100" y="140" font-family="system-ui, sans-serif" font-size="12" fill="#F1F5F9" text-anchor="middle">• मैथिलीशरण गुप्त</text>
+    <text x="100" y="165" font-family="system-ui, sans-serif" font-size="12" fill="#F1F5F9" text-anchor="middle">• साकेत महाकाव्य</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <path d="M 510 180 L 540 180" stroke="#64748B" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Box 3 -->
+  <g transform="translate(550, 80)" filter="url(#shadow)">
+    <rect width="200" height="200" rx="12" fill="url(#blueGrad)"/>
+    <text x="100" y="40" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">छायावाद युग</text>
+    <text x="100" y="75" font-family="system-ui, sans-serif" font-size="13" fill="#E2E8F0" text-anchor="middle">(1918 - 1936)</text>
+    <text x="100" y="115" font-family="system-ui, sans-serif" font-size="12" fill="#F1F5F9" text-anchor="middle">• जयशंकर प्रसाद</text>
+    <text x="100" y="140" font-family="system-ui, sans-serif" font-size="12" fill="#F1F5F9" text-anchor="middle">• कामायनी</text>
+    <text x="100" y="165" font-family="system-ui, sans-serif" font-size="12" fill="#F1F5F9" text-anchor="middle">• निराला, पंत, महादेवी</text>
+  </g>
+</svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" width="100%">
+  <defs>
+    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#0D9488" />
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="280" fill="#F8FAFC" rx="12"/>
+
+  <!-- Node 1: Total Distance -->
+  <rect x="50" y="80" width="200" height="100" rx="10" fill="url(#boxGrad)" filter="drop-shadow(0px 4px 6px rgba(0,0,0,0.1))"/>
+  <text x="150" y="125" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">कुल दूरी</text>
+  <text x="150" y="150" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle">(d1 + d2 + ...)</text>
+
+  <!-- Arrow 1 -->
+  <path d="M 260 130 L 330 130" stroke="#64748B" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Node 2: Average Speed Core -->
+  <rect x="340" y="60" width="120" height="140" rx="10" fill="#059669" filter="drop-shadow(0px 4px 6px rgba(0,0,0,0.1))"/>
+  <text x="400" y="120" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">औसत चाल</text>
+  <text x="400" y="145" fill="#FEF3C7" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">कुल दूरी / कुल समय</text>
+
+  <!-- Arrow 2 -->
+  <path d="M 470 130 L 540 130" stroke="#64748B" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Node 3: Total Time -->
+  <rect x="550" y="80" width="200" height="100" rx="10" fill="url(#boxGrad)" filter="drop-shadow(0px 4px 6px rgba(0,0,0,0.1))"/>
+  <text x="650" y="125" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">कुल समय</text>
+  <text x="650" y="150" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle">(t1 + t2 + ...)</text>
+</svg>

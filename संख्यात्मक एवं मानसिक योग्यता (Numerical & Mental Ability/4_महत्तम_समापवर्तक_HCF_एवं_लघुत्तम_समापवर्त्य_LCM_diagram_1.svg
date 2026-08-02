@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="100%">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488" />
+      <stop offset="100%" stop-color="#14B8A6" />
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="300" fill="#F8FAFC" rx="15" ry="15"/>
+
+  <!-- Box 1: HCF Applications -->
+  <g transform="translate(50, 40)">
+    <rect width="320" height="220" rx="12" ry="12" fill="url(#blueGrad)" filter="drop-shadow(0px 4px 6px rgba(0,0,0,0.1))"/>
+    <text x="160" y="35" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">HCF के वास्तविक अनुप्रयोग</text>
+    <text x="30" y="80" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="14">• अधिकतम आकार की टाइलें या कमरे की माप</text>
+    <text x="30" y="120" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="14">• वस्तुओं को बराबर समूहों में बांटना</text>
+    <text x="30" y="160" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="14">• अधिकतम लंबाई ज्ञात करना जो पूरी तरह माप सके</text>
+  </g>
+
+  <!-- Box 2: LCM Applications -->
+  <g transform="translate(430, 40)">
+    <rect width="320" height="220" rx="12" ry="12" fill="url(#tealGrad)" filter="drop-shadow(0px 4px 6px rgba(0,0,0,0.1))"/>
+    <text x="160" y="35" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">LCM के वास्तविक अनुप्रयोग</text>
+    <text x="30" y="80" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="14">• घंटियों का एक साथ बजना (Traffic Lights)</text>
+    <text x="30" y="120" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="14">• वृत्ताकार पथ पर दौड़ने वाले धावक</text>
+    <text x="30" y="160" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="14">• न्यूनतम समय अंतराल की गणना</text>
+  </g>
+</svg>

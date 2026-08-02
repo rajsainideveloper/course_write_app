@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" width="100%">
+  <defs>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="100%" stop-color="#0D9488"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Box 1 -->
+  <g transform="translate(40, 30)" filter="url(#shadow)">
+    <rect width="210" height="200" rx="12" fill="url(#cardGrad)"/>
+    <text x="105" y="40" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">वर्ग एवं वर्गमूल</text>
+    <text x="20" y="80" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="14">• 1 से 50 तक वर्ग याद करें</text>
+    <text x="20" y="115" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="14">• इकाई अंक का नियम समझें</text>
+    <text x="20" y="150" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="14">• अभाज्य गुणनखंड प्रयोग करें</text>
+  </g>
+
+  <!-- Box 2 -->
+  <g transform="translate(295, 30)" filter="url(#shadow)">
+    <rect width="210" height="200" rx="12" fill="url(#cardGrad)"/>
+    <text x="105" y="40" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">घन एवं घनमूल</text>
+    <text x="20" y="80" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="14">• 1 से 20 तक घन रटें</text>
+    <text x="20" y="115" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="14">• इकाई अंक हमेशा समान रहता है</text>
+    <text x="20" y="150" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="14">• अनुमान विधि का प्रयोग करें</text>
+  </g>
+
+  <!-- Box 3 -->
+  <g transform="translate(550, 30)" filter="url(#shadow)">
+    <rect width="210" height="200" rx="12" fill="url(#cardGrad)"/>
+    <text x="105" y="40" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">त्वरित तकनीक</text>
+    <text x="20" y="80" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="14">• वैदिक गणित सूत्र</text>
+    <text x="20" y="115" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="14">• डिजिटल सम (Digital Sum)</text>
+    <text x="20" y="150" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="14">• विकल्पों का अनुमान (Approximation)</text>
+  </g>
+</svg>

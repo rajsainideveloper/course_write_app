@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%">
+  <defs>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#0D9488" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#F8FAFC" rx="12" ry="12"/>
+
+  <!-- Title -->
+  <text x="400" y="45" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="bold" fill="#1E3A8A" text-anchor="middle">मुहावरे एवं लोकोक्तियाँ: मुख्य तुलनात्मक अंतर</text>
+
+  <!-- Left Box: Idioms -->
+  <rect x="50" y="80" width="300" height="320" rx="10" ry="10" fill="#FFFFFF" stroke="#0D9488" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="50" y="80" width="300" height="50" rx="10" ry="10" fill="url(#primaryGrad)"/>
+  <text x="200" y="112" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">मुहावरे (Idioms)</text>
+  
+  <text x="75" y="155" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#334155">• यह केवल एक **वाक्यांश** होता है।</text>
+  <text x="75" y="195" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#334155">• इसका **स्वतंत्र प्रयोग** संभव नहीं है।</text>
+  <text x="75" y="235" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#334155">• इसमें क्रिया का रूप **लिंग-वचन** के अनुसार बदलता है।</text>
+  <text x="75" y="275" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#334155">• यह लाक्षणिक अर्थ पर आधारित होता है।</text>
+  <text x="75" y="315" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#334155">• उदाहरण: **आँखों का तारा होना**</text>
+
+  <!-- Right Box: Proverbs -->
+  <rect x="450" y="80" width="300" height="320" rx="10" ry="10" fill="#FFFFFF" stroke="#059669" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="450" y="80" width="300" height="50" rx="10" ry="10" fill="url(#primaryGrad)"/>
+  <text x="600" y="112" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">लोकोक्तियाँ (Proverbs)</text>
+
+  <text x="475" y="155" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#334155">• यह एक **पूर्ण वाक्य** होती है।</text>
+  <text x="475" y="195" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#334155">• इसका **स्वतंत्र प्रयोग** किया जा सकता है।</text>
+  <text x="475" y="235" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#334155">• इसका रूप **परिवर्तित** नहीं होता (स्थिर रहती है)।</text>
+  <text x="475" y="275" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#334155">• यह जनअनुभव और सत्य पर आधारित होती है।</text>
+  <text x="475" y="315" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#334155">• उदाहरण: **नाच न जाने आँगन टेढ़ा**</text>
+
+  <!-- Center divider indicator -->
+  <path d="M 370 240 L 430 240" stroke="#94A3B8" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrow)"/>
+</svg>

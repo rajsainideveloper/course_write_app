@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" width="100%">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#1E3A8A" stop-opacity="0.4"/>
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#0D9488" stop-opacity="0.4"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background Box -->
+  <rect x="20" y="20" width="760" height="310" rx="15" ry="15" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2" filter="url(#shadow)"/>
+
+  <!-- Diagram 1: All / Inclusion -->
+  <g transform="translate(140, 175)">
+    <circle cx="0" cy="0" r="70" fill="url(#blueGrad)" stroke="#1E3A8A" stroke-width="2.5"/>
+    <circle cx="0" cy="10" r="40" fill="url(#tealGrad)" stroke="#0D9488" stroke-width="2.5"/>
+    <text x="0" y="-30" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1E3A8A" text-anchor="middle">बाहरी वर्ग (A)</text>
+    <text x="0" y="15" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#0D9488" text-anchor="middle">आंतरिक (B)</text>
+    <text x="0" y="100" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" fill="#334155" text-anchor="middle">पूर्णतः समाहित (All)</text>
+  </g>
+
+  <!-- Diagram 2: Intersection / Some -->
+  <g transform="translate(400, 175)">
+    <circle cx="-35" cy="0" r="55" fill="url(#blueGrad)" stroke="#1E3A8A" stroke-width="2.5"/>
+    <circle cx="35" cy="0" r="55" fill="url(#tealGrad)" stroke="#0D9488" stroke-width="2.5"/>
+    <text x="-35" y="-5" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1E3A8A" text-anchor="middle">समुच्चय A</text>
+    <text x="35" y="-5" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#0D9488" text-anchor="middle">समुच्चय B</text>
+    <text x="0" y="5" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#059669" text-anchor="middle">उभयनिष्ठ</text>
+    <text x="0" y="100" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" fill="#334155" text-anchor="middle">आंशिक संबंध (Some)</text>
+  </g>
+
+  <!-- Diagram 3: Disjoint / No -->
+  <g transform="translate(660, 175)">
+    <circle cx="-50" cy="0" r="45" fill="url(#blueGrad)" stroke="#1E3A8A" stroke-width="2.5"/>
+    <circle cx="50" cy="0" r="45" fill="url(#tealGrad)" stroke="#0D9488" stroke-width="2.5"/>
+    <text x="-50" y="5" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1E3A8A" text-anchor="middle">समूह A</text>
+    <text x="50" y="5" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#0D9488" text-anchor="middle">समूह B</text>
+    <text x="0" y="100" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" fill="#334155" text-anchor="middle">पूर्णतः पृथक (No)</text>
+  </g>
+</svg>

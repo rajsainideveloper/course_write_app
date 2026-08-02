@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 250" width="100%">
+  <defs>
+    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#0D9488" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#64748B" flood-opacity="0.3"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="250" fill="#F8FAFC" rx="12" ry="12"/>
+
+  <!-- CP Box -->
+  <g filter="url(#shadow)">
+    <rect x="50" y="80" width="180" height="90" rx="12" ry="12" fill="url(#boxGrad)"/>
+    <text x="140" y="115" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" dy=".3em">क्रय मूल्य (CP)</text>
+    <text x="140" y="145" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle" dy=".3em">+ लाभ / - हानि</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <path d="M 235 125 L 315 125" stroke="#64748B" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- SP Box -->
+  <g filter="url(#shadow)">
+    <rect x="325" y="80" width="150" height="90" rx="12" ry="12" fill="#059669"/>
+    <text x="400" y="115" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" dy=".3em">विक्रय मूल्य (SP)</text>
+    <text x="400" y="145" fill="#ECFDF5" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle" dy=".3em">बराबर मूल्य</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <path d="M 485 125 L 565 125" stroke="#64748B" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- MP Box -->
+  <g filter="url(#shadow)">
+    <rect x="575" y="80" width="180" height="90" rx="12" ry="12" fill="url(#boxGrad)"/>
+    <text x="665" y="115" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" dy=".3em">अंकित मूल्य (MP)</text>
+    <text x="665" y="145" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle" dy=".3em">- छूट (Discount)</text>
+  </g>
+</svg>

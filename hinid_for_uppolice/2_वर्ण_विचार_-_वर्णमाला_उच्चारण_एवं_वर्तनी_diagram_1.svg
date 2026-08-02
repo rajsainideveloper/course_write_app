@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%">
+  <defs>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#2563EB" />
+    </linearGradient>
+    <linearGradient id="secondaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488" />
+      <stop offset="100%" stop-color="#14B8A6" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="450" fill="#F8FAFC" rx="12"/>
+  
+  <!-- Main Title -->
+  <text x="400" y="40" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="bold" fill="#1E293B" text-anchor="middle">हिंदी वर्णमाला का संरचनात्मक वर्गीकरण</text>
+
+  <!-- Root Node -->
+  <rect x="300" y="70" width="200" height="50" rx="8" fill="url(#primaryGrad)" filter="url(#shadow)"/>
+  <text x="400" y="100" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">हिंदी वर्णमाला (52 वर्ण)</text>
+
+  <!-- Connectors from Root -->
+  <path d="M 400 120 L 400 150 L 200 150 L 200 180" stroke="#64748B" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 400 120 L 400 150 L 600 150 L 600 180" stroke="#64748B" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Level 1 Left: Swar -->
+  <rect x="100" y="180" width="200" height="45" rx="8" fill="url(#secondaryGrad)" filter="url(#shadow)"/>
+  <text x="200" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">स्वर (11 वर्ण)</text>
+
+  <!-- Level 1 Right: Vyanjan -->
+  <rect x="500" y="180" width="200" height="45" rx="8" fill="url(#secondaryGrad)" filter="url(#shadow)"/>
+  <text x="600" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">व्यंजन (41 वर्ण)</text>
+
+  <!-- Connectors for Swar -->
+  <path d="M 150 225 L 150 260" stroke="#64748B" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 250 225 L 250 260" stroke="#64748B" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Swar Subtypes -->
+  <rect x="70" y="265" width="160" height="40" rx="6" fill="url(#accentGrad)" filter="url(#shadow)"/>
+  <text x="150" y="290" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle">ह्रस्व, दीर्घ, प्लुत</text>
+
+  <rect x="245" y="265" width="160" height="40" rx="6" fill="url(#accentGrad)" filter="url(#shadow)"/>
+  <text x="325" y="290" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle">मूल व संयुक्त स्वर</text>
+
+  <!-- Connectors for Vyanjan -->
+  <path d="M 550 225 L 550 260" stroke="#64748B" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 650 225 L 650 260" stroke="#64748B" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Vyanjan Subtypes -->
+  <rect x="435" y="265" width="160" height="40" rx="6" fill="url(#accentGrad)" filter="url(#shadow)"/>
+  <text x="515" y="290" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle">वर्गीय, अंतःस्थ, ऊष्म</text>
+
+  <rect x="610" y="265" width="160" height="40" rx="6" fill="url(#accentGrad)" filter="url(#shadow)"/>
+  <text x="690" y="290" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle">संयुक्त व अयोगवाह</text>
+
+  <!-- Footer note inside SVG -->
+  <text x="400" y="380" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-style="italic" fill="#64748B" text-anchor="middle">* कुल 52 वर्णों का वैज्ञानिक मानक विभाजन</text>
+</svg>

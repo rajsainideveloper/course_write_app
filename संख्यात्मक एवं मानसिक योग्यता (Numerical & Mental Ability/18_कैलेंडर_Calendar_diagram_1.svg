@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#0D9488" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.2" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="#F8FAFC" rx="15" ry="15" />
+  
+  <!-- Title -->
+  <text x="400" y="45" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="bold" fill="#1E3A8A" text-anchor="middle">कैलेंडर गणना प्रक्रिया प्रवाह (Calendar Calculation Flow)</text>
+
+  <!-- Step 1 -->
+  <rect x="50" y="80" width="200" height="100" rx="10" ry="10" fill="url(#grad1)" filter="url(#shadow)" />
+  <text x="150" y="120" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">चरण 1</text>
+  <text x="150" y="145" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle">तारीख + महीना कोड</text>
+  <text x="150" y="165" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle">+ शताब्दी कोड</text>
+
+  <!-- Arrow 1 -->
+  <path d="M 250 130 L 300 130" stroke="#0D9488" stroke-width="3" fill="none" marker-end="url(#arrow)" />
+
+  <!-- Step 2 -->
+  <rect x="300" y="80" width="200" height="100" rx="10" ry="10" fill="url(#grad1)" filter="url(#shadow)" />
+  <text x="400" y="120" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">चरण 2</text>
+  <text x="400" y="145" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle">वर्ष के अंतिम 2 अंक</text>
+  <text x="400" y="165" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle">+ (वर्ष / 4 का भागफल)</text>
+
+  <!-- Arrow 2 -->
+  <path d="M 500 130 L 550 130" stroke="#0D9488" stroke-width="3" fill="none" />
+
+  <!-- Step 3 -->
+  <rect x="550" y="80" width="200" height="100" rx="10" ry="10" fill="url(#grad1)" filter="url(#shadow)" />
+  <text x="650" y="120" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">चरण 3</text>
+  <text x="650" y="145" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle">कुल योग को</text>
+  <text x="650" y="165" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle">7 से भाग दें</text>
+
+  <!-- Arrow Down -->
+  <path d="M 400 180 L 400 240" stroke="#0D9488" stroke-width="3" fill="none" />
+
+  <!-- Result Box -->
+  <rect x="250" y="245" width="300" height="130" rx="12" ry="12" fill="#059669" filter="url(#shadow)" />
+  <text x="400" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">अंतिम परिणाम</text>
+  <text x="400" y="310" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">प्राप्त शेषफल (Remainder) ही</text>
+  <text x="400" y="335" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">निर्दिष्ट दिन का कोड होता है!</text>
+</svg>

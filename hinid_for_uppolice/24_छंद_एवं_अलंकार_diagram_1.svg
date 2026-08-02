@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" width="100%">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#0D9488" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#000000" flood-opacity="0.2"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="350" fill="#F8FAFC" rx="15"/>
+  
+  <!-- Central Node -->
+  <rect x="300" y="30" width="200" height="60" rx="10" fill="url(#grad1)" filter="url(#shadow)"/>
+  <text x="400" y="60" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" dy=".3em">छंद के मुख्य भेद</text>
+
+  <!-- Branch 1 -->
+  <rect x="50" y="180" width="200" height="70" rx="10" fill="#059669" filter="url(#shadow)"/>
+  <text x="150" y="208" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">मात्रिक छंद</text>
+  <text x="150" y="230" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle">(मात्राओं की गणना पर आधारित)</text>
+
+  <!-- Branch 2 -->
+  <rect x="300" y="180" width="200" height="70" rx="10" fill="#059669" filter="url(#shadow)"/>
+  <text x="400" y="208" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">वर्णिक छंद</text>
+  <text x="400" y="230" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle">(वर्णों की गणना पर आधारित)</text>
+
+  <!-- Branch 3 -->
+  <rect x="550" y="180" width="200" height="70" rx="10" fill="#059669" filter="url(#shadow)"/>
+  <text x="650" y="208" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">मुक्त छंद</text>
+  <text x="650" y="230" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle">(नियंत्रण मुक्त, निराला शैली)</text>
+
+  <!-- Connectors -->
+  <path d="M 400 90 L 400 135 L 150 135 L 150 180" stroke="#64748B" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 400 90 L 400 180" stroke="#64748B" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 400 90 L 400 135 L 650 135 L 650 180" stroke="#64748B" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+</svg>

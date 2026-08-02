@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" width="100%">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488"/>
+      <stop offset="100%" stop-color="#14B8A6"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="350" fill="#F8FAFC" rx="15"/>
+
+  <!-- Step 1 -->
+  <g transform="translate(50, 100)">
+    <rect width="200" height="150" rx="12" fill="url(#blueGrad)" filter="drop-shadow(0px 4px 6px rgba(0,0,0,0.1))"/>
+    <text x="100" y="50" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">चरण 1: समस्या पहचान</text>
+    <text x="100" y="90" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle">घटना या परिस्थिति</text>
+    <text x="100" y="115" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle">की यथार्थ परख</text>
+  </g>
+
+  <!-- Connector 1 -->
+  <path d="M 255 175 L 295 175" stroke="#64748B" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Step 2 -->
+  <g transform="translate(300, 100)">
+    <rect width="200" height="150" rx="12" fill="url(#tealGrad)" filter="drop-shadow(0px 4px 6px rgba(0,0,0,0.1))"/>
+    <text x="100" y="50" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">चरण 2: विकल्प विश्लेषण</text>
+    <text x="100" y="90" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle">नियमों और नैतिकता</text>
+    <text x="100" y="115" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle">के आधार पर तुलना</text>
+  </g>
+
+  <!-- Connector 2 -->
+  <path d="M 505 175 L 545 175" stroke="#64748B" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Step 3 -->
+  <g transform="translate(550, 100)">
+    <rect width="200" height="150" rx="12" fill="url(#emeraldGrad)" filter="drop-shadow(0px 4px 6px rgba(0,0,0,0.1))"/>
+    <text x="100" y="50" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">चरण 3: सटीक निर्णय</text>
+    <text x="100" y="90" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle">तत्काल, न्यायसंगत</text>
+    <text x="100" y="115" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle">एवं प्रभावी कार्रवाई</text>
+  </g>
+</svg>

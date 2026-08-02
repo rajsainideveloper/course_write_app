@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" width="100%">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488"/>
+      <stop offset="100%" stop-color="#14B8A6"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="350" fill="#F8FAFC" rx="12"/>
+
+  <!-- Step 1 -->
+  <g transform="translate(50, 60)" filter="url(#shadow)">
+    <rect width="200" height="180" rx="12" fill="url(#blueGrad)"/>
+    <text x="100" y="40" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">चरण 1: विश्लेषण</text>
+    <text x="100" y="80" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">दिए गए अक्षरों की</text>
+    <text x="100" y="105" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">कुल संख्या और आवृत्ति</text>
+    <text x="100" y="135" fill="#93C5FD" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">($n!$ गणना नियम)</text>
+  </g>
+
+  <!-- Connector 1 -->
+  <path d="M 255 150 L 295 150" stroke="#64748B" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Step 2 -->
+  <g transform="translate(300, 60)" filter="url(#shadow)">
+    <rect width="200" height="180" rx="12" fill="url(#tealGrad)"/>
+    <text x="100" y="40" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">चरण 2: संयोजन</text>
+    <text x="100" y="80" fill="#CCFBF1" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">संभावित जोड़े बनाना</text>
+    <text x="100" y="105" fill="#CCFBF1" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">स्वर और व्यंजन के</text>
+    <text x="100" y="135" fill="#99F6E4" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">(Vowels &amp; Consonants)</text>
+  </g>
+
+  <!-- Connector 2 -->
+  <path d="M 505 150 L 545 150" stroke="#64748B" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Step 3 -->
+  <g transform="translate(550, 60)" filter="url(#shadow)">
+    <rect width="200" height="180" rx="12" fill="url(#emeraldGrad)"/>
+    <text x="100" y="40" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">चरण 3: सत्यापन</text>
+    <text x="100" y="80" fill="#ECFDF5" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">विकल्पों से मिलान</text>
+    <text x="100" y="105" fill="#ECFDF5" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">एवं नकारात्मक जाँच</text>
+    <text x="100" y="135" fill="#A7F3D0" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">(सटीक उत्तर चयन)</text>
+  </g>
+
+  <!-- Footer Note -->
+  <text x="400" y="280" fill="#475569" font-family="system-ui, sans-serif" font-size="14" font-weight="600" text-anchor="middle">चित्र: उत्तर प्रदेश पुलिस कांस्टेबल परीक्षा के लिए शब्द निर्माण तार्किक प्रक्रिया प्रवाह</text>
+</svg>

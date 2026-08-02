@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" width="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC" />
+      <stop offset="100%" stop-color="#E2E8F0" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  
+  <rect width="800" height="350" rx="12" fill="url(#bgGrad)" />
+  
+  <!-- Box 1 -->
+  <g transform="translate(40, 40)" filter="url(#shadow)">
+    <rect width="220" height="270" rx="10" fill="url(#cardGrad)" />
+    <text x="110" y="40" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">घंटे की सुई</text>
+    <text x="25" y="90" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="14">• 12 घंटे = 360°</text>
+    <text x="25" y="140" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="14">• 1 घंटा = 30°</text>
+    <text x="25" y="190" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="14">• 1 मिनट = 0.5°</text>
+    <text x="25" y="235" fill="#34D399" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold">($1/2$° प्रति मिनट)</text>
+  </g>
+
+  <!-- Box 2 -->
+  <g transform="translate(290, 40)" filter="url(#shadow)">
+    <rect width="220" height="270" rx="10" fill="url(#cardGrad)" />
+    <text x="110" y="40" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">मिनट की सुई</text>
+    <text x="25" y="90" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="14">• 60 मिनट = 360°</text>
+    <text x="25" y="140" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="14">• 1 मिनट = 6°</text>
+    <text x="25" y="190" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="14">• 10 मिनट = 60°</text>
+    <text x="25" y="235" fill="#34D399" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold">(तेज़ गति से भ्रमण)</text>
+  </g>
+
+  <!-- Box 3 -->
+  <g transform="translate(540, 40)" filter="url(#shadow)">
+    <rect width="220" height="270" rx="10" fill="url(#cardGrad)" />
+    <text x="110" y="40" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">सापेक्ष गति (Diff)</text>
+    <text x="25" y="90" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="14">• सापेक्ष चाल = $5.5$°</text>
+    <text x="25" y="140" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="14">• $\frac{11}{2}$° प्रति मिनट</text>
+    <text x="25" y="190" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="14">• अंतराल पाटने हेतु</text>
+    <text x="25" y="235" fill="#34D399" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold">उपयोगी शॉर्टकट</text>
+  </g>
+</svg>

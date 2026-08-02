@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" width="100%">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488" />
+      <stop offset="100%" stop-color="#14B8A6" />
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748B"/>
+    </marker>
+  </defs>
+  
+  <rect width="800" height="280" rx="12" fill="#F8FAFC"/>
+  
+  <text x="400" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="bold" fill="#1E3A8A" text-anchor="middle">हिन्दी शब्द-भेद वर्गीकरण</text>
+  
+  <rect x="50" y="70" width="300" height="160" rx="10" fill="url(#blueGrad)" opacity="0.9"/>
+  <text x="200" y="105" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">विकारी शब्द</text>
+  <text x="200" y="135" font-family="system-ui, sans-serif" font-size="13" fill="#E2E8F0" text-anchor="middle">लिंग, वचन, कारक से प्रभावित</text>
+  <text x="200" y="165" font-family="system-ui, sans-serif" font-size="12" fill="#CBD5E1" text-anchor="middle">उदाहरण: लड़का, लड़के, लड़की</text>
+  <text x="200" y="195" font-family="system-ui, sans-serif" font-size="12" fill="#CBD5E1" text-anchor="middle">भेद: संज्ञा, सर्वनाम, विशेषण, क्रिया</text>
+
+  <rect x="450" y="70" width="300" height="160" rx="10" fill="url(#tealGrad)" opacity="0.9"/>
+  <text x="600" y="105" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">अविकारी शब्द (अव्यय)</text>
+  <text x="600" y="135" font-family="system-ui, sans-serif" font-size="13" fill="#E2E8F0" text-anchor="middle">लिंग, वचन, कारक से अपरिवर्तित</text>
+  <text x="600" y="165" font-family="system-ui, sans-serif" font-size="12" fill="#CBD5E1" text-anchor="middle">उदाहरण: धीरे, और, परन्तु, अरे</text>
+  <text x="600" y="195" font-family="system-ui, sans-serif" font-size="12" fill="#CBD5E1" text-anchor="middle">भेद: क्रियाविशेषण, संबंधबोधक आदि</text>
+</svg>

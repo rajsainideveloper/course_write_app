@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" width="100%">
+  <defs>
+    <linearGradient id="cardGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <linearGradient id="cardGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488" />
+      <stop offset="100%" stop-color="#14B8A6" />
+    </linearGradient>
+    <linearGradient id="cardGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="350" fill="#F8FAFC" rx="12"/>
+
+  <!-- Step 1 -->
+  <g transform="translate(50, 75)">
+    <rect width="200" height="200" rx="12" fill="url(#cardGrad1)"/>
+    <text x="100" y="50" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">चरण 1</text>
+    <text x="100" y="100" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">दिए गए दिनों का</text>
+    <text x="100" y="130" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">LCM निकालें</text>
+    <text x="100" y="170" fill="#93C5FD" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">= कुल कार्य (Total Work)</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <path d="M 260 175 L 290 175" stroke="#64748B" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Step 2 -->
+  <g transform="translate(300, 75)">
+    <rect width="200" height="200" rx="12" fill="url(#cardGrad2)"/>
+    <text x="100" y="50" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">चरण 2</text>
+    <text x="100" y="100" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">प्रत्येक की इकाई</text>
+    <text x="100" y="130" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">दक्षता ज्ञात करें</text>
+    <text x="100" y="170" fill="#5EEAD4" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">कुल कार्य ÷ दिन</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <path d="M 510 175 L 540 175" stroke="#64748B" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Step 3 -->
+  <g transform="translate(550, 75)">
+    <rect width="200" height="200" rx="12" fill="url(#cardGrad3)"/>
+    <text x="100" y="50" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">चरण 3</text>
+    <text x="100" y="100" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">संयुक्त कार्य समय</text>
+    <text x="100" y="130" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">की गणना करें</text>
+    <text x="100" y="170" fill="#A7F3D0" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">कुल कार्य ÷ कुल दक्षता</text>
+  </g>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488"/>
+      <stop offset="100%" stop-color="#14B8A6"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="450" fill="#F8FAFC" rx="15"/>
+
+  <!-- Title -->
+  <text x="400" y="40" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="bold" fill="#1E293B" text-anchor="middle">प्रमुख हिंदी साहित्यिक पुरस्कार एवं उनके स्थापना वर्ष</text>
+
+  <!-- Box 1: Jnanpith -->
+  <g transform="translate(50, 80)">
+    <rect width="210" height="140" rx="10" fill="url(#blueGrad)" filter="drop-shadow(0px 4px 6px rgba(0,0,0,0.1))"/>
+    <text x="105" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">ज्ञानपीठ पुरस्कार</text>
+    <text x="105" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#E2E8F0" text-anchor="middle">स्थापना: 1961 (1965 से)</text>
+    <text x="105" y="90" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#E2E8F0" text-anchor="middle">प्रथम हिंदी: सुमित्रानंदन पंत</text>
+    <text x="105" y="115" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#93C5FD" text-anchor="middle">कृति: 'चिदंबरा' (1968)</text>
+  </g>
+
+  <!-- Box 2: Sahitya Akademi -->
+  <g transform="translate(295, 80)">
+    <rect width="210" height="140" rx="10" fill="url(#tealGrad)" filter="drop-shadow(0px 4px 6px rgba(0,0,0,0.1))"/>
+    <text x="105" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">साहित्य अकादमी</text>
+    <text x="105" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#E2E8F0" text-anchor="middle">स्थापना: 1954</text>
+    <text x="105" y="90" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#E2E8F0" text-anchor="middle">प्रथम हिंदी: माखनलाल चतुर्वेदी</text>
+    <text x="105" y="115" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#5EEAD4" text-anchor="middle">कृति: 'हिम तरंगिणी' (1955)</text>
+  </g>
+
+  <!-- Box 3: Saraswati / Vyas -->
+  <g transform="translate(540, 80)">
+    <rect width="210" height="140" rx="10" fill="url(#greenGrad)" filter="drop-shadow(0px 4px 6px rgba(0,0,0,0.1))"/>
+    <text x="105" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">सरस्वती / व्यास सम्मान</text>
+    <text x="105" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#E2E8F0" text-anchor="middle">स्थापना: 1991</text>
+    <text x="105" y="90" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#E2E8F0" text-anchor="middle">संस्था: के.के. बिड़ला फाउंडेशन</text>
+    <text x="105" y="115" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#A7F3D0" text-anchor="middle">सर्वोच्च साहित्यिक सम्मान</text>
+  </g>
+
+  <!-- Bottom Info Panel -->
+  <g transform="translate(50, 250)">
+    <rect width="700" height="150" rx="10" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+    <text x="350" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#0F172A" text-anchor="middle">उत्तर प्रदेश पुलिस कांस्टेबल परीक्षा महत्वपूर्ण बिंदु</text>
+    <text x="50" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#334155">• महादेवी वर्मा को उनकी रचना 'यामा' के लिए 1982 में ज्ञानपीठ पुरस्कार मिला।</text>
+    <text x="50" y="100" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#334155">• उत्तर प्रदेश हिंदी संस्थान का सर्वोच्च सम्मान 'भारत-भारती सम्मान' है।</text>
+    <text x="50" y="130" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#334155">• हरिवंश राय बच्चन को प्रथम 'सरस्वती सम्मान' (1991) से नवाजा गया था।</text>
+  </g>
+</svg>

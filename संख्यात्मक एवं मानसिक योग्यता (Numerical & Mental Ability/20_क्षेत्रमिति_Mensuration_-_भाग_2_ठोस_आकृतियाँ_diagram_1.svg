@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" width="100%">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#0D9488" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#1E3A8A" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="350" fill="#F8FAFC" rx="12"/>
+
+  <!-- Box 1: घन एवं घनाभ -->
+  <g transform="translate(40, 40)" filter="url(#shadow)">
+    <rect width="210" height="260" rx="10" fill="#ffffff" stroke="#CBD5E1" stroke-width="2"/>
+    <rect x="15" y="15" width="180" height="40" rx="6" fill="url(#grad1)"/>
+    <text x="105" y="40" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">घन / घनाभ</text>
+    <text x="25" y="90" fill="#1E293B" font-family="system-ui, sans-serif" font-size="14">• विमाएँ: l, b, h</text>
+    <text x="25" y="130" fill="#1E293B" font-family="system-ui, sans-serif" font-size="14">• आयतन = l×b×h</text>
+    <text x="25" y="170" fill="#1E293B" font-family="system-ui, sans-serif" font-size="14">• विकर्ण आधारित प्रश्न</text>
+    <text x="25" y="210" fill="#0D9488" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">रिफॉर्मूला: 2(lb+bh+hl)</text>
+  </g>
+
+  <!-- Box 2: बेलन एवं शंकु -->
+  <g transform="translate(295, 40)" filter="url(#shadow)">
+    <rect width="210" height="260" rx="10" fill="#ffffff" stroke="#CBD5E1" stroke-width="2"/>
+    <rect x="15" y="15" width="180" height="40" rx="6" fill="url(#grad2)"/>
+    <text x="105" y="40" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">बेलन / शंकु</text>
+    <text x="25" y="90" fill="#1E293B" font-family="system-ui, sans-serif" font-size="14">• त्रिज्या (r), ऊँचाई (h)</text>
+    <text x="25" y="130" fill="#1E293B" font-family="system-ui, sans-serif" font-size="14">• शंकु तिर्यक ऊँचाई l</text>
+    <text x="25" y="170" fill="#1E293B" font-family="system-ui, sans-serif" font-size="14">• वक्र पृष्ठीय क्षेत्रफल</text>
+    <text x="25" y="210" fill="#059669" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">पाई (π) का प्रयोग</text>
+  </g>
+
+  <!-- Box 3: गोला -->
+  <g transform="translate(550, 40)" filter="url(#shadow)">
+    <rect width="210" height="260" rx="10" fill="#ffffff" stroke="#CBD5E1" stroke-width="2"/>
+    <rect x="15" y="15" width="180" height="40" rx="6" fill="url(#grad1)"/>
+    <text x="105" y="40" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">गोला (Sphere)</text>
+    <text x="25" y="90" fill="#1E293B" font-family="system-ui, sans-serif" font-size="14">• त्रिज्या (r) पर आधारित</text>
+    <text x="25" y="130" fill="#1E293B" font-family="system-ui, sans-serif" font-size="14">• आयतन = 4/3 πr³</text>
+    <text x="25" y="170" fill="#1E293B" font-family="system-ui, sans-serif" font-size="14">• पृष्ठीय क्षेत्रफल 4πr²</text>
+    <text x="25" y="210" fill="#0D9488" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">सीधे मान रखना</text>
+  </g>
+</svg>

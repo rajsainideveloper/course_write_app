@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#0D9488" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#F8FAFC" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="40" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="bold" fill="#1E3A8A" text-anchor="middle">संख्या श्रृंखला विश्लेषण प्रक्रिया</text>
+
+  <!-- Step 1 -->
+  <rect x="50" y="80" width="200" height="80" rx="10" fill="url(#grad1)" filter="url(#shadow)"/>
+  <text x="150" y="115" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">चरण 1: अंतर जांचें</text>
+  <text x="150" y="135" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#E2E8F0" text-anchor="middle">प्राथमिक अंतर (Diff) निकालें</text>
+
+  <!-- Step 2 -->
+  <rect x="300" y="80" width="200" height="80" rx="10" fill="url(#grad1)" filter="url(#shadow)"/>
+  <text x="400" y="115" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">चरण 2: द्वितीयक अंतर</text>
+  <text x="400" y="135" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#E2E8F0" text-anchor="middle">अंतर का अंतर (Double Diff)</text>
+
+  <!-- Step 3 -->
+  <rect x="550" y="80" width="200" height="80" rx="10" fill="url(#grad1)" filter="url(#shadow)"/>
+  <text x="650" y="115" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">चरण 3: गुणन/भाग</text>
+  <text x="650" y="135" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#E2E8F0" text-anchor="middle">तेजी से बढ़ने पर गुणा जांचें</text>
+
+  <!-- Connectors Row 1 -->
+  <path d="M 250 120 L 300 120" stroke="#64748B" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 500 120 L 550 120" stroke="#64748B" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Row 2 -->
+  <rect x="550" y="220" width="200" height="80" rx="10" fill="url(#grad2)" filter="url(#shadow)"/>
+  <text x="650" y="255" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">चरण 4: वर्ग/घन नियम</text>
+  <text x="650" y="275" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#E2E8F0" text-anchor="middle">+$n^2$ या $-n^3$ पैटर्न</text>
+
+  <path d="M 650 160 L 650 220" stroke="#64748B" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Row 3 Left -->
+  <rect x="300" y="220" width="200" height="80" rx="10" fill="url(#grad2)" filter="url(#shadow)"/>
+  <text x="400" y="255" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">चरण 5: मिश्रित श्रृंखला</text>
+  <text x="400" y="275" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#E2E8F0" text-anchor="middle">एकांतर (Alternate) पद</text>
+
+  <path d="M 550 260 L 500 260" stroke="#64748B" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Conclusion Box -->
+  <rect x="175" y="350" width="450" height="90" rx="10" fill="#1E3A8A" filter="url(#shadow)"/>
+  <text x="400" y="385" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">अतिमिश्रित एवं विशिष्ट पैटर्न</text>
+  <text x="400" y="415" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#E2E8F0" text-anchor="middle">=अभाज्य संख्या + मिश्रित संक्रिया (जैसे $\times 2 + 1$)=</text>
+
+  <path d="M 300 260 L 250 260 L 250 350" stroke="#64748B" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+</svg>

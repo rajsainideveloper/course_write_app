@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" width="100%">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#0D9488" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748B"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="350" fill="#F8FAFC" rx="15"/>
+  
+  <!-- Central Node -->
+  <rect x="320" y="30" width="160" height="60" rx="10" fill="url(#grad1)" filter="drop-shadow(0px 4px 6px rgba(0,0,0,0.1))"/>
+  <text x="400" y="65" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">संज्ञा (Noun)</text>
+  
+  <!-- Sub-nodes -->
+  <rect x="40" y="160" width="130" height="50" rx="8" fill="url(#grad2)"/>
+  <text x="105" y="190" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">व्यक्तिवाचक</text>
+  
+  <rect x="190" y="160" width="130" height="50" rx="8" fill="url(#grad2)"/>
+  <text x="255" y="190" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">जातिवाचक</text>
+  
+  <rect x="340" y="160" width="130" height="50" rx="8" fill="url(#grad2)"/>
+  <text x="405" y="190" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">द्रव्यवाचक</text>
+  
+  <rect x="490" y="160" width="130" height="50" rx="8" fill="url(#grad2)"/>
+  <text x="555" y="190" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">समूहवाचक</text>
+  
+  <rect x="640" y="160" width="130" height="50" rx="8" fill="url(#grad2)"/>
+  <text x="705" y="190" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">भाववाचक</text>
+  
+  <!-- Connectors -->
+  <path d="M 400 90 L 400 130 L 105 130 L 105 160" stroke="#64748B" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 400 130 L 255 130 L 255 160" stroke="#64748B" stroke-width="2" fill="none"/>
+  <path d="M 400 130 L 405 160" stroke="#64748B" stroke-width="2" fill="none"/>
+  <path d="M 400 130 L 555 130 L 555 160" stroke="#64748B" stroke-width="2" fill="none"/>
+  <path d="M 400 130 L 705 130 L 705 160" stroke="#64748B" stroke-width="2" fill="none"/>
+</svg>

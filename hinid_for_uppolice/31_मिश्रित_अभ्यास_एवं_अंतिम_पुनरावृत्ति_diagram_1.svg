@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC" />
+      <stop offset="100%" stop-color="#E2E8F0" />
+    </linearGradient>
+    <linearGradient id="boxGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <linearGradient id="boxGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488" />
+      <stop offset="100%" stop-color="#14B8A6" />
+    </linearGradient>
+    <linearGradient id="boxGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#34D399" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="450" rx="15" fill="url(#bgGrad)" />
+
+  <text x="400" y="40" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="bold" fill="#1E293B" text-anchor="middle">सामान्य हिंदी व्याकरण वास्तुकला (General Hindi Grammar Architecture)</text>
+
+  <!-- Level 1 -->
+  <rect x="300" y="75" width="200" height="55" rx="10" fill="url(#boxGrad1)" filter="url(#shadow)"/>
+  <text x="400" y="102" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dy=".3em">शब्द रचना (Word Formation)</text>
+
+  <!-- Arrows Down -->
+  <path d="M 400 130 L 400 165" stroke="#64748B" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Level 2 Boxes -->
+  <rect x="70" y="175" width="180" height="55" rx="10" fill="url(#boxGrad2)" filter="url(#shadow)"/>
+  <text x="160" y="202" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dy=".3em">संधि एवं समास (Sandhi &amp; Samas)</text>
+
+  <rect x="310" y="175" width="180" height="55" rx="10" fill="url(#boxGrad2)" filter="url(#shadow)"/>
+  <text x="400" y="202" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dy=".3em">उपसर्ग एवं प्रत्यय (Prefix &amp; Suffix)</text>
+
+  <rect x="550" y="175" width="180" height="55" rx="10" fill="url(#boxGrad2)" filter="url(#shadow)"/>
+  <text x="640" y="202" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dy=".3em">विकारी पद (Inflected Words)</text>
+
+  <!-- Connectors Level 2 to Level 3 -->
+  <path d="M 160 230 L 160 280" stroke="#64748B" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 400 230 L 400 280" stroke="#64748B" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 640 230 L 640 280" stroke="#64748B" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Level 3 Boxes -->
+  <rect x="70" y="290" width="180" height="55" rx="10" fill="url(#boxGrad3)" filter="url(#shadow)"/>
+  <text x="160" y="317" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dy=".3em">वर्णों और पदों का मेल</text>
+
+  <rect x="310" y="290" width="180" height="55" rx="10" fill="url(#boxGrad3)" filter="url(#shadow)"/>
+  <text x="400" y="317" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dy=".3em">शब्दांश का जुड़ना</text>
+
+  <rect x="550" y="290" width="180" height="55" rx="10" fill="url(#boxGrad3)" filter="url(#shadow)"/>
+  <text x="640" y="317" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dy=".3em">लिंग, वचन, कारक</text>
+</svg>

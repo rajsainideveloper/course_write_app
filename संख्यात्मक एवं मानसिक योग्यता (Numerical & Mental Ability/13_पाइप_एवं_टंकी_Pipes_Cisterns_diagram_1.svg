@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="100%">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#991B1B" />
+      <stop offset="100%" stop-color="#EF4444" />
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748B"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="300" rx="15" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="2"/>
+  
+  <!-- Inlet Box -->
+  <rect x="50" y="50" width="280" height="90" rx="10" fill="url(#blueGrad)" filter="drop-shadow(0px 4px 6px rgba(0,0,0,0.1))"/>
+  <text x="190" y="85" fill="#FFFFFF" font-size="16" font-family="system-ui" font-weight="bold" text-anchor="middle">भरने वाला पाइप (Inlet)</text>
+  <text x="190" y="115" fill="#E2E8F0" font-size="14" font-family="system-ui" text-anchor="middle">क्षमता = +1/t (धनात्मक)</text>
+  
+  <!-- Outlet Box -->
+  <rect x="470" y="50" width="280" height="90" rx="10" fill="url(#redGrad)" filter="drop-shadow(0px 4px 6px rgba(0,0,0,0.1))"/>
+  <text x="610" y="85" fill="#FFFFFF" font-size="16" font-family="system-ui" font-weight="bold" text-anchor="middle">खाली करने वाला पाइप (Outlet)</text>
+  <text x="610" y="115" fill="#FEE2E2" font-size="14" font-family="system-ui" text-anchor="middle">क्षमता = -1/t (ऋणात्मक)</text>
+  
+  <!-- Combined Box -->
+  <rect x="260" y="180" width="280" height="90" rx="10" fill="#0D9488" filter="drop-shadow(0px 4px 6px rgba(0,0,0,0.1))"/>
+  <text x="400" y="215" fill="#FFFFFF" font-size="16" font-family="system-ui" font-weight="bold" text-anchor="middle">संयुक्त पाइप (Combined)</text>
+  <text x="400" y="245" fill="#CCFBF1" font-size="14" font-family="system-ui" text-anchor="middle">कुल क्षमता = (1/A - 1/B)</text>
+  
+  <!-- Connectors -->
+  <path d="M 190 140 L 190 160 L 330 160 L 330 180" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 610 140 L 610 160 L 470 160 L 470 180" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+</svg>

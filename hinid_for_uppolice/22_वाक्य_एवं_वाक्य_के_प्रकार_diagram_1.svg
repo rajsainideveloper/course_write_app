@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="100%">
+  <defs>
+    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#0D9488" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.2"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748B"/>
+    </marker>
+  </defs>
+  
+  <!-- Flow Chart Background -->
+  <rect width="800" height="300" fill="#F8FAFC" rx="15"/>
+  
+  <!-- Step 1: ध्वनि -->
+  <g transform="translate(50, 100)" filter="url(#shadow)">
+    <rect width="110" height="80" rx="10" fill="url(#boxGrad)"/>
+    <text x="55" y="35" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">ध्वनि</text>
+    <text x="55" y="55" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">(Sound)</text>
+  </g>
+  
+  <path d="M 165 140 L 210 140" stroke="#64748B" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Step 2: शब्द -->
+  <g transform="translate(220, 100)" filter="url(#shadow)">
+    <rect width="110" height="80" rx="10" fill="url(#boxGrad)"/>
+    <text x="55" y="35" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">शब्द</text>
+    <text x="55" y="55" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">(Word)</text>
+  </g>
+  
+  <path d="M 335 140 L 380 140" stroke="#64748B" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Step 3: पद -->
+  <g transform="translate(390, 100)" filter="url(#shadow)">
+    <rect width="110" height="80" rx="10" fill="url(#boxGrad)"/>
+    <text x="55" y="35" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">पद</text>
+    <text x="55" y="55" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">(Term)</text>
+  </g>
+  
+  <path d="M 505 140 L 550 140" stroke="#64748B" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Step 4: वाक्य -->
+  <g transform="translate(560, 100)" filter="url(#shadow)">
+    <rect width="180" height="80" rx="10" fill="#059669"/>
+    <text x="90" y="35" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">वाक्य (पूर्ण इकाई)</text>
+    <text x="90" y="55" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">(Sentence)</text>
+  </g>
+</svg>

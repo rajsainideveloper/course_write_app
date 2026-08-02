@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" width="100%">
+  <defs>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#2563EB" />
+    </linearGradient>
+    <linearGradient id="secondaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488" />
+      <stop offset="100%" stop-color="#14B8A6" />
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="350" fill="#F8FAFC" rx="12" ry="12"/>
+
+  <!-- Step 1: Check Statement I -->
+  <rect x="50" y="50" width="200" height="90" rx="10" ry="10" fill="url(#primaryGrad)" filter="drop-shadow(0px 4px 6px rgba(0,0,0,0.1))"/>
+  <text x="150" y="85" fill="#FFFFFF" font-size="15" font-family="system-ui, sans-serif" font-weight="bold" text-anchor="middle">कथन I की जाँच</text>
+  <text x="150" y="112" fill="#E2E8F0" font-size="13" font-family="system-ui, sans-serif" text-anchor="middle">क्या यह अकेला पर्याप्त है?</text>
+
+  <!-- Decision Point 1 -->
+  <rect x="300" y="50" width="200" height="90" rx="10" ry="10" fill="url(#secondaryGrad)" filter="drop-shadow(0px 4px 6px rgba(0,0,0,0.1))"/>
+  <text x="400" y="85" fill="#FFFFFF" font-size="15" font-family="system-ui, sans-serif" font-weight="bold" text-anchor="middle">कथन II की जाँच</text>
+  <text x="400" y="112" fill="#CCFBF1" font-size="13" font-family="system-ui, sans-serif" text-anchor="middle">स्वतंत्र रूप से देखें</text>
+
+  <!-- Step 3: Combined -->
+  <rect x="550" y="50" width="200" height="90" rx="10" ry="10" fill="#059669" filter="drop-shadow(0px 4px 6px rgba(0,0,0,0.1))"/>
+  <text x="650" y="85" fill="#FFFFFF" font-size="15" font-family="system-ui, sans-serif" font-weight="bold" text-anchor="middle">संयुक्त विश्लेषण</text>
+  <text x="650" y="112" fill="#ECFDF5" font-size="13" font-family="system-ui, sans-serif" text-anchor="middle">दोनों को मिलाकर जाँचें</text>
+
+  <!-- Connectors -->
+  <path d="M 250 95 L 300 95" stroke="#64748B" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 500 95 L 550 95" stroke="#64748B" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Outcomes Box at Bottom -->
+  <rect x="50" y="190" width="700" height="110" rx="10" ry="10" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+  <text x="400" y="225" fill="#1E293B" font-size="16" font-family="system-ui, sans-serif" font-weight="bold" text-anchor="middle">निर्णय प्रक्रिया के मुख्य निष्कर्ष</text>
+  <text x="400" y="255" fill="#475569" font-size="13" font-family="system-ui, sans-serif" text-anchor="middle">• यदि I या II में से कोई एक भी स्वतंत्र रूप से उत्तर दे दे, तो संयुक्त करने की आवश्यकता नहीं है।</text>
+  <text x="400" y="278" fill="#475569" font-size="13" font-family="system-ui, sans-serif" text-anchor="middle">• यदि दोनों को मिलाने पर भी उत्तर न आए, तो विकल्प (D) का चयन करें।</text>
+</svg>

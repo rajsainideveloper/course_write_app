@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 220" width="100%">
+  <defs>
+    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#0D9488" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#000000" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <!-- Boxes -->
+  <g filter="url(#shadow)">
+    <rect x="20" y="80" width="110" height="60" rx="8" ry="8" fill="url(#boxGrad)"/>
+    <text x="75" y="107" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">संस्कृत</text>
+    <text x="75" y="125" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">(वैदिक/लौकिक)</text>
+
+    <rect x="155" y="80" width="110" height="60" rx="8" ry="8" fill="url(#boxGrad)"/>
+    <text x="210" y="107" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">प्राकृत</text>
+    <text x="210" y="125" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">(भगवान महावीर)</text>
+
+    <rect x="290" y="80" width="110" height="60" rx="8" ry="8" fill="url(#boxGrad)"/>
+    <text x="345" y="107" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">अपभ्रंश</text>
+    <text x="345" y="125" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">(अट्ठाटवीं सदी)</text>
+
+    <rect x="425" y="80" width="110" height="60" rx="8" ry="8" fill="url(#boxGrad)"/>
+    <text x="480" y="107" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">अवहाट्ड</text>
+    <text x="480" y="125" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">(संक्रमण काल)</text>
+
+    <rect x="560" y="80" width="215" height="60" rx="8" ry="8" fill="#059669" filter="url(#shadow)"/>
+    <text x="667.5" y="107" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">प्राचीन हिंदी</text>
+    <text x="667.5" y="125" fill="#ECFDF5" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">(1000 ईस्वी से प्रारंभ)</text>
+  </g>
+
+  <!-- Connectors -->
+  <path d="M 130 110 L 150 110" stroke="#64748B" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 265 110 L 285 110" stroke="#64748B" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 400 110 L 420 110" stroke="#64748B" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 535 110 L 555 110" stroke="#64748B" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+</svg>

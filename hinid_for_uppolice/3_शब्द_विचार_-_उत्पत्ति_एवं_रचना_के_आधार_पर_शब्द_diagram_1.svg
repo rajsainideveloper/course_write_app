@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%">
+  <defs>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="100%" stop-color="#0D9488"/>
+    </linearGradient>
+    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.1"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="400" fill="#F1F5F9" rx="12"/>
+
+  <!-- Main Title Box -->
+  <rect x="250" y="20" width="300" height="50" rx="8" fill="url(#primaryGrad)" filter="url(#shadow)"/>
+  <text x="400" y="50" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" dy=".3em">उत्पत्ति के आधार पर शब्द भेद</text>
+
+  <!-- Branches -->
+  <!-- Box 1: Tatsam -->
+  <rect x="50" y="140" width="150" height="100" rx="8" fill="url(#boxGrad)" stroke="#0D9488" stroke-width="2" filter="url(#shadow)"/>
+  <text x="125" y="175" fill="#1E3A8A" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">तत्सम शब्द</text>
+  <text x="125" y="205" fill="#64748B" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">संस्कृत मूल शब्द</text>
+  <text x="125" y="225" fill="#0D9488" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">(अग्नि, सूर्य)</text>
+
+  <!-- Box 2: Tadbhav -->
+  <rect x="235" y="140" width="150" height="100" rx="8" fill="url(#boxGrad)" stroke="#0D9488" stroke-width="2" filter="url(#shadow)"/>
+  <text x="310" y="175" fill="#1E3A8A" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">तद्भव शब्द</text>
+  <text x="310" y="205" fill="#64748B" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">परिवर्तित रूप</text>
+  <text x="310" y="225" fill="#0D9488" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">(आग, सूरज)</text>
+
+  <!-- Box 3: Deshaj -->
+  <rect x="420" y="140" width="150" height="100" rx="8" fill="url(#boxGrad)" stroke="#0D9488" stroke-width="2" filter="url(#shadow)"/>
+  <text x="495" y="175" fill="#1E3A8A" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">देशज शब्द</text>
+  <text x="495" y="205" fill="#64748B" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">क्षेत्रीय भाषा से</text>
+  <text x="495" y="225" fill="#0D9488" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">(गाड़ी, खटिया)</text>
+
+  <!-- Box 4: Videshi -->
+  <rect x="605" y="140" width="150" height="100" rx="8" fill="url(#boxGrad)" stroke="#0D9488" stroke-width="2" filter="url(#shadow)"/>
+  <text x="680" y="175" fill="#1E3A8A" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">विदेशी शब्द</text>
+  <text x="680" y="205" fill="#64748B" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">विदेशों से आए</text>
+  <text x="680" y="225" fill="#0D9488" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">(स्कूल, मेज़)</text>
+
+  <!-- Connectors from Title to Boxes -->
+  <path d="M 400 70 L 400 105 L 125 105 L 125 140" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 400 105 L 310 105 L 310 140" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 400 105 L 495 105 L 495 140" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 400 105 L 680 105 L 680 140" stroke="#94A3B8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Footer Note -->
+  <rect x="50" y="290" width="705" height="60" rx="6" fill="#1E3A8A" opacity="0.05"/>
+  <text x="400" y="320" fill="#1E3A8A" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">इतिहास, संपर्क और भौगोलिक परिस्थितियों के आधार पर शब्दों का यह क्रम विकसित हुआ है।</text>
+</svg>

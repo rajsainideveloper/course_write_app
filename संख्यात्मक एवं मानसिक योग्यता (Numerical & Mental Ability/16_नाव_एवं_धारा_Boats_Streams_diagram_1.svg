@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" width="100%">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="100%" stop-color="#0D9488"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0D9488"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="350" rx="12" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="2"/>
+
+  <!-- Title -->
+  <text x="400" y="40" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="bold" fill="#1E3A8A" text-anchor="middle">नाव एवं धारा - गति की दिशा का प्रभाव</text>
+
+  <!-- Box 1: Downstream -->
+  <rect x="50" y="80" width="310" height="110" rx="10" fill="#E6FFFA" stroke="#0D9488" stroke-width="2"/>
+  <text x="205" y="115" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#0D9488" text-anchor="middle">अनुकूल धारा (Downstream)</text>
+  <text x="205" y="145" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#334155" text-anchor="middle">दिशा: नाव और धारा एक ही ओर</text>
+  <text x="205" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#059669" text-anchor="middle">चाल = u + v</text>
+
+  <!-- Box 2: Upstream -->
+  <rect x="440" y="80" width="310" height="110" rx="10" fill="#FEF2F2" stroke="#EF4444" stroke-width="2"/>
+  <text x="595" y="115" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#DC2626" text-anchor="middle">प्रतिकूल धारा (Upstream)</text>
+  <text x="595" y="145" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#334155" text-anchor="middle">दिशा: नाव और धारा विपरीत</text>
+  <text x="595" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#DC2626" text-anchor="middle">चाल = u - v</text>
+
+  <!-- Summary Footer Box -->
+  <rect x="150" y="220" width="500" height="90" rx="10" fill="url(#blueGrad)" />
+  <text x="400" y="255" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">मूल मंत्र: शांत जल की चाल = (Sd + Su) / 2</text>
+  <text x="400" y="285" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#E2E8F0" text-anchor="middle">धारा की चाल = (Sd - Su) / 2</text>
+</svg>

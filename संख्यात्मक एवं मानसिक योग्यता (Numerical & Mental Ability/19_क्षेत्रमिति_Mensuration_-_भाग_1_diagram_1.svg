@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" width="100%">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488" />
+      <stop offset="100%" stop-color="#14B8A6" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#000000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background Card 1: Square & Rectangle -->
+  <rect x="40" y="30" width="330" height="280" rx="12" ry="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2" filter="url(#shadow)" />
+  <rect x="40" y="30" width="330" height="50" rx="12" ry="12" fill="url(#blueGrad)" />
+  <text x="205" y="60" fill="#FFFFFF" font-size="18" font-weight="bold" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">वर्ग और आयत संबंध</text>
+  
+  <text x="70" y="110" fill="#1E3A8A" font-size="15" font-weight="bold" font-family="system-ui, -apple-system, sans-serif">1. वर्ग (Square):</text>
+  <text x="90" y="140" fill="#334155" font-size="14" font-family="system-ui, -apple-system, sans-serif">• क्षेत्रफल = भुजा²</text>
+  <text x="90" y="170" fill="#334155" font-size="14" font-family="system-ui, -apple-system, sans-serif">• परिमाप = 4 × भुजा</text>
+  
+  <text x="70" y="215" fill="#1E3A8A" font-size="15" font-weight="bold" font-family="system-ui, -apple-system, sans-serif">2. आयत (Rectangle):</text>
+  <text x="90" y="245" fill="#334155" font-size="14" font-family="system-ui, -apple-system, sans-serif">• क्षेत्रफल = लंबाई × चौड़ाई</text>
+  <text x="90" y="275" fill="#334155" font-size="14" font-family="system-ui, -apple-system, sans-serif">• विकर्ण = √(लंबाई² + चौड़ाई²)</text>
+
+  <!-- Background Card 2: Triangle & Circle -->
+  <rect x="430" y="30" width="330" height="280" rx="12" ry="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2" filter="url(#shadow)" />
+  <rect x="430" y="30" width="330" height="50" rx="12" ry="12" fill="url(#tealGrad)" />
+  <text x="595" y="60" fill="#FFFFFF" font-size="18" font-weight="bold" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">त्रिभुज और वृत्त संकल्पना</text>
+
+  <text x="460" y="110" fill="#0D9488" font-size="15" font-weight="bold" font-family="system-ui, -apple-system, sans-serif">1. त्रिभुज (Triangle):</text>
+  <text x="480" y="140" fill="#334155" font-size="14" font-family="system-ui, -apple-system, sans-serif">• सामान्य क्षेत्रफल = ½ × आधार × ऊँचाई</text>
+  <text x="480" y="170" fill="#334155" font-size="14" font-family="system-ui, -apple-system, sans-serif">• समबाहु = (√3/4) × भुजा²</text>
+
+  <text x="460" y="215" fill="#0D9488" font-size="15" font-weight="bold" font-family="system-ui, -apple-system, sans-serif">2. वृत्त (Circle):</text>
+  <text x="480" y="245" fill="#334155" font-size="14" font-family="system-ui, -apple-system, sans-serif">• क्षेत्रफल = πr²</text>
+  <text x="480" y="275" fill="#334155" font-size="14" font-family="system-ui, -apple-system, sans-serif">• परिधि = 2πr</text>
+</svg>
